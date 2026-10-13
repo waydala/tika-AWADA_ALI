@@ -1,0 +1,52 @@
+name: Tâche 2 — tests et mutations
+
+on:
+  push:
+    branches: [main, tache2-awada-ali, tache2-tika-awada-ali, tache2-awada-ali-local]
+    paths:
+      - 'tika-core/**'
+      - 'scripts/tache2.sh'
+      - 'scripts/summarize-mutations.py'
+      - 'tika-parent/pom.xml'
+      - '.github/workflows/tache2.yml'
+  pull_request:
+    paths:
+      - 'tika-core/**'
+      - 'scripts/tache2.sh'
+      - 'scripts/summarize-mutations.py'
+      - 'tika-parent/pom.xml'
+      - '.github/workflows/tache2.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  tests-and-mutations:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '21'
+          cache: maven
+      - name: Compiler, tester et comparer les trois suites
+        run: scripts/tache2.sh all
+      - name: Vérifier et synthétiser les mêmes mutants
+        run: python3 scripts/summarize-mutations.py
+      - name: Conserver les rapports
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: tache2-test-and-mutation-reports
+          path: |
+            evidence/pit-*/
+            evidence/*-suite.log
+            evidence/surefire-*/
+            evidence/coverage-*/
+            evidence/mutation-summary.json
+            evidence/mutation-comparison.md
+            tika-core/target/surefire-reports/
+            tika-core/target/site/jacoco/

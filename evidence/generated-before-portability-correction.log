@@ -1,0 +1,283 @@
+[INFO] Maveniverse Nisse 0.9.4 loaded
+[INFO] Nisse injecting 32 properties into User Properties
+[INFO] Scanning for projects...
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for org.apache.tika:tika-parent:pom:4.0.0-SNAPSHOT
+[WARNING] 'version' contains an expression but should be a constant. @ org.apache.tika:tika-parent:${revision}, C:\Users\adawa\Documents\UDEM FALL 2026\3913\tika\tika-parent\pom.xml, line 34, column 12
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for org.apache.tika:tika:pom:4.0.0-SNAPSHOT
+[WARNING] 'version' contains an expression but should be a constant. @ org.apache.tika:tika-parent:${revision}, C:\Users\adawa\Documents\UDEM FALL 2026\3913\tika\tika-parent\pom.xml, line 34, column 12
+[WARNING] 
+[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+[WARNING] 
+[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+[WARNING] 
+[INFO] No need for inlining
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Build Order:
+[INFO] 
+[INFO] Apache Tika parent                                                 [pom]
+[INFO] Apache Tika Annotation Processor                                   [jar]
+[INFO] Apache Tika core                                                [bundle]
+[INFO] 
+[INFO] --------------------< org.apache.tika:tika-parent >---------------------
+[INFO] Building Apache Tika parent 4.0.0-SNAPSHOT                         [1/3]
+[INFO]   from pom.xml
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --- enforcer:3.6.3:enforce (enforce-maven-version) @ tika-parent ---
+[INFO] Rule 0: org.apache.maven.enforcer.rules.version.RequireMavenVersion passed
+[INFO] 
+[INFO] --- enforcer:3.6.3:enforce (enforce-java-version) @ tika-parent ---
+[INFO] Rule 0: org.apache.maven.enforcer.rules.version.RequireJavaVersion passed
+[INFO] 
+[INFO] --- enforcer:3.6.3:enforce (enforce-maven) @ tika-parent ---
+[INFO] Rule 0: org.apache.maven.enforcer.rules.dependency.DependencyConvergence passed
+[INFO] Rule 1: org.apache.maven.enforcer.rules.version.RequireMavenVersion passed
+[INFO] 
+[INFO] --- enforcer:3.6.3:enforce (ban-bad-log4j-versions) @ tika-parent ---
+[INFO] Rule 0: org.apache.maven.enforcer.rules.dependency.BannedDependencies passed
+[INFO] 
+[INFO] --- enforcer:3.6.3:enforce (ban-xerces-and-xml-apis) @ tika-parent ---
+[INFO] Rule 0: org.apache.maven.enforcer.rules.dependency.BannedDependencies passed
+[INFO] 
+[INFO] --- jacoco:0.8.15:prepare-agent (default) @ tika-parent ---
+[INFO] Skipping JaCoCo execution because property jacoco.skip is set.
+[INFO] 
+[INFO] --- spotless:3.9.0:apply (default) @ tika-parent ---
+[INFO] Spotless apply skipped
+[INFO] 
+[INFO] --- remote-resources:3.3.0:process (process-resource-bundles) @ tika-parent ---
+[INFO] Preparing remote bundle org.apache.apache.resources:apache-jar-resource-bundle:1.8
+[INFO] Copying 3 resources from 1 bundle.
+[INFO] 
+[INFO] --- flatten:1.8.0:flatten (flatten) @ tika-parent ---
+[INFO] Generating flattened POM of project org.apache.tika:tika-parent:pom:4.0.0-SNAPSHOT...
+[INFO] 
+[INFO] --- checkstyle:3.6.0:check (validate) @ tika-parent ---
+[INFO] 
+[INFO] --- jacoco:0.8.15:report (report) @ tika-parent ---
+[INFO] Skipping JaCoCo execution because property jacoco.skip is set.
+[INFO] 
+[INFO] --- ossindex:3.2.0:audit (audit-dependencies) @ tika-parent ---
+[INFO] Skipping; POM module
+[INFO] 
+[INFO] --- forbiddenapis:3.10:check (default) @ tika-parent ---
+[INFO] Skipping execution for packaging "pom"
+[INFO] 
+[INFO] --- forbiddenapis:3.10:testCheck (default) @ tika-parent ---
+[INFO] Skipping execution for packaging "pom"
+[INFO] 
+[INFO] --- install:3.1.4:install (default-install) @ tika-parent ---
+[INFO] Installing C:\Users\adawa\Documents\UDEM FALL 2026\3913\tika\tika-parent\.flattened-pom.xml to C:\Users\adawa\.m2\repository\org\apache\tika\tika-parent\4.0.0-SNAPSHOT\tika-parent-4.0.0-SNAPSHOT.pom
+[INFO] 
+[INFO] -------------< org.apache.tika:tika-annotation-processor >--------------
+[INFO] Building Apache Tika Annotation Processor 4.0.0-SNAPSHOT           [2/3]
+[INFO]   from C:\Users\adawa\Documents\UDEM FALL 2026\3913\tika\tika-annotation-processor\pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- enforcer:3.6.3:enforce (enforce-maven-version) @ tika-annotation-processor ---
+[INFO] 
+[INFO] --- enforcer:3.6.3:enforce (enforce-java-version) @ tika-annotation-processor ---
+[INFO] 
+[INFO] --- enforcer:3.6.3:enforce (enforce-maven) @ tika-annotation-processor ---
+[INFO] Rule 0: org.apache.maven.enforcer.rules.dependency.DependencyConvergence passed
+[INFO] 
+[INFO] --- enforcer:3.6.3:enforce (ban-bad-log4j-versions) @ tika-annotation-processor ---
+[INFO] Rule 0: org.apache.maven.enforcer.rules.dependency.BannedDependencies passed
+[INFO] 
+[INFO] --- enforcer:3.6.3:enforce (ban-xerces-and-xml-apis) @ tika-annotation-processor ---
+[INFO] Rule 0: org.apache.maven.enforcer.rules.dependency.BannedDependencies passed
+[INFO] 
+[INFO] --- jacoco:0.8.15:prepare-agent (default) @ tika-annotation-processor ---
+[INFO] Skipping JaCoCo execution because property jacoco.skip is set.
+[INFO] 
+[INFO] --- spotless:3.9.0:apply (default) @ tika-annotation-processor ---
+[INFO] Spotless apply skipped
+[INFO] 
+[INFO] --- remote-resources:3.3.0:process (process-resource-bundles) @ tika-annotation-processor ---
+[INFO] Preparing remote bundle org.apache.apache.resources:apache-jar-resource-bundle:1.8
+[INFO] Copying 3 resources from 1 bundle.
+[INFO] 
+[INFO] --- resources:3.5.0:resources (default-resources) @ tika-annotation-processor ---
+[INFO] Copying 1 resource from src\main\resources to target\classes
+[INFO] Copying 3 resources from target\maven-shared-archive-resources to target\classes
+[INFO] 
+[INFO] --- flatten:1.8.0:flatten (flatten) @ tika-annotation-processor ---
+[INFO] Generating flattened POM of project org.apache.tika:tika-annotation-processor:jar:4.0.0-SNAPSHOT...
+[INFO] 
+[INFO] --- compiler:3.15.0:compile (default-compile) @ tika-annotation-processor ---
+[INFO] Nothing to compile - all classes are up to date.
+[INFO] 
+[INFO] --- checkstyle:3.6.0:check (validate) @ tika-annotation-processor ---
+[INFO] 
+[INFO] --- resources:3.5.0:testResources (default-testResources) @ tika-annotation-processor ---
+[INFO] skip non existing resourceDirectory C:\Users\adawa\Documents\UDEM FALL 2026\3913\tika\tika-annotation-processor\src\test\resources
+[INFO] Copying 3 resources from target\maven-shared-archive-resources to target\test-classes
+[INFO] 
+[INFO] --- compiler:3.15.0:testCompile (default-testCompile) @ tika-annotation-processor ---
+[INFO] Nothing to compile - all classes are up to date.
+[INFO] 
+[INFO] --- surefire:3.5.6:test (default-test) @ tika-annotation-processor ---
+[INFO] Tests are skipped.
+[INFO] 
+[INFO] --- jacoco:0.8.15:report (report) @ tika-annotation-processor ---
+[INFO] Skipping JaCoCo execution because property jacoco.skip is set.
+[INFO] 
+[INFO] --- jar:3.5.0:jar (default-jar) @ tika-annotation-processor ---
+[INFO] 
+[INFO] --- ossindex:3.2.0:audit (audit-dependencies) @ tika-annotation-processor ---
+[INFO] Skipping; configured
+[INFO] 
+[INFO] --- forbiddenapis:3.10:check (default) @ tika-annotation-processor ---
+[INFO] Scanning for classes to check...
+[INFO] Reading bundled API signatures: jdk-unsafe-17
+[INFO] Reading bundled API signatures: jdk-deprecated-17
+[INFO] Reading bundled API signatures: jdk-non-portable
+[INFO] Reading bundled API signatures: jdk-internal-17
+[INFO] Reading bundled API signatures: commons-io-unsafe-2.11.0
+[INFO] Loading classes to check...
+[INFO] Scanning classes for violations...
+[INFO] Scanned 3 class file(s) for forbidden API invocations (in 0.13s), 0 error(s).
+[INFO] 
+[INFO] --- forbiddenapis:3.10:testCheck (default) @ tika-annotation-processor ---
+[INFO] Scanning for classes to check...
+[INFO] Reading bundled API signatures: jdk-unsafe-17
+[INFO] Reading bundled API signatures: jdk-deprecated-17
+[INFO] Reading bundled API signatures: jdk-non-portable
+[INFO] Reading bundled API signatures: jdk-internal-17
+[INFO] Reading bundled API signatures: commons-io-unsafe-2.11.0
+[INFO] Loading classes to check...
+[INFO] Scanning classes for violations...
+[INFO] Scanned 1 class file(s) for forbidden API invocations (in 0.04s), 0 error(s).
+[INFO] 
+[INFO] --- install:3.1.4:install (default-install) @ tika-annotation-processor ---
+[INFO] Installing C:\Users\adawa\Documents\UDEM FALL 2026\3913\tika\tika-annotation-processor\.flattened-pom.xml to C:\Users\adawa\.m2\repository\org\apache\tika\tika-annotation-processor\4.0.0-SNAPSHOT\tika-annotation-processor-4.0.0-SNAPSHOT.pom
+[INFO] Installing C:\Users\adawa\Documents\UDEM FALL 2026\3913\tika\tika-annotation-processor\target\tika-annotation-processor-4.0.0-SNAPSHOT.jar to C:\Users\adawa\.m2\repository\org\apache\tika\tika-annotation-processor\4.0.0-SNAPSHOT\tika-annotation-processor-4.0.0-SNAPSHOT.jar
+[INFO] 
+[INFO] ---------------------< org.apache.tika:tika-core >----------------------
+[INFO] Building Apache Tika core 4.0.0-SNAPSHOT                           [3/3]
+[INFO]   from C:\Users\adawa\Documents\UDEM FALL 2026\3913\tika\tika-core\pom.xml
+[INFO] -------------------------------[ bundle ]-------------------------------
+[INFO] 
+[INFO] --- enforcer:3.6.3:enforce (enforce-maven-version) @ tika-core ---
+[INFO] Rule 0: org.apache.maven.enforcer.rules.version.RequireMavenVersion passed
+[INFO] 
+[INFO] --- enforcer:3.6.3:enforce (enforce-java-version) @ tika-core ---
+[INFO] Rule 0: org.apache.maven.enforcer.rules.version.RequireJavaVersion passed
+[INFO] 
+[INFO] --- enforcer:3.6.3:enforce (enforce-maven) @ tika-core ---
+[INFO] Rule 0: org.apache.maven.enforcer.rules.dependency.DependencyConvergence passed
+[INFO] Rule 1: org.apache.maven.enforcer.rules.version.RequireMavenVersion passed
+[INFO] 
+[INFO] --- enforcer:3.6.3:enforce (ban-bad-log4j-versions) @ tika-core ---
+[INFO] Rule 0: org.apache.maven.enforcer.rules.dependency.BannedDependencies passed
+[INFO] 
+[INFO] --- enforcer:3.6.3:enforce (ban-xerces-and-xml-apis) @ tika-core ---
+[INFO] Rule 0: org.apache.maven.enforcer.rules.dependency.BannedDependencies passed
+[INFO] 
+[INFO] --- checkstyle:3.6.0:check (validate) @ tika-core ---
+[INFO] 
+[INFO] --- jacoco:0.8.15:prepare-agent (default) @ tika-core ---
+[INFO] Skipping JaCoCo execution because property jacoco.skip is set.
+[INFO] 
+[INFO] --- spotless:3.9.0:apply (default) @ tika-core ---
+[INFO] Spotless apply skipped
+[INFO] 
+[INFO] --- remote-resources:3.3.0:process (process-resource-bundles) @ tika-core ---
+[INFO] Preparing remote bundle org.apache.apache.resources:apache-jar-resource-bundle:1.8
+[INFO] Copying 3 resources from 1 bundle.
+[INFO] Copying appended resource: META-INF/LICENSE
+[INFO] 
+[INFO] --- resources:3.5.0:resources (default-resources) @ tika-core ---
+[INFO] Copying 5 resources from src\main\resources to target\classes
+[INFO] Copying 3 resources from target\maven-shared-archive-resources to target\classes
+[INFO] 
+[INFO] --- flatten:1.8.0:flatten (flatten) @ tika-core ---
+[INFO] Generating flattened POM of project org.apache.tika:tika-core:bundle:4.0.0-SNAPSHOT...
+[INFO] 
+[INFO] --- compiler:3.15.0:compile (default-compile) @ tika-core ---
+[INFO] Nothing to compile - all classes are up to date.
+[INFO] 
+[INFO] --- resources:3.5.0:testResources (default-testResources) @ tika-core ---
+[INFO] Copying 57 resources from src\test\resources to target\test-classes
+[INFO] Copying 3 resources from target\maven-shared-archive-resources to target\test-classes
+[INFO] 
+[INFO] --- compiler:3.15.0:testCompile (default-testCompile) @ tika-core ---
+[INFO] Nothing to compile - all classes are up to date.
+[INFO] 
+[INFO] --- surefire:3.5.6:test (default-test) @ tika-core ---
+[INFO] Tests are skipped.
+[INFO] 
+[INFO] --- jacoco:0.8.15:report (report) @ tika-core ---
+[INFO] Skipping JaCoCo execution because property jacoco.skip is set.
+[INFO] 
+[INFO] --- bundle:6.1.0:bundle (default-bundle) @ tika-core ---
+[WARNING] Bundle org.apache.tika:tika-core:bundle:4.0.0-SNAPSHOT : includeresource.duplicates: Duplicate overwritten: org/apache/tika/mime/tika-mimetypes.xml (Consider using the onduplicate: directive to handle duplicates.)
+[INFO] Building bundle: C:\Users\adawa\Documents\UDEM FALL 2026\3913\tika\tika-core\target\tika-core-4.0.0-SNAPSHOT.jar
+[INFO] Writing manifest: C:\Users\adawa\Documents\UDEM FALL 2026\3913\tika\tika-core\target\classes\META-INF\MANIFEST.MF
+[INFO] 
+[INFO] --- jar:3.5.0:test-jar (default) @ tika-core ---
+[INFO] Building jar: C:\Users\adawa\Documents\UDEM FALL 2026\3913\tika\tika-core\target\tika-core-4.0.0-SNAPSHOT-tests.jar
+[INFO] 
+[INFO] --- assembly:3.8.0:single (default) @ tika-core ---
+[INFO] Reading assembly descriptor: src/main/assembly/test-jar-with-dependencies.xml
+[INFO] Building jar: C:\Users\adawa\Documents\UDEM FALL 2026\3913\tika\tika-core\target\tika-core-4.0.0-SNAPSHOT-test-jar-with-dependencies.jar
+[INFO] 
+[INFO] --- failsafe:3.5.6:integration-test (default) @ tika-core ---
+[INFO] Tests are skipped.
+[INFO] 
+[INFO] --- ossindex:3.2.0:audit (audit-dependencies) @ tika-core ---
+[INFO] Skipping; configured
+[INFO] 
+[INFO] --- forbiddenapis:3.10:check (default) @ tika-core ---
+[INFO] Scanning for classes to check...
+[INFO] Reading bundled API signatures: jdk-unsafe-17
+[INFO] Reading bundled API signatures: jdk-deprecated-17
+[INFO] Reading bundled API signatures: jdk-non-portable
+[INFO] Reading bundled API signatures: jdk-internal-17
+[INFO] Reading bundled API signatures: commons-io-unsafe-2.11.0
+[INFO] Loading classes to check...
+[INFO] Scanning classes for violations...
+[INFO] Scanned 394 class file(s) for forbidden API invocations (in 0.65s), 0 error(s).
+[INFO] 
+[INFO] --- forbiddenapis:3.10:testCheck (default) @ tika-core ---
+[INFO] Scanning for classes to check...
+[INFO] Reading bundled API signatures: jdk-unsafe-17
+[INFO] Reading bundled API signatures: jdk-deprecated-17
+[INFO] Reading bundled API signatures: jdk-non-portable
+[INFO] Reading bundled API signatures: jdk-internal-17
+[INFO] Reading bundled API signatures: commons-io-unsafe-2.11.0
+[INFO] Loading classes to check...
+[INFO] Scanning classes for violations...
+[ERROR] Forbidden method invocation: java.lang.String#getBytes() [Uses default charset]
+[ERROR]   in org.apache.tika.io.LookaheadInputStream_markSupported_6_0_Test (LookaheadInputStream_markSupported_6_0_Test.java:18)
+[ERROR] Forbidden method invocation: java.lang.String#getBytes() [Uses default charset]
+[ERROR]   in org.apache.tika.io.LookaheadInputStream_markSupported_6_0_Test (LookaheadInputStream_markSupported_6_0_Test.java:28)
+[ERROR] Forbidden method invocation: java.lang.String#getBytes() [Uses default charset]
+[ERROR]   in org.apache.tika.io.LookaheadInputStream_markSupported_6_0_Test (LookaheadInputStream_markSupported_6_0_Test.java:37)
+[ERROR] Forbidden method invocation: java.lang.String#getBytes() [Uses default charset]
+[ERROR]   in org.apache.tika.io.LookaheadInputStream_markSupported_6_0_Test (LookaheadInputStream_markSupported_6_0_Test.java:43)
+[ERROR] Scanned 98 class file(s) for forbidden API invocations (in 0.27s), 4 error(s).
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Summary for Apache Tika parent 4.0.0-SNAPSHOT:
+[INFO] 
+[INFO] Apache Tika parent ................................. SUCCESS [  2.060 s]
+[INFO] Apache Tika Annotation Processor ................... SUCCESS [  0.906 s]
+[INFO] Apache Tika core ................................... FAILURE [  7.548 s]
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  12.079 s
+[INFO] Finished at: 2026-10-13T14:47:30-04:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal de.thetaphi:forbiddenapis:3.10:testCheck (default) on project tika-core: Check for forbidden API calls failed, see log. -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoExecutionException
+[ERROR] 
+[ERROR] After correcting the problems, you can resume the build with the command
+[ERROR]   mvn <args> -rf :tika-core

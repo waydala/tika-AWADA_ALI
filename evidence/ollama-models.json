@@ -1,0 +1,54 @@
+{
+  "models": [
+    {
+      "name": "code-llama:latest",
+      "model": "code-llama:latest",
+      "modified_at": "2026-10-13T14:38:31.6805999-04:00",
+      "size": 1929912286,
+      "digest": "14cde3edbc25f0524ef9c218923ad71d99f3cbc1a23e21f1fc446f82b9732908",
+      "details": {
+        "parent_model": "qwen2.5-coder:3b",
+        "format": "gguf",
+        "family": "qwen2",
+        "families": [
+          "qwen2"
+        ],
+        "parameter_size": "3.1B",
+        "quantization_level": "Q4_K_M",
+        "context_length": 32768,
+        "embedding_length": 2048,
+        "runner": "llamacpp"
+      },
+      "capabilities": [
+        "completion",
+        "tools",
+        "insert"
+      ]
+    },
+    {
+      "name": "qwen2.5-coder:3b",
+      "model": "qwen2.5-coder:3b",
+      "modified_at": "2026-10-13T14:37:57.1240791-04:00",
+      "size": 1929912626,
+      "digest": "f72c60cabf6237b07f6e632b2c48d533cef25eda2efbd34bed21c5e9c01e6225",
+      "details": {
+        "parent_model": "",
+        "format": "gguf",
+        "family": "qwen2",
+        "families": [
+          "qwen2"
+        ],
+        "parameter_size": "3.1B",
+        "quantization_level": "Q4_K_M",
+        "context_length": 32768,
+        "embedding_length": 2048,
+        "runner": "ggml"
+      },
+      "capabilities": [
+        "completion",
+        "tools",
+        "insert"
+      ]
+    }
+  ]
+}

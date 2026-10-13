@@ -1,0 +1,90 @@
+[
+  {
+    "file": "tika-core/src/test/java/org/apache/tika/io/LookaheadInputStream_markSupported_6_0_Test.java",
+    "category": "compilation",
+    "before": "assertArrayEquals(\"Hello\".getBytes(), buffer, 0, bytesRead);",
+    "after": "assertArrayEquals(\"Hello\".getBytes(), buffer);",
+    "reason": "JUnit 5 does not provide an assertArrayEquals(byte[], byte[], int, int) overload."
+  },
+  {
+    "file": "tika-core/src/test/java/org/apache/tika/io/LookaheadInputStream_markSupported_6_0_Test.java",
+    "category": "compilation",
+    "before": "assertArrayEquals(\"World!\".getBytes(), buffer, 0, bytesRead);",
+    "after": "assertArrayEquals(\"World!\".getBytes(), buffer);",
+    "reason": "JUnit 5 does not provide an assertArrayEquals(byte[], byte[], int, int) overload."
+  },
+  {
+    "file": "tika-core/src/test/java/org/apache/tika/io/LookaheadInputStream_markSupported_6_0_Test.java",
+    "category": "oracle",
+    "before": "assertArrayEquals(\"World!\".getBytes(), buffer);",
+    "after": "assertArrayEquals(\"Hello\".getBytes(), buffer);",
+    "reason": "reset returns to the marked beginning: the same five bytes must be replayed."
+  },
+  {
+    "file": "tika-core/src/test/java/org/apache/tika/io/LookaheadInputStream_read_2_0_Test.java",
+    "category": "oracle",
+    "before": "assertEquals(2, bytesRead);",
+    "after": "assertEquals(-1, bytesRead);",
+    "reason": "The three-byte lookahead window has been consumed; subsequent reads return -1 and leave the destination unchanged."
+  },
+  {
+    "file": "tika-core/src/test/java/org/apache/tika/io/LookaheadInputStream_read_2_0_Test.java",
+    "category": "oracle",
+    "before": "assertArrayEquals(new byte[] { 4, 5 }, buffer);",
+    "after": "assertArrayEquals(new byte[] { 1, 2, 3 }, buffer);",
+    "reason": "The three-byte lookahead window has been consumed; subsequent reads return -1 and leave the destination unchanged."
+  },
+  {
+    "file": "tika-core/src/test/java/org/apache/tika/io/LookaheadInputStream_read_2_0_Test.java",
+    "category": "oracle",
+    "before": "assertEquals(1, bytesRead);",
+    "after": "assertEquals(-1, bytesRead);",
+    "reason": "The three-byte lookahead window has been consumed; subsequent reads return -1 and leave the destination unchanged."
+  },
+  {
+    "file": "tika-core/src/test/java/org/apache/tika/io/LookaheadInputStream_read_2_0_Test.java",
+    "category": "oracle",
+    "before": "assertArrayEquals(new byte[] { 5 }, buffer);",
+    "after": "assertArrayEquals(new byte[] { 1, 2, 3 }, buffer);",
+    "reason": "The three-byte lookahead window has been consumed; subsequent reads return -1 and leave the destination unchanged."
+  },
+  {
+    "file": "tika-core/src/test/java/org/apache/tika/io/LookaheadInputStream_read_3_0_Test.java",
+    "category": "oracle",
+    "before": "assertEquals(2, inputStream.available());",
+    "after": "assertEquals(2, lookaheadInputStream.available());",
+    "reason": "fill prefetches all five bytes from the delegate; the wrapper, rather than the delegate, has two buffered bytes remaining."
+  },
+  {
+    "file": "tika-core/src/test/java/org/apache/tika/io/LookaheadInputStream_markSupported_6_0_Test.java",
+    "category": "portability",
+    "line": 18,
+    "before": "ByteArrayInputStream bais = new ByteArrayInputStream(\"Hello, World!\".getBytes());",
+    "after": "ByteArrayInputStream bais = new ByteArrayInputStream(\"Hello, World!\".getBytes(java.nio.charset.StandardCharsets.UTF_8));",
+    "reason": "The Tika forbidden-apis check rejects default-charset conversion; UTF-8 fixes the encoding explicitly without changing these ASCII byte values."
+  },
+  {
+    "file": "tika-core/src/test/java/org/apache/tika/io/LookaheadInputStream_markSupported_6_0_Test.java",
+    "category": "portability",
+    "line": 28,
+    "before": "ByteArrayInputStream bais = new ByteArrayInputStream(\"Hello, World!\".getBytes());",
+    "after": "ByteArrayInputStream bais = new ByteArrayInputStream(\"Hello, World!\".getBytes(java.nio.charset.StandardCharsets.UTF_8));",
+    "reason": "The Tika forbidden-apis check rejects default-charset conversion; UTF-8 fixes the encoding explicitly without changing these ASCII byte values."
+  },
+  {
+    "file": "tika-core/src/test/java/org/apache/tika/io/LookaheadInputStream_markSupported_6_0_Test.java",
+    "category": "portability",
+    "line": 37,
+    "before": "assertArrayEquals(\"Hello\".getBytes(), buffer);",
+    "after": "assertArrayEquals(\"Hello\".getBytes(java.nio.charset.StandardCharsets.UTF_8), buffer);",
+    "reason": "The Tika forbidden-apis check rejects default-charset conversion; UTF-8 fixes the encoding explicitly without changing these ASCII byte values."
+  },
+  {
+    "file": "tika-core/src/test/java/org/apache/tika/io/LookaheadInputStream_markSupported_6_0_Test.java",
+    "category": "portability",
+    "line": 43,
+    "before": "assertArrayEquals(\"Hello\".getBytes(), buffer);",
+    "after": "assertArrayEquals(\"Hello\".getBytes(java.nio.charset.StandardCharsets.UTF_8), buffer);",
+    "reason": "The Tika forbidden-apis check rejects default-charset conversion; UTF-8 fixes the encoding explicitly without changing these ASCII byte values."
+  }
+]

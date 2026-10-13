@@ -1,0 +1,25 @@
+[INFO] Maveniverse Nisse 0.9.4 loaded
+[INFO] Nisse injecting 32 properties into User Properties
+[INFO] Scanning for projects...
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for org.apache.tika:tika-core:bundle:4.0.0-SNAPSHOT
+[WARNING] 'version' contains an expression but should be a constant. @ org.apache.tika:tika-parent:${revision}, C:\Users\adawa\Documents\UDEM FALL 2026\3913\tika\tika-parent\pom.xml, line 34, column 12
+[WARNING] 
+[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+[WARNING] 
+[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+[WARNING] 
+[INFO] No need for inlining
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  0.849 s
+[INFO] Finished at: 2026-10-13T14:36:55-04:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Could not find goal 'help' in plugin io.github.zju-aces-ise:chatunitest-maven-plugin:2.1.1 among available goals class, clean, copy, debug, generateCoverage, generateMethodCoverage, generateMethodCoverage_merge, generateMethodCoverage_separate, method, methodWithoutOverload, parse, project, restore, sample -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoNotFoundException

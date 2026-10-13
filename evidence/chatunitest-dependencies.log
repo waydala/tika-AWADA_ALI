@@ -1,0 +1,80 @@
+[INFO] Maveniverse Nisse 0.9.4 loaded
+[INFO] Nisse injecting 32 properties into User Properties
+[INFO] Scanning for projects...
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for org.apache.tika:tika-core:bundle:4.0.0-SNAPSHOT
+[WARNING] 'version' contains an expression but should be a constant. @ org.apache.tika:tika-parent:${revision}, C:\Users\adawa\Documents\UDEM FALL 2026\3913\tika\tika-parent\pom.xml, line 34, column 12
+[WARNING] 
+[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+[WARNING] 
+[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+[WARNING] 
+[INFO] No need for inlining
+[INFO] 
+[INFO] ---------------------< org.apache.tika:tika-core >----------------------
+[INFO] Building Apache Tika core 4.0.0-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] -------------------------------[ bundle ]-------------------------------
+[INFO] 
+[INFO] --- dependency:3.11.0:resolve (default-cli) @ tika-core ---
+[INFO] Can't extract module name from chatunitest-starter-1.4.0.pom: Module format not recognized: C:\Users\adawa\.m2\repository\io\github\ZJU-ACES-ISE\chatunitest-starter\1.4.0\chatunitest-starter-1.4.0.pom
+[INFO] 
+[INFO] The following files have been resolved:
+[INFO]    org.slf4j:slf4j-api:jar:2.0.18:compile -- module org.slf4j
+[INFO]    commons-io:commons-io:jar:2.22.0:compile -- module org.apache.commons.io
+[INFO]    org.commonmark:commonmark:jar:0.30.0:compile -- module org.commonmark
+[INFO]    org.commonmark:commonmark-ext-gfm-tables:jar:0.30.0:compile -- module org.commonmark.ext.gfm.tables
+[INFO]    org.commonmark:commonmark-ext-gfm-strikethrough:jar:0.30.0:compile -- module org.commonmark.ext.gfm.strikethrough
+[INFO]    org.osgi:org.osgi.core:jar:6.0.0:provided (optional) -- module org.osgi.core (auto)
+[INFO]    org.osgi:org.osgi.compendium:jar:5.0.0:provided (optional) -- module org.osgi.compendium (auto)
+[INFO]    biz.aQute.bnd:biz.aQute.bndlib:jar:7.3.0:provided -- module biz.aQute.bndlib [auto]
+[INFO]    org.osgi:org.osgi.dto:jar:1.0.0:provided -- module org.osgi.dto (auto)
+[INFO]    org.osgi:org.osgi.resource:jar:1.0.0:provided -- module org.osgi.resource (auto)
+[INFO]    org.osgi:org.osgi.framework:jar:1.8.0:provided -- module org.osgi.framework (auto)
+[INFO]    org.osgi:org.osgi.util.tracker:jar:1.5.4:provided -- module org.osgi.util.tracker [auto]
+[INFO]    org.osgi:osgi.annotation:jar:8.0.1:provided -- module osgi.annotation (auto)
+[INFO]    org.osgi:org.osgi.service.log:jar:1.3.0:provided -- module org.osgi.service.log (auto)
+[INFO]    org.osgi:org.osgi.service.repository:jar:1.1.0:provided -- module org.osgi.service.repository (auto)
+[INFO]    org.osgi:org.osgi.util.function:jar:1.2.0:provided -- module org.osgi.util.function [auto]
+[INFO]    org.osgi:org.osgi.util.promise:jar:1.3.0:provided -- module org.osgi.util.promise [auto]
+[INFO]    biz.aQute.bnd:biz.aQute.bnd.util:jar:7.3.0:provided -- module biz.aQute.bnd.util [auto]
+[INFO]    org.osgi:org.osgi.service.serviceloader:jar:1.0.0:provided -- module org.osgi.service.serviceloader (auto)
+[INFO]    org.apache.tika:tika-annotation-processor:jar:4.0.0-SNAPSHOT:provided -- module org.apache.tika.annotation.processor [auto]
+[INFO]    org.mockito:mockito-junit-jupiter:jar:5.15.2:test -- module org.mockito.junit.jupiter [auto]
+[INFO]    org.mockito:mockito-core:jar:5.23.0:test -- module org.mockito
+[INFO]    org.objenesis:objenesis:jar:3.3:test -- module org.objenesis [auto]
+[INFO]    com.google.guava:guava:jar:33.6.0-jre:test -- module com.google.common
+[INFO]    com.google.guava:failureaccess:jar:1.0.3:test -- module com.google.common.util.concurrent.internal
+[INFO]    com.google.guava:listenablefuture:jar:9999.0-empty-to-avoid-conflict-with-guava:test -- module listenablefuture (auto)
+[INFO]    org.jspecify:jspecify:jar:1.0.0:test -- module org.jspecify
+[INFO]    com.google.errorprone:error_prone_annotations:jar:2.50.0:test -- module com.google.errorprone.annotations
+[INFO]    com.google.j2objc:j2objc-annotations:jar:3.1:test -- module com.google.j2objc.annotations
+[INFO]    com.martensigwart:fakeload:jar:0.7.0:test -- module fakeload (auto)
+[INFO]    com.google.code.findbugs:jsr305:jar:3.0.2:test -- module jsr305 (auto)
+[INFO]    org.apache.logging.log4j:log4j-core:jar:2.26.1:test -- module org.apache.logging.log4j.core
+[INFO]    org.apache.logging.log4j:log4j-api:jar:2.26.1:test -- module org.apache.logging.log4j
+[INFO]    org.apache.logging.log4j:log4j-slf4j2-impl:jar:2.26.1:test -- module org.apache.logging.log4j.slf4j2.impl
+[INFO]    org.junit.jupiter:junit-jupiter-api:jar:6.1.3:test -- module org.junit.jupiter.api
+[INFO]    org.opentest4j:opentest4j:jar:1.3.0:test -- module org.opentest4j
+[INFO]    org.junit.platform:junit-platform-commons:jar:6.1.3:test -- module org.junit.platform.commons
+[INFO]    org.apiguardian:apiguardian-api:jar:1.1.2:test -- module org.apiguardian.api
+[INFO]    org.junit.jupiter:junit-jupiter-engine:jar:6.1.3:test -- module org.junit.jupiter.engine
+[INFO]    org.junit.platform:junit-platform-engine:jar:6.1.3:test -- module org.junit.platform.engine
+[INFO]    io.github.ZJU-ACES-ISE:chatunitest-starter:pom:1.4.0:test
+[INFO]    org.junit.platform:junit-platform-launcher:jar:6.1.3:test -- module org.junit.platform.launcher
+[INFO]    org.junit.vintage:junit-vintage-engine:jar:6.1.3:test -- module org.junit.vintage.engine
+[INFO]    junit:junit:jar:4.13.2:test -- module junit [auto]
+[INFO]    org.hamcrest:hamcrest-core:jar:1.3:test -- module hamcrest.core (auto)
+[INFO]    org.junit.jupiter:junit-jupiter-params:jar:6.1.3:test -- module org.junit.jupiter.params
+[INFO]    org.junit.platform:junit-platform-runner:jar:1.9.2:test -- module org.junit.platform.runner
+[INFO]    org.junit.platform:junit-platform-suite-api:jar:6.1.3:test -- module org.junit.platform.suite.api
+[INFO]    org.junit.platform:junit-platform-suite-commons:jar:1.9.2:test -- module org.junit.platform.suite.commons
+[INFO]    net.bytebuddy:byte-buddy:jar:1.10.20:test -- module net.bytebuddy
+[INFO]    net.bytebuddy:byte-buddy-agent:jar:1.10.20:test -- module net.bytebuddy.agent
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  8.608 s
+[INFO] Finished at: 2026-10-13T14:36:07-04:00
+[INFO] ------------------------------------------------------------------------

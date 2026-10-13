@@ -1,0 +1,11 @@
+{
+  "attempt0": {
+    "testClassName": "LookaheadInputStream_read_2_0_Test",
+    "fullName": "org.apache.tika.io.LookaheadInputStream_read_2_0_Test",
+    "path": "C:\\Users\\adawa\\Documents\\UDEM FALL 2026\\3913\\tika\\tika-core\\..\\evidence\\chatunitest\\generated\\tika-parent\\tika-core\\org\\apache\\tika\\io\\LookaheadInputStream_read_2_0_Test.java",
+    "className": "LookaheadInputStream",
+    "packageName": "org.apache.tika.io",
+    "methodName": "read",
+    "methodSig": "read()"
+  }
+}

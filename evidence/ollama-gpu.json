@@ -1,0 +1,24 @@
+{
+  "models": [
+    {
+      "name": "code-llama:latest",
+      "model": "code-llama:latest",
+      "size": 2403178905,
+      "digest": "14cde3edbc25f0524ef9c218923ad71d99f3cbc1a23e21f1fc446f82b9732908",
+      "details": {
+        "parent_model": "",
+        "format": "gguf",
+        "family": "qwen2",
+        "families": [
+          "qwen2"
+        ],
+        "parameter_size": "3.1B",
+        "quantization_level": "Q4_K_M"
+      },
+      "expires_at": "2026-10-13T14:44:32.5240877-04:00",
+      "size_vram": 2403178905,
+      "context_length": 8192,
+      "runner": "llamacpp"
+    }
+  ]
+}

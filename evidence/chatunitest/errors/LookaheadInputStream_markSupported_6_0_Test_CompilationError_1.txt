@@ -1,0 +1,74 @@
+package org.apache.tika.io;
+
+import java.io.ByteArrayInputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import org.junit.jupiter.api.extension.ExtendWith;
+import org.mockito.junit.jupiter.MockitoExtension;
+import org.mockito.*;
+import org.junit.jupiter.api.*;
+import static org.mockito.Mockito.*;
+import static org.junit.jupiter.api.Assertions.*;
+
+public class LookaheadInputStream_markSupported_6_0_Test {
+
+    @Test
+    public void testMarkSupported() throws IOException {
+        // Create a ByteArrayInputStream with some data
+        ByteArrayInputStream bais = new ByteArrayInputStream("Hello, World!".getBytes());
+        // Create a LookaheadInputStream with the ByteArrayInputStream
+        LookaheadInputStream lsi = new LookaheadInputStream(bais, 10);
+        // Check that markSupported() returns true
+        assertTrue(lsi.markSupported());
+    }
+
+    @Test
+    public void testReadWithMark() throws IOException {
+        // Create a ByteArrayInputStream with some data
+        ByteArrayInputStream bais = new ByteArrayInputStream("Hello, World!".getBytes());
+        // Create a LookaheadInputStream with the ByteArrayInputStream
+        LookaheadInputStream lsi = new LookaheadInputStream(bais, 10);
+        // Mark the current position
+        lsi.mark(10);
+        // Read some bytes
+        byte[] buffer = new byte[5];
+        int bytesRead = lsi.read(buffer, 0, 5);
+        // Check that the read bytes are correct
+        assertArrayEquals("Hello".getBytes(), buffer, 0, bytesRead);
+        // Reset to the marked position
+        lsi.reset();
+        // Read more bytes
+        bytesRead = lsi.read(buffer, 0, 5);
+        // Check that the read bytes are correct
+        assertArrayEquals("World!".getBytes(), buffer, 0, bytesRead);
+    }
+}
+
+--------------------------------------------
+Error in LookaheadInputStream_markSupported_6_0_Test: line -1 : Annotation processing is enabled because one or more processors were found
+  on the class path. A future release of javac may disable annotation processing
+  unless at least one processor is specified by name (-processor), or a search
+  path is specified (--processor-path, --processor-module-path), or annotation
+  processing is enabled explicitly (-proc:only, -proc:full).
+  Use -Xlint:-options to suppress this message.
+  Use -proc:none to disable annotation processing.
+Error in LookaheadInputStream_markSupported_6_0_Test: line -1 : Supported source version 'RELEASE_17' from annotation processor 'org.apache.tika.annotation.TikaComponentProcessor' less than -source '21'
+Error in LookaheadInputStream_markSupported_6_0_Test: line 37 : no suitable method found for assertArrayEquals(byte[],byte[],int,int)
+    method org.junit.jupiter.api.Assertions.assertArrayEquals(double[],double[],double,java.util.function.Supplier<java.lang.String>) is not applicable
+      (argument mismatch; byte[] cannot be converted to double[])
+    method org.junit.jupiter.api.Assertions.assertArrayEquals(double[],double[],double,java.lang.String) is not applicable
+      (argument mismatch; byte[] cannot be converted to double[])
+    method org.junit.jupiter.api.Assertions.assertArrayEquals(float[],float[],float,java.util.function.Supplier<java.lang.String>) is not applicable
+      (argument mismatch; byte[] cannot be converted to float[])
+    method org.junit.jupiter.api.Assertions.assertArrayEquals(float[],float[],float,java.lang.String) is not applicable
+      (argument mismatch; byte[] cannot be converted to float[])
+Error in LookaheadInputStream_markSupported_6_0_Test: line 43 : no suitable method found for assertArrayEquals(byte[],byte[],int,int)
+    method org.junit.jupiter.api.Assertions.assertArrayEquals(double[],double[],double,java.util.function.Supplier<java.lang.String>) is not applicable
+      (argument mismatch; byte[] cannot be converted to double[])
+    method org.junit.jupiter.api.Assertions.assertArrayEquals(double[],double[],double,java.lang.String) is not applicable
+      (argument mismatch; byte[] cannot be converted to double[])
+    method org.junit.jupiter.api.Assertions.assertArrayEquals(float[],float[],float,java.util.function.Supplier<java.lang.String>) is not applicable
+      (argument mismatch; byte[] cannot be converted to float[])
+    method org.junit.jupiter.api.Assertions.assertArrayEquals(float[],float[],float,java.lang.String) is not applicable
+      (argument mismatch; byte[] cannot be converted to float[])
+Error in LookaheadInputStream_markSupported_6_0_Test: line -1 : Some messages have been simplified; recompile with -Xdiags:verbose to get full output

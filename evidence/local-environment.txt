@@ -1,0 +1,7 @@
+Apache Maven 3.9.9 (8e8579a9e76f7d015ee5ec7bfcdc97d260186937)
+Maven home: C:\Users\adawa\Documents\UDEM FALL 2026\3913\tools\apache-maven-3.9.9
+Java version: 21.0.12.1, vendor: Eclipse Adoptium, runtime: C:\Users\adawa\Documents\UDEM FALL 2026\3913\tools\jdk-21.0.12.1+1
+Default locale: en_CA, platform encoding: UTF-8
+OS name: "windows 11", version: "10.0", arch: "amd64", family: "windows"
+ollama version is 0.40.3
+2026-10-13T14:38:42.2925659-04:00

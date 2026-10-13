@@ -1,0 +1,22 @@
+[
+  {
+    "attempt": 0,
+    "round": 0,
+    "prompt": [
+      {
+        "role": "system",
+        "content": "Generate one complete Java JUnit 5 test class for the given focal public method.\r\nOutput only one fenced java code block. Write at most TWO short test methods.\r\nImport org.junit.jupiter.api.Test and use the exact annotation @Test.\r\nImport static org.junit.jupiter.api.Assertions.*.\r\nUse java.io.ByteArrayInputStream as the underlying stream. Do not use Mockito,\r\nreflection, custom InputStream subclasses, or private fields. Use only public APIs.\r\nUse explicit expected values, read counts and byte arrays as assertions.\r\nInclude every necessary import and a valid package org.apache.tika.io declaration.\r\nEvery test that uses streams must declare throws Exception.\r\nName the public class LookaheadInputStreamGeneratedTest. Finish the complete class.\r\n"
+      },
+      {
+        "role": "user",
+        "content": "The focal method is `close()` in the focal class `LookaheadInputStream`,\r\nInformation of the focal method is\r\n```org.apache.tika.io\nimport java.io.IOException;\nimport java.io.InputStream;\npublic class LookaheadInputStream {\nprivate final byte[] buffer;\nprivate InputStream stream;\nprivate int buffered = 0;\nprivate int position = 0;\nprivate int mark = 0;\n@Override\n    public void close() throws IOException {\n        if (stream != null) {\n            stream.reset();\n            stream = null;\n        }\n    }\n}```.\r\n\r\n    Signatures of Other methods in the focal class are `public LookaheadInputStream(InputStream stream, int n){}\n\n\n`.\r\n\r\nFor this focal class, these public methods are available:\r\nLookaheadInputStream(InputStream stream, int n), read(), read(byte[] b, int off, int len),\r\navailable(), markSupported(), mark(int limit), reset(), close(), skip(long n).\r\nNever access the PRIVATE fields position, buffered, buffer, stream or mark.\r\nTo check remaining buffered bytes use available(), not a field access.\r\nFor array reads, allocate a destination large enough for off + len.\r\nTest only returned read counts and the destination byte array contents.\r\n"
+      }
+    ],
+    "response": "```java\npackage org.apache.tika.io;\n\nimport java.io.ByteArrayInputStream;\nimport java.io.IOException;\nimport java.io.InputStream;\nimport org.junit.jupiter.api.Test;\nimport static org.junit.jupiter.api.Assertions.*;\n\npublic class LookaheadInputStreamGeneratedTest {\n\n    @Test\n    public void testCloseWithoutStream() throws IOException {\n        LookaheadInputStream inputStream = new LookaheadInputStream(null, 10);\n        inputStream.close();\n        // No exception should be thrown\n    }\n\n    @Test\n    public void testCloseWithStream() throws IOException {\n        ByteArrayInputStream byteArrayInputStream = new ByteArrayInputStream(new byte[]{1, 2, 3});\n        LookaheadInputStream inputStream = new LookaheadInputStream(byteArrayInputStream, 10);\n        inputStream.close();\n        // No exception should be thrown\n        byteArrayInputStream.reset();\n        assertEquals(3, byteArrayInputStream.available());\n    }\n}\n```",
+    "promptToken": 393,
+    "responseToken": 176,
+    "hasCode": true,
+    "code": "package org.apache.tika.io;\n\nimport java.io.ByteArrayInputStream;\nimport java.io.IOException;\nimport java.io.InputStream;\nimport org.mockito.*;\nimport org.junit.jupiter.api.*;\nimport static org.mockito.Mockito.*;\nimport static org.junit.jupiter.api.Assertions.*;\nimport org.junit.jupiter.api.extension.ExtendWith;\nimport org.mockito.junit.jupiter.MockitoExtension;\n\npublic class LookaheadInputStream_close_0_0_Test {\n\n    @Test\n    public void testCloseWithoutStream() throws IOException {\n        LookaheadInputStream inputStream = new LookaheadInputStream(null, 10);\n        inputStream.close();\n        // No exception should be thrown\n    }\n\n    @Test\n    public void testCloseWithStream() throws IOException {\n        ByteArrayInputStream byteArrayInputStream = new ByteArrayInputStream(new byte[] { 1, 2, 3 });\n        LookaheadInputStream inputStream = new LookaheadInputStream(byteArrayInputStream, 10);\n        inputStream.close();\n        // No exception should be thrown\n        byteArrayInputStream.reset();\n        assertEquals(3, byteArrayInputStream.available());\n    }\n}\n",
+    "hasError": false
+  }
+]

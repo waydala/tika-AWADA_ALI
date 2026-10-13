@@ -1,0 +1,22 @@
+[
+  {
+    "file": "LookaheadInputStream_close_0_0_Test.java",
+    "raw_sha256": "6641070b2820dc21980a0da72c66764384d12f27a1354c31b5f3920d4ace8ba4",
+    "delivered_sha256": "6641070b2820dc21980a0da72c66764384d12f27a1354c31b5f3920d4ace8ba4"
+  },
+  {
+    "file": "LookaheadInputStream_markSupported_6_0_Test.java",
+    "raw_sha256": "7438a49f94696bcfc51dcc3cfdeea563ec229b51705c8a2ddb70511edff2bc9d",
+    "delivered_sha256": "821a3360086125857e464532ca07a42a1f24f62858da405f1fc2dcf805dc51c4"
+  },
+  {
+    "file": "LookaheadInputStream_read_2_0_Test.java",
+    "raw_sha256": "0954e220b3b59b7f72806fcfe145efcd6b1715015ef73e6f40f9b58eb6d53321",
+    "delivered_sha256": "c763f3a8236fc0965e405d679ccde371e27f98ca15a49a4d996687755228443a"
+  },
+  {
+    "file": "LookaheadInputStream_read_3_0_Test.java",
+    "raw_sha256": "4fbaf3ee63ac49287264767801e643b9d9843f36de9b1346e6a34616aae75f9f",
+    "delivered_sha256": "f622c8071451d3c8504e3d253e558156382d25f97b82432969535d59e98f38ea"
+  }
+]
