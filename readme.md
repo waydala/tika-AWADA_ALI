@@ -1,6 +1,7 @@
 # IFT3913 — Tâche 2 — Ali Awada
 
 Ali Awada — [waydala](https://github.com/waydala).
+Remise individuelle, sans binôme.
 
 Ce travail augmente les tests de `org.apache.tika.io.LookaheadInputStream`,
 dans `tika-core` du [cas d'étude du cours](https://github.com/umontreal-diro/tika).
