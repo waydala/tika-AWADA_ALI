@@ -1,0 +1,26 @@
+{
+  "original": {
+    "total": 33,
+    "statuses": {
+      "SURVIVED": 5,
+      "KILLED": 19,
+      "NO_COVERAGE": 9
+    },
+    "mutation_score_percent": 57.58
+  },
+  "generated": {
+    "total": 33,
+    "statuses": {
+      "SURVIVED": 6,
+      "KILLED": 27
+    },
+    "mutation_score_percent": 81.82
+  },
+  "final": {
+    "total": 33,
+    "statuses": {
+      "KILLED": 33
+    },
+    "mutation_score_percent": 100.0
+  }
+}

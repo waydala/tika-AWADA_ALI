@@ -439,8 +439,17 @@ l'utilitaire file y est disponible, donc le test supplémentaire ignoré sous
 Windows s'y exécute avec succès. Les données XML des trois étapes Ubuntu
 sont conservées sous evidence/ubuntu-wsl. La syntaxe Bash a aussi été vérifiée
 avec bash -n, et le bit exécutable du script est enregistré dans Git.
-**L'exécution hébergée de GitHub Actions reste à vérifier après publication :
-aucun push n'a été effectué pendant cette préparation locale.**
+**GitHub Actions a été exécuté avec succès après publication** :
+[exécution 38459745558](https://github.com/waydala/tika-AWADA_ALI/actions/runs/38459745558),
+sur le commit `8e3fabaedd6e6bfcba0e5cb64aa3b311aa748e43`.
+Les rapports téléchargés ont été inspectés : **19/33, 27/33 et 33/33 mutants**,
+avec les mêmes identités que les mesures locales. Les **13 nouveaux tests passent**,
+et la suite finale recense **762 tests, 760 réussis, deux ignorés, aucun échec ni erreur**.
+Les données de cette validation hébergée sont distinctes des mesures Windows locales :
+[vérification](evidence/github-actions/verification.json),
+[métadonnées du job](evidence/github-actions/run.json),
+[synthèse PIT](evidence/github-actions/mutation-summary.json).
+Les XML PIT et JaCoCo des trois étapes sont conservés sous evidence/github-actions.
 
 ## 10. Usage de l'IA et provenance
 

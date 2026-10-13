@@ -1,0 +1,121 @@
+{
+  "success": true,
+  "run_url": "https://github.com/waydala/tika-AWADA_ALI/actions/runs/38459745558",
+  "tested_commit": "8e3fabaedd6e6bfcba0e5cb64aa3b311aa748e43",
+  "suites": {
+    "original": {
+      "tests": {
+        "tests": 749,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 2
+      },
+      "target_class_tests_passed": 6,
+      "coverage": {
+        "INSTRUCTION": {
+          "covered": 129,
+          "missed": 35
+        },
+        "BRANCH": {
+          "covered": 14,
+          "missed": 2
+        },
+        "LINE": {
+          "covered": 32,
+          "missed": 8
+        },
+        "COMPLEXITY": {
+          "covered": 15,
+          "missed": 3
+        },
+        "METHOD": {
+          "covered": 8,
+          "missed": 2
+        },
+        "CLASS": {
+          "covered": 1,
+          "missed": 0
+        }
+      },
+      "killed": 19,
+      "total_mutants": 33
+    },
+    "generated": {
+      "tests": {
+        "tests": 757,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 2
+      },
+      "target_class_tests_passed": 14,
+      "coverage": {
+        "INSTRUCTION": {
+          "covered": 164,
+          "missed": 0
+        },
+        "BRANCH": {
+          "covered": 16,
+          "missed": 0
+        },
+        "LINE": {
+          "covered": 40,
+          "missed": 0
+        },
+        "COMPLEXITY": {
+          "covered": 18,
+          "missed": 0
+        },
+        "METHOD": {
+          "covered": 10,
+          "missed": 0
+        },
+        "CLASS": {
+          "covered": 1,
+          "missed": 0
+        }
+      },
+      "killed": 27,
+      "total_mutants": 33
+    },
+    "final": {
+      "tests": {
+        "tests": 762,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 2
+      },
+      "target_class_tests_passed": 19,
+      "coverage": {
+        "INSTRUCTION": {
+          "covered": 164,
+          "missed": 0
+        },
+        "BRANCH": {
+          "covered": 16,
+          "missed": 0
+        },
+        "LINE": {
+          "covered": 40,
+          "missed": 0
+        },
+        "COMPLEXITY": {
+          "covered": 18,
+          "missed": 0
+        },
+        "METHOD": {
+          "covered": 10,
+          "missed": 0
+        },
+        "CLASS": {
+          "covered": 1,
+          "missed": 0
+        }
+      },
+      "killed": 33,
+      "total_mutants": 33
+    }
+  },
+  "all_13_added_tests_passed": true,
+  "mutation_identities_match_local": true,
+  "generation_provenance": "ChatUniTest tests generated locally; GitHub Actions executes the frozen delivered sources."
+}
