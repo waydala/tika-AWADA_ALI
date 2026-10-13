@@ -453,6 +453,13 @@ Les XML PIT et JaCoCo des trois étapes sont conservés sous evidence/github-act
 
 ## 10. Usage de l'IA et provenance
 
+Outils utilisés le **13 octobre 2026** : Qwen2.5-Coder 3B, avec les versions
+de ChatUniTest et d'Ollama précisées en section 2, et
+[Codex](https://openai.com/codex/), agent basé sur GPT-6 dans cette session.
+La demande initiale à Codex comprenait notamment « je veux que tu complètes la tâche numéro 2 »
+et « tu peux les run sur mon ordi ». Les prompts et réponses effectivement
+transmis à Qwen par ChatUniTest sont conservés dans les historiques liés en section 3.
+
 ChatUniTest et Qwen2.5-Coder produisent les tests identifiés comme générés.
 Codex assiste la configuration, les validations, les 12 corrections explicites,
 l'analyse des rapports, la conception des cinq tests complémentaires et ce README.
