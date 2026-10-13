@@ -1,0 +1,53 @@
+{
+  "success": true,
+  "suites": {
+    "original": {
+      "tests": 749,
+      "errors": 0,
+      "failures": 0,
+      "skipped": 3
+    },
+    "generated": {
+      "tests": 757,
+      "errors": 0,
+      "failures": 0,
+      "skipped": 3
+    },
+    "final": {
+      "tests": 762,
+      "errors": 0,
+      "failures": 0,
+      "skipped": 3
+    }
+  },
+  "mutants": {
+    "original": {
+      "total": 33,
+      "statuses": {
+        "SURVIVED": 5,
+        "KILLED": 19,
+        "NO_COVERAGE": 9
+      },
+      "mutation_score_percent": 57.58
+    },
+    "generated": {
+      "total": 33,
+      "statuses": {
+        "SURVIVED": 6,
+        "KILLED": 27
+      },
+      "mutation_score_percent": 81.82
+    },
+    "final": {
+      "total": 33,
+      "statuses": {
+        "KILLED": 33
+      },
+      "mutation_score_percent": 100.0
+    }
+  },
+  "corrections": 12,
+  "production_unchanged": true,
+  "all_readme_local_links_exist": true,
+  "raw_to_delivered_reconstruction_verified": true
+}

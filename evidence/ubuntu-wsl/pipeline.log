@@ -1,0 +1,1870 @@
+[INFO] Maveniverse Nisse 0.9.4 loaded
+[INFO] Nisse injecting 31 properties into User Properties
+[INFO] Scanning for projects...
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for org.apache.tika:tika-parent:pom:4.0.0-SNAPSHOT
+[WARNING] 'version' contains an expression but should be a constant. @ org.apache.tika:tika-parent:${revision}, /mnt/c/Users/adawa/Documents/UDEM FALL 2026/3913/tools/ci-check/tika-parent/pom.xml, line 34, column 12
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for org.apache.tika:tika:pom:4.0.0-SNAPSHOT
+[WARNING] 'version' contains an expression but should be a constant. @ org.apache.tika:tika-parent:${revision}, /mnt/c/Users/adawa/Documents/UDEM FALL 2026/3913/tools/ci-check/tika-parent/pom.xml, line 34, column 12
+[WARNING] 
+[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+[WARNING] 
+[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+[WARNING] 
+[INFO] No need for inlining
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Build Order:
+[INFO] 
+[INFO] Apache Tika parent                                                 [pom]
+[INFO] Apache Tika Annotation Processor                                   [jar]
+[INFO] Apache Tika core                                                [bundle]
+[INFO] 
+[INFO] --------------------< org.apache.tika:tika-parent >---------------------
+[INFO] Building Apache Tika parent 4.0.0-SNAPSHOT                         [1/3]
+[INFO]   from pom.xml
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --- enforcer:3.6.3:enforce (enforce-maven-version) @ tika-parent ---
+[INFO] Rule 0: org.apache.maven.enforcer.rules.version.RequireMavenVersion passed
+[INFO] 
+[INFO] --- enforcer:3.6.3:enforce (enforce-java-version) @ tika-parent ---
+[INFO] Rule 0: org.apache.maven.enforcer.rules.version.RequireJavaVersion passed
+[INFO] 
+[INFO] --- enforcer:3.6.3:enforce (enforce-maven) @ tika-parent ---
+[INFO] Rule 0: org.apache.maven.enforcer.rules.dependency.DependencyConvergence passed
+[INFO] Rule 1: org.apache.maven.enforcer.rules.version.RequireMavenVersion passed
+[INFO] 
+[INFO] --- enforcer:3.6.3:enforce (ban-bad-log4j-versions) @ tika-parent ---
+[INFO] Rule 0: org.apache.maven.enforcer.rules.dependency.BannedDependencies passed
+[INFO] 
+[INFO] --- enforcer:3.6.3:enforce (ban-xerces-and-xml-apis) @ tika-parent ---
+[INFO] Rule 0: org.apache.maven.enforcer.rules.dependency.BannedDependencies passed
+[INFO] 
+[INFO] --- jacoco:0.8.15:prepare-agent (default) @ tika-parent ---
+[INFO] Skipping JaCoCo execution because property jacoco.skip is set.
+[INFO] 
+[INFO] --- spotless:3.9.0:apply (default) @ tika-parent ---
+[INFO] Spotless apply skipped
+[INFO] 
+[INFO] --- remote-resources:3.3.0:process (process-resource-bundles) @ tika-parent ---
+[INFO] Preparing remote bundle org.apache.apache.resources:apache-jar-resource-bundle:1.8
+[INFO] Copying 3 resources from 1 bundle.
+[INFO] 
+[INFO] --- flatten:1.8.0:flatten (flatten) @ tika-parent ---
+[INFO] Generating flattened POM of project org.apache.tika:tika-parent:pom:4.0.0-SNAPSHOT...
+[INFO] 
+[INFO] --- checkstyle:3.6.0:check (validate) @ tika-parent ---
+[INFO] 
+[INFO] --- jacoco:0.8.15:report (report) @ tika-parent ---
+[INFO] Skipping JaCoCo execution because property jacoco.skip is set.
+[INFO] 
+[INFO] --- ossindex:3.2.0:audit (audit-dependencies) @ tika-parent ---
+[INFO] Skipping; POM module
+[INFO] 
+[INFO] --- forbiddenapis:3.10:check (default) @ tika-parent ---
+[INFO] Skipping execution for packaging "pom"
+[INFO] 
+[INFO] --- forbiddenapis:3.10:testCheck (default) @ tika-parent ---
+[INFO] Skipping execution for packaging "pom"
+[INFO] 
+[INFO] --- install:3.1.4:install (default-install) @ tika-parent ---
+[INFO] Installing /mnt/c/Users/adawa/Documents/UDEM FALL 2026/3913/tools/ci-check/tika-parent/.flattened-pom.xml to /root/.m2/repository/org/apache/tika/tika-parent/4.0.0-SNAPSHOT/tika-parent-4.0.0-SNAPSHOT.pom
+[INFO] 
+[INFO] -------------< org.apache.tika:tika-annotation-processor >--------------
+[INFO] Building Apache Tika Annotation Processor 4.0.0-SNAPSHOT           [2/3]
+[INFO]   from /mnt/c/Users/adawa/Documents/UDEM FALL 2026/3913/tools/ci-check/tika-annotation-processor/pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- enforcer:3.6.3:enforce (enforce-maven-version) @ tika-annotation-processor ---
+[INFO] 
+[INFO] --- enforcer:3.6.3:enforce (enforce-java-version) @ tika-annotation-processor ---
+[INFO] 
+[INFO] --- enforcer:3.6.3:enforce (enforce-maven) @ tika-annotation-processor ---
+[INFO] Rule 0: org.apache.maven.enforcer.rules.dependency.DependencyConvergence passed
+[INFO] 
+[INFO] --- enforcer:3.6.3:enforce (ban-bad-log4j-versions) @ tika-annotation-processor ---
+[INFO] Rule 0: org.apache.maven.enforcer.rules.dependency.BannedDependencies passed
+[INFO] 
+[INFO] --- enforcer:3.6.3:enforce (ban-xerces-and-xml-apis) @ tika-annotation-processor ---
+[INFO] Rule 0: org.apache.maven.enforcer.rules.dependency.BannedDependencies passed
+[INFO] 
+[INFO] --- jacoco:0.8.15:prepare-agent (default) @ tika-annotation-processor ---
+[INFO] Skipping JaCoCo execution because property jacoco.skip is set.
+[INFO] 
+[INFO] --- spotless:3.9.0:apply (default) @ tika-annotation-processor ---
+[INFO] Spotless apply skipped
+[INFO] 
+[INFO] --- remote-resources:3.3.0:process (process-resource-bundles) @ tika-annotation-processor ---
+[INFO] Preparing remote bundle org.apache.apache.resources:apache-jar-resource-bundle:1.8
+[INFO] Copying 3 resources from 1 bundle.
+[INFO] 
+[INFO] --- resources:3.5.0:resources (default-resources) @ tika-annotation-processor ---
+[INFO] Copying 1 resource from src/main/resources to target/classes
+[INFO] Copying 3 resources from target/maven-shared-archive-resources to target/classes
+[INFO] 
+[INFO] --- flatten:1.8.0:flatten (flatten) @ tika-annotation-processor ---
+[INFO] Generating flattened POM of project org.apache.tika:tika-annotation-processor:jar:4.0.0-SNAPSHOT...
+[INFO] 
+[INFO] --- compiler:3.15.0:compile (default-compile) @ tika-annotation-processor ---
+[INFO] Recompiling the module because of changed source code.
+[INFO] Compiling 3 source files with javac [debug deprecation release 17] to target/classes
+[INFO] 
+[INFO] --- checkstyle:3.6.0:check (validate) @ tika-annotation-processor ---
+[INFO] 
+[INFO] --- resources:3.5.0:testResources (default-testResources) @ tika-annotation-processor ---
+[INFO] skip non existing resourceDirectory /mnt/c/Users/adawa/Documents/UDEM FALL 2026/3913/tools/ci-check/tika-annotation-processor/src/test/resources
+[INFO] Copying 3 resources from target/maven-shared-archive-resources to target/test-classes
+[INFO] 
+[INFO] --- compiler:3.15.0:testCompile (default-testCompile) @ tika-annotation-processor ---
+[INFO] Recompiling the module because of changed dependency.
+[INFO] Compiling 1 source file with javac [debug deprecation release 17] to target/test-classes
+[INFO] 
+[INFO] --- surefire:3.5.6:test (default-test) @ tika-annotation-processor ---
+[INFO] Tests are skipped.
+[INFO] 
+[INFO] --- jacoco:0.8.15:report (report) @ tika-annotation-processor ---
+[INFO] Skipping JaCoCo execution because property jacoco.skip is set.
+[INFO] 
+[INFO] --- jar:3.5.0:jar (default-jar) @ tika-annotation-processor ---
+[INFO] Building jar: /mnt/c/Users/adawa/Documents/UDEM FALL 2026/3913/tools/ci-check/tika-annotation-processor/target/tika-annotation-processor-4.0.0-SNAPSHOT.jar
+[INFO] 
+[INFO] --- ossindex:3.2.0:audit (audit-dependencies) @ tika-annotation-processor ---
+[INFO] Skipping; configured
+[INFO] 
+[INFO] --- forbiddenapis:3.10:check (default) @ tika-annotation-processor ---
+[INFO] Scanning for classes to check...
+[INFO] Reading bundled API signatures: jdk-unsafe-17
+[INFO] Reading bundled API signatures: jdk-deprecated-17
+[INFO] Reading bundled API signatures: jdk-non-portable
+[INFO] Reading bundled API signatures: jdk-internal-17
+[INFO] Reading bundled API signatures: commons-io-unsafe-2.11.0
+[INFO] Loading classes to check...
+[INFO] Scanning classes for violations...
+[INFO] Scanned 3 class file(s) for forbidden API invocations (in 0.40s), 0 error(s).
+[INFO] 
+[INFO] --- forbiddenapis:3.10:testCheck (default) @ tika-annotation-processor ---
+[INFO] Scanning for classes to check...
+[INFO] Reading bundled API signatures: jdk-unsafe-17
+[INFO] Reading bundled API signatures: jdk-deprecated-17
+[INFO] Reading bundled API signatures: jdk-non-portable
+[INFO] Reading bundled API signatures: jdk-internal-17
+[INFO] Reading bundled API signatures: commons-io-unsafe-2.11.0
+[INFO] Loading classes to check...
+[INFO] Scanning classes for violations...
+[INFO] Scanned 1 class file(s) for forbidden API invocations (in 0.24s), 0 error(s).
+[INFO] 
+[INFO] --- install:3.1.4:install (default-install) @ tika-annotation-processor ---
+[INFO] Installing /mnt/c/Users/adawa/Documents/UDEM FALL 2026/3913/tools/ci-check/tika-annotation-processor/.flattened-pom.xml to /root/.m2/repository/org/apache/tika/tika-annotation-processor/4.0.0-SNAPSHOT/tika-annotation-processor-4.0.0-SNAPSHOT.pom
+[INFO] Installing /mnt/c/Users/adawa/Documents/UDEM FALL 2026/3913/tools/ci-check/tika-annotation-processor/target/tika-annotation-processor-4.0.0-SNAPSHOT.jar to /root/.m2/repository/org/apache/tika/tika-annotation-processor/4.0.0-SNAPSHOT/tika-annotation-processor-4.0.0-SNAPSHOT.jar
+[INFO] 
+[INFO] ---------------------< org.apache.tika:tika-core >----------------------
+[INFO] Building Apache Tika core 4.0.0-SNAPSHOT                           [3/3]
+[INFO]   from /mnt/c/Users/adawa/Documents/UDEM FALL 2026/3913/tools/ci-check/tika-core/pom.xml
+[INFO] -------------------------------[ bundle ]-------------------------------
+[INFO] 
+[INFO] --- enforcer:3.6.3:enforce (enforce-maven-version) @ tika-core ---
+[INFO] Rule 0: org.apache.maven.enforcer.rules.version.RequireMavenVersion passed
+[INFO] 
+[INFO] --- enforcer:3.6.3:enforce (enforce-java-version) @ tika-core ---
+[INFO] Rule 0: org.apache.maven.enforcer.rules.version.RequireJavaVersion passed
+[INFO] 
+[INFO] --- enforcer:3.6.3:enforce (enforce-maven) @ tika-core ---
+[INFO] Rule 0: org.apache.maven.enforcer.rules.dependency.DependencyConvergence passed
+[INFO] Rule 1: org.apache.maven.enforcer.rules.version.RequireMavenVersion passed
+[INFO] 
+[INFO] --- enforcer:3.6.3:enforce (ban-bad-log4j-versions) @ tika-core ---
+[INFO] Rule 0: org.apache.maven.enforcer.rules.dependency.BannedDependencies passed
+[INFO] 
+[INFO] --- enforcer:3.6.3:enforce (ban-xerces-and-xml-apis) @ tika-core ---
+[INFO] Rule 0: org.apache.maven.enforcer.rules.dependency.BannedDependencies passed
+[INFO] 
+[INFO] --- checkstyle:3.6.0:check (validate) @ tika-core ---
+[INFO] 
+[INFO] --- jacoco:0.8.15:prepare-agent (default) @ tika-core ---
+[INFO] Skipping JaCoCo execution because property jacoco.skip is set.
+[INFO] 
+[INFO] --- spotless:3.9.0:apply (default) @ tika-core ---
+[INFO] Spotless apply skipped
+[INFO] 
+[INFO] --- remote-resources:3.3.0:process (process-resource-bundles) @ tika-core ---
+[INFO] Preparing remote bundle org.apache.apache.resources:apache-jar-resource-bundle:1.8
+[INFO] Copying 3 resources from 1 bundle.
+[INFO] Copying appended resource: META-INF/LICENSE
+[INFO] 
+[INFO] --- resources:3.5.0:resources (default-resources) @ tika-core ---
+[INFO] Copying 5 resources from src/main/resources to target/classes
+[INFO] Copying 3 resources from target/maven-shared-archive-resources to target/classes
+[INFO] 
+[INFO] --- flatten:1.8.0:flatten (flatten) @ tika-core ---
+[INFO] Generating flattened POM of project org.apache.tika:tika-core:bundle:4.0.0-SNAPSHOT...
+[INFO] 
+[INFO] --- compiler:3.15.0:compile (default-compile) @ tika-core ---
+[INFO] Recompiling the module because of changed dependency.
+[INFO] Compiling 324 source files with javac [debug deprecation release 17] to target/classes
+[INFO] Processing @TikaComponent: org.apache.tika.config.EmbeddedLimits -> embedded-limits (SPI: false, contextKey: null, defaultFor: null)
+[INFO] /mnt/c/Users/adawa/Documents/UDEM FALL 2026/3913/tools/ci-check/tika-core/src/main/java/org/apache/tika/config/EmbeddedLimits.java:[71,8] Class org.apache.tika.config.EmbeddedLimits is a parse-context component, adding to parse-context.idx
+[INFO] Processing @TikaComponent: org.apache.tika.config.OutputLimits -> output-limits (SPI: false, contextKey: null, defaultFor: null)
+[INFO] /mnt/c/Users/adawa/Documents/UDEM FALL 2026/3913/tools/ci-check/tika-core/src/main/java/org/apache/tika/config/OutputLimits.java:[65,8] Class org.apache.tika.config.OutputLimits is a parse-context component, adding to parse-context.idx
+[INFO] Processing @TikaComponent: org.apache.tika.config.TimeoutLimits -> timeout-limits (SPI: false, contextKey: null, defaultFor: null)
+[INFO] /mnt/c/Users/adawa/Documents/UDEM FALL 2026/3913/tools/ci-check/tika-core/src/main/java/org/apache/tika/config/TimeoutLimits.java:[54,8] Class org.apache.tika.config.TimeoutLimits is a parse-context component, adding to parse-context.idx
+[INFO] Processing @TikaComponent: org.apache.tika.detect.BOMDetector -> bom-detector (SPI: false, contextKey: null, defaultFor: null)
+[INFO] Auto-detected contextKey=org.apache.tika.detect.EncodingDetector for org.apache.tika.detect.BOMDetector
+[INFO] Processing @TikaComponent: org.apache.tika.detect.DefaultDetector -> default-detector (SPI: false, contextKey: null, defaultFor: null)
+[INFO] Auto-detected contextKey=org.apache.tika.detect.Detector for org.apache.tika.detect.DefaultDetector
+[INFO] Processing @TikaComponent: org.apache.tika.detect.EmptyDetector -> empty-detector (SPI: false, contextKey: null, defaultFor: null)
+[INFO] Auto-detected contextKey=org.apache.tika.detect.Detector for org.apache.tika.detect.EmptyDetector
+[INFO] Processing @TikaComponent: org.apache.tika.detect.FileCommandDetector -> file-command-detector (SPI: false, contextKey: null, defaultFor: null)
+[INFO] Auto-detected contextKey=org.apache.tika.detect.Detector for org.apache.tika.detect.FileCommandDetector
+[INFO] Processing @TikaComponent: org.apache.tika.detect.MagicDetector -> magic-detector (SPI: false, contextKey: null, defaultFor: null)
+[INFO] Auto-detected contextKey=org.apache.tika.detect.Detector for org.apache.tika.detect.MagicDetector
+[INFO] Processing @TikaComponent: org.apache.tika.detect.MetadataCharsetDetector -> metadata-charset-detector (SPI: false, contextKey: null, defaultFor: null)
+[INFO] Auto-detected contextKey=org.apache.tika.detect.EncodingDetector for org.apache.tika.detect.MetadataCharsetDetector
+[INFO] Processing @TikaComponent: org.apache.tika.detect.OverrideEncodingDetector -> override-encoding-detector (SPI: false, contextKey: null, defaultFor: null)
+[INFO] Auto-detected contextKey=org.apache.tika.detect.EncodingDetector for org.apache.tika.detect.OverrideEncodingDetector
+[INFO] Processing @TikaComponent: org.apache.tika.extractor.SkipEmbeddedDocumentSelector -> skip-embedded-document-selector (SPI: true, contextKey: org.apache.tika.extractor.DocumentSelector, defaultFor: null)
+[INFO] /mnt/c/Users/adawa/Documents/UDEM FALL 2026/3913/tools/ci-check/tika-core/src/main/java/org/apache/tika/extractor/SkipEmbeddedDocumentSelector.java:[30,8] Class org.apache.tika.extractor.SkipEmbeddedDocumentSelector is a parse-context component, adding to parse-context.idx
+[INFO] Processing @TikaComponent: org.apache.tika.extractor.StandardExtractorFactory -> standard-extractor-factory (SPI: true, contextKey: null, defaultFor: null)
+[INFO] /mnt/c/Users/adawa/Documents/UDEM FALL 2026/3913/tools/ci-check/tika-core/src/main/java/org/apache/tika/extractor/StandardExtractorFactory.java:[28,8] Class org.apache.tika.extractor.StandardExtractorFactory is a parse-context component, adding to parse-context.idx
+[INFO] Processing @TikaComponent: org.apache.tika.io.SpoolingStrategy -> spooling-strategy (SPI: false, contextKey: null, defaultFor: null)
+[INFO] /mnt/c/Users/adawa/Documents/UDEM FALL 2026/3913/tools/ci-check/tika-core/src/main/java/org/apache/tika/io/SpoolingStrategy.java:[47,8] Class org.apache.tika.io.SpoolingStrategy is a parse-context component, adding to parse-context.idx
+[INFO] Processing @TikaComponent: org.apache.tika.language.translate.DefaultTranslator -> default-translator (SPI: true, contextKey: null, defaultFor: null)
+[INFO] Auto-detected contextKey=org.apache.tika.language.translate.Translator for org.apache.tika.language.translate.DefaultTranslator
+[INFO] Processing @TikaComponent: org.apache.tika.language.translate.EmptyTranslator -> empty-translator (SPI: true, contextKey: null, defaultFor: null)
+[INFO] Auto-detected contextKey=org.apache.tika.language.translate.Translator for org.apache.tika.language.translate.EmptyTranslator
+[INFO] Processing @TikaComponent: org.apache.tika.metadata.filter.CaptureGroupMetadataFilter -> capture-group-metadata-filter (SPI: true, contextKey: null, defaultFor: null)
+[INFO] Auto-detected contextKey=org.apache.tika.metadata.filter.MetadataFilter for org.apache.tika.metadata.filter.CaptureGroupMetadataFilter
+[INFO] Processing @TikaComponent: org.apache.tika.metadata.filter.ClearByAttachmentTypeMetadataFilter -> clear-by-attachment-type-metadata-filter (SPI: true, contextKey: null, defaultFor: null)
+[INFO] Auto-detected contextKey=org.apache.tika.metadata.filter.MetadataFilter for org.apache.tika.metadata.filter.ClearByAttachmentTypeMetadataFilter
+[INFO] Processing @TikaComponent: org.apache.tika.metadata.filter.DateNormalizingMetadataFilter -> date-normalizing-metadata-filter (SPI: true, contextKey: null, defaultFor: null)
+[INFO] Auto-detected contextKey=org.apache.tika.metadata.filter.MetadataFilter for org.apache.tika.metadata.filter.DateNormalizingMetadataFilter
+[INFO] Processing @TikaComponent: org.apache.tika.metadata.filter.ExcludeFieldMetadataFilter -> exclude-field-metadata-filter (SPI: true, contextKey: null, defaultFor: null)
+[INFO] Auto-detected contextKey=org.apache.tika.metadata.filter.MetadataFilter for org.apache.tika.metadata.filter.ExcludeFieldMetadataFilter
+[INFO] Processing @TikaComponent: org.apache.tika.metadata.filter.FieldNameMappingFilter -> field-name-mapping-filter (SPI: true, contextKey: null, defaultFor: null)
+[INFO] Auto-detected contextKey=org.apache.tika.metadata.filter.MetadataFilter for org.apache.tika.metadata.filter.FieldNameMappingFilter
+[INFO] Processing @TikaComponent: org.apache.tika.metadata.filter.GeoPointMetadataFilter -> geo-point-metadata-filter (SPI: true, contextKey: null, defaultFor: null)
+[INFO] Auto-detected contextKey=org.apache.tika.metadata.filter.MetadataFilter for org.apache.tika.metadata.filter.GeoPointMetadataFilter
+[INFO] Processing @TikaComponent: org.apache.tika.metadata.filter.IncludeFieldMetadataFilter -> include-field-metadata-filter (SPI: true, contextKey: null, defaultFor: null)
+[INFO] Auto-detected contextKey=org.apache.tika.metadata.filter.MetadataFilter for org.apache.tika.metadata.filter.IncludeFieldMetadataFilter
+[INFO] Processing @TikaComponent: org.apache.tika.metadata.filter.LegacyKeyMigrationFilter -> legacy-key-migration-filter (SPI: true, contextKey: null, defaultFor: null)
+[INFO] Auto-detected contextKey=org.apache.tika.metadata.filter.MetadataFilter for org.apache.tika.metadata.filter.LegacyKeyMigrationFilter
+[INFO] Processing @TikaComponent: org.apache.tika.metadata.filter.NoOpFilter -> no-op-filter (SPI: true, contextKey: null, defaultFor: null)
+[INFO] Auto-detected contextKey=org.apache.tika.metadata.filter.MetadataFilter for org.apache.tika.metadata.filter.NoOpFilter
+[INFO] Processing @TikaComponent: org.apache.tika.metadata.filter.RemoveByMimeMetadataFilter -> remove-by-mime-metadata-filter (SPI: true, contextKey: null, defaultFor: null)
+[INFO] Auto-detected contextKey=org.apache.tika.metadata.filter.MetadataFilter for org.apache.tika.metadata.filter.RemoveByMimeMetadataFilter
+[INFO] Processing @TikaComponent: org.apache.tika.metadata.writefilter.StandardMetadataLimiterFactory -> standard-metadata-limiter-factory (SPI: true, contextKey: org.apache.tika.metadata.writefilter.MetadataWriteLimiterFactory, defaultFor: null)
+[INFO] /mnt/c/Users/adawa/Documents/UDEM FALL 2026/3913/tools/ci-check/tika-core/src/main/java/org/apache/tika/metadata/writefilter/StandardMetadataLimiterFactory.java:[50,8] Class org.apache.tika.metadata.writefilter.StandardMetadataLimiterFactory is a parse-context component, adding to parse-context.idx
+[INFO] Processing @TikaComponent: org.apache.tika.mime.MimeTypes -> mime-types (SPI: false, contextKey: null, defaultFor: null)
+[INFO] Auto-detected contextKey=org.apache.tika.detect.Detector for org.apache.tika.mime.MimeTypes
+[INFO] Processing @TikaComponent: org.apache.tika.parser.AutoDetectParserConfig -> auto-detect-parser-config (SPI: false, contextKey: null, defaultFor: null)
+[INFO] /mnt/c/Users/adawa/Documents/UDEM FALL 2026/3913/tools/ci-check/tika-core/src/main/java/org/apache/tika/parser/AutoDetectParserConfig.java:[38,8] Class org.apache.tika.parser.AutoDetectParserConfig is a parse-context component, adding to parse-context.idx
+[INFO] Processing @TikaComponent: org.apache.tika.parser.DefaultParser -> default-parser (SPI: false, contextKey: null, defaultFor: null)
+[INFO] Auto-detected contextKey=org.apache.tika.parser.Parser for org.apache.tika.parser.DefaultParser
+[INFO] Processing @TikaComponent: org.apache.tika.parser.EmptyParser -> empty-parser (SPI: false, contextKey: null, defaultFor: null)
+[INFO] Auto-detected contextKey=org.apache.tika.parser.Parser for org.apache.tika.parser.EmptyParser
+[INFO] Processing @TikaComponent: org.apache.tika.parser.ErrorParser -> error-parser (SPI: false, contextKey: null, defaultFor: null)
+[INFO] Auto-detected contextKey=org.apache.tika.parser.Parser for org.apache.tika.parser.ErrorParser
+[INFO] Processing @TikaComponent: org.apache.tika.parser.RegexCaptureParser -> regex-capture-parser (SPI: false, contextKey: null, defaultFor: null)
+[INFO] Auto-detected contextKey=org.apache.tika.parser.Parser for org.apache.tika.parser.RegexCaptureParser
+[INFO] Processing @TikaComponent: org.apache.tika.parser.SimplePasswordProvider -> simple-password-provider (SPI: true, contextKey: org.apache.tika.parser.PasswordProvider, defaultFor: null)
+[INFO] /mnt/c/Users/adawa/Documents/UDEM FALL 2026/3913/tools/ci-check/tika-core/src/main/java/org/apache/tika/parser/SimplePasswordProvider.java:[38,8] Class org.apache.tika.parser.SimplePasswordProvider is a parse-context component, adding to parse-context.idx
+[INFO] Processing @TikaComponent: org.apache.tika.parser.external.ExternalParser -> external-parser (SPI: true, contextKey: null, defaultFor: null)
+[INFO] Auto-detected contextKey=org.apache.tika.parser.Parser for org.apache.tika.parser.external.ExternalParser
+[INFO] Processing @TikaComponent: org.apache.tika.sax.BasicContentHandlerFactory -> basic-content-handler-factory (SPI: true, contextKey: null, defaultFor: org.apache.tika.sax.ContentHandlerFactory)
+[INFO] /mnt/c/Users/adawa/Documents/UDEM FALL 2026/3913/tools/ci-check/tika-core/src/main/java/org/apache/tika/sax/BasicContentHandlerFactory.java:[40,8] Class org.apache.tika.sax.BasicContentHandlerFactory is a parse-context component, adding to parse-context.idx
+[INFO] Processing @TikaComponent: org.apache.tika.sax.SAXOutputConfig -> sax-output-config (SPI: false, contextKey: null, defaultFor: null)
+[INFO] /mnt/c/Users/adawa/Documents/UDEM FALL 2026/3913/tools/ci-check/tika-core/src/main/java/org/apache/tika/sax/SAXOutputConfig.java:[31,8] Class org.apache.tika.sax.SAXOutputConfig is a parse-context component, adding to parse-context.idx
+[INFO] Generated SPI file: META-INF/services/org.apache.tika.language.translate.Translator with 2 implementations
+[INFO] Generated SPI file: META-INF/services/org.apache.tika.parser.Parser with 1 implementations
+[INFO] Generated SPI file: META-INF/services/org.apache.tika.metadata.filter.MetadataFilter with 10 implementations
+[INFO] Generated index file: META-INF/tika/encoding-detectors.idx with 3 components
+[INFO] Generated index file: META-INF/tika/translators.idx with 2 components
+[INFO] Generated index file: META-INF/tika/metadata-filters.idx with 10 components
+[INFO] Generated index file: META-INF/tika/parse-context.idx with 11 components
+[INFO] Generated index file: META-INF/tika/parsers.idx with 5 components
+[INFO] Generated index file: META-INF/tika/detectors.idx with 5 components
+[WARNING] /mnt/c/Users/adawa/Documents/UDEM FALL 2026/3913/tools/ci-check/tika-core/src/main/java/org/apache/tika/config/package-info.java:[21,22] aQute.bnd.annotation.Version in aQute.bnd.annotation has been deprecated
+[WARNING] /mnt/c/Users/adawa/Documents/UDEM FALL 2026/3913/tools/ci-check/tika-core/src/main/java/org/apache/tika/config/package-info.java:[21,22] aQute.bnd.annotation.Version in aQute.bnd.annotation has been deprecated
+[WARNING] /mnt/c/Users/adawa/Documents/UDEM FALL 2026/3913/tools/ci-check/tika-core/src/main/java/org/apache/tika/config/package-info.java:[21,22] aQute.bnd.annotation.Version in aQute.bnd.annotation has been deprecated
+[WARNING] /mnt/c/Users/adawa/Documents/UDEM FALL 2026/3913/tools/ci-check/tika-core/src/main/java/org/apache/tika/detect/package-info.java:[21,22] aQute.bnd.annotation.Version in aQute.bnd.annotation has been deprecated
+[WARNING] /mnt/c/Users/adawa/Documents/UDEM FALL 2026/3913/tools/ci-check/tika-core/src/main/java/org/apache/tika/detect/package-info.java:[21,22] aQute.bnd.annotation.Version in aQute.bnd.annotation has been deprecated
+[WARNING] /mnt/c/Users/adawa/Documents/UDEM FALL 2026/3913/tools/ci-check/tika-core/src/main/java/org/apache/tika/detect/package-info.java:[21,22] aQute.bnd.annotation.Version in aQute.bnd.annotation has been deprecated
+[WARNING] /mnt/c/Users/adawa/Documents/UDEM FALL 2026/3913/tools/ci-check/tika-core/src/main/java/org/apache/tika/exception/package-info.java:[21,22] aQute.bnd.annotation.Version in aQute.bnd.annotation has been deprecated
+[WARNING] /mnt/c/Users/adawa/Documents/UDEM FALL 2026/3913/tools/ci-check/tika-core/src/main/java/org/apache/tika/exception/package-info.java:[21,22] aQute.bnd.annotation.Version in aQute.bnd.annotation has been deprecated
+[WARNING] /mnt/c/Users/adawa/Documents/UDEM FALL 2026/3913/tools/ci-check/tika-core/src/main/java/org/apache/tika/exception/package-info.java:[21,22] aQute.bnd.annotation.Version in aQute.bnd.annotation has been deprecated
+[WARNING] /mnt/c/Users/adawa/Documents/UDEM FALL 2026/3913/tools/ci-check/tika-core/src/main/java/org/apache/tika/extractor/package-info.java:[21,22] aQute.bnd.annotation.Version in aQute.bnd.annotation has been deprecated
+[WARNING] /mnt/c/Users/adawa/Documents/UDEM FALL 2026/3913/tools/ci-check/tika-core/src/main/java/org/apache/tika/extractor/package-info.java:[21,22] aQute.bnd.annotation.Version in aQute.bnd.annotation has been deprecated
+[WARNING] /mnt/c/Users/adawa/Documents/UDEM FALL 2026/3913/tools/ci-check/tika-core/src/main/java/org/apache/tika/extractor/package-info.java:[21,22] aQute.bnd.annotation.Version in aQute.bnd.annotation has been deprecated
+[WARNING] /mnt/c/Users/adawa/Documents/UDEM FALL 2026/3913/tools/ci-check/tika-core/src/main/java/org/apache/tika/io/package-info.java:[21,22] aQute.bnd.annotation.Version in aQute.bnd.annotation has been deprecated
+[WARNING] /mnt/c/Users/adawa/Documents/UDEM FALL 2026/3913/tools/ci-check/tika-core/src/main/java/org/apache/tika/io/package-info.java:[21,22] aQute.bnd.annotation.Version in aQute.bnd.annotation has been deprecated
+[WARNING] /mnt/c/Users/adawa/Documents/UDEM FALL 2026/3913/tools/ci-check/tika-core/src/main/java/org/apache/tika/io/package-info.java:[21,22] aQute.bnd.annotation.Version in aQute.bnd.annotation has been deprecated
+[WARNING] /mnt/c/Users/adawa/Documents/UDEM FALL 2026/3913/tools/ci-check/tika-core/src/main/java/org/apache/tika/metadata/package-info.java:[21,22] aQute.bnd.annotation.Version in aQute.bnd.annotation has been deprecated
+[WARNING] /mnt/c/Users/adawa/Documents/UDEM FALL 2026/3913/tools/ci-check/tika-core/src/main/java/org/apache/tika/metadata/package-info.java:[21,22] aQute.bnd.annotation.Version in aQute.bnd.annotation has been deprecated
+[WARNING] /mnt/c/Users/adawa/Documents/UDEM FALL 2026/3913/tools/ci-check/tika-core/src/main/java/org/apache/tika/metadata/package-info.java:[21,22] aQute.bnd.annotation.Version in aQute.bnd.annotation has been deprecated
+[WARNING] /mnt/c/Users/adawa/Documents/UDEM FALL 2026/3913/tools/ci-check/tika-core/src/main/java/org/apache/tika/mime/package-info.java:[21,22] aQute.bnd.annotation.Version in aQute.bnd.annotation has been deprecated
+[WARNING] /mnt/c/Users/adawa/Documents/UDEM FALL 2026/3913/tools/ci-check/tika-core/src/main/java/org/apache/tika/mime/package-info.java:[21,22] aQute.bnd.annotation.Version in aQute.bnd.annotation has been deprecated
+[WARNING] /mnt/c/Users/adawa/Documents/UDEM FALL 2026/3913/tools/ci-check/tika-core/src/main/java/org/apache/tika/mime/package-info.java:[21,22] aQute.bnd.annotation.Version in aQute.bnd.annotation has been deprecated
+[WARNING] /mnt/c/Users/adawa/Documents/UDEM FALL 2026/3913/tools/ci-check/tika-core/src/main/java/org/apache/tika/package-info.java:[21,22] aQute.bnd.annotation.Version in aQute.bnd.annotation has been deprecated
+[WARNING] /mnt/c/Users/adawa/Documents/UDEM FALL 2026/3913/tools/ci-check/tika-core/src/main/java/org/apache/tika/package-info.java:[21,22] aQute.bnd.annotation.Version in aQute.bnd.annotation has been deprecated
+[WARNING] /mnt/c/Users/adawa/Documents/UDEM FALL 2026/3913/tools/ci-check/tika-core/src/main/java/org/apache/tika/package-info.java:[21,22] aQute.bnd.annotation.Version in aQute.bnd.annotation has been deprecated
+[WARNING] /mnt/c/Users/adawa/Documents/UDEM FALL 2026/3913/tools/ci-check/tika-core/src/main/java/org/apache/tika/parser/package-info.java:[21,22] aQute.bnd.annotation.Version in aQute.bnd.annotation has been deprecated
+[WARNING] /mnt/c/Users/adawa/Documents/UDEM FALL 2026/3913/tools/ci-check/tika-core/src/main/java/org/apache/tika/parser/package-info.java:[21,22] aQute.bnd.annotation.Version in aQute.bnd.annotation has been deprecated
+[WARNING] /mnt/c/Users/adawa/Documents/UDEM FALL 2026/3913/tools/ci-check/tika-core/src/main/java/org/apache/tika/parser/package-info.java:[21,22] aQute.bnd.annotation.Version in aQute.bnd.annotation has been deprecated
+[WARNING] /mnt/c/Users/adawa/Documents/UDEM FALL 2026/3913/tools/ci-check/tika-core/src/main/java/org/apache/tika/sax/package-info.java:[21,22] aQute.bnd.annotation.Version in aQute.bnd.annotation has been deprecated
+[WARNING] /mnt/c/Users/adawa/Documents/UDEM FALL 2026/3913/tools/ci-check/tika-core/src/main/java/org/apache/tika/sax/package-info.java:[21,22] aQute.bnd.annotation.Version in aQute.bnd.annotation has been deprecated
+[WARNING] /mnt/c/Users/adawa/Documents/UDEM FALL 2026/3913/tools/ci-check/tika-core/src/main/java/org/apache/tika/sax/package-info.java:[21,22] aQute.bnd.annotation.Version in aQute.bnd.annotation has been deprecated
+[WARNING] /mnt/c/Users/adawa/Documents/UDEM FALL 2026/3913/tools/ci-check/tika-core/src/main/java/org/apache/tika/sax/xpath/package-info.java:[21,22] aQute.bnd.annotation.Version in aQute.bnd.annotation has been deprecated
+[WARNING] /mnt/c/Users/adawa/Documents/UDEM FALL 2026/3913/tools/ci-check/tika-core/src/main/java/org/apache/tika/sax/xpath/package-info.java:[21,22] aQute.bnd.annotation.Version in aQute.bnd.annotation has been deprecated
+[WARNING] /mnt/c/Users/adawa/Documents/UDEM FALL 2026/3913/tools/ci-check/tika-core/src/main/java/org/apache/tika/sax/xpath/package-info.java:[21,22] aQute.bnd.annotation.Version in aQute.bnd.annotation has been deprecated
+[WARNING] /mnt/c/Users/adawa/Documents/UDEM FALL 2026/3913/tools/ci-check/tika-core/src/main/java/org/apache/tika/utils/package-info.java:[21,22] aQute.bnd.annotation.Version in aQute.bnd.annotation has been deprecated
+[WARNING] /mnt/c/Users/adawa/Documents/UDEM FALL 2026/3913/tools/ci-check/tika-core/src/main/java/org/apache/tika/utils/package-info.java:[21,22] aQute.bnd.annotation.Version in aQute.bnd.annotation has been deprecated
+[WARNING] /mnt/c/Users/adawa/Documents/UDEM FALL 2026/3913/tools/ci-check/tika-core/src/main/java/org/apache/tika/utils/package-info.java:[21,22] aQute.bnd.annotation.Version in aQute.bnd.annotation has been deprecated
+[WARNING] /mnt/c/Users/adawa/Documents/UDEM FALL 2026/3913/tools/ci-check/tika-core/src/main/java/org/apache/tika/detect/DefaultDetector.java:[122,37] org.apache.tika.detect.OverrideDetector in org.apache.tika.detect has been deprecated
+[WARNING] /mnt/c/Users/adawa/Documents/UDEM FALL 2026/3913/tools/ci-check/tika-core/src/main/java/org/apache/tika/mime/ProbabilisticMimeDetectionSelector.java:[164,36] getMimeType(java.lang.String) in org.apache.tika.mime.MimeTypes has been deprecated
+[WARNING] /mnt/c/Users/adawa/Documents/UDEM FALL 2026/3913/tools/ci-check/tika-core/src/main/java/org/apache/tika/sax/RecursiveParserWrapperHandler.java:[157,44] TIKA_CONTENT_HANDLER in org.apache.tika.metadata.TikaCoreProperties has been deprecated
+[INFO] /mnt/c/Users/adawa/Documents/UDEM FALL 2026/3913/tools/ci-check/tika-core/src/main/java/org/apache/tika/config/ServiceLoader.java: Some input files use unchecked or unsafe operations.
+[INFO] /mnt/c/Users/adawa/Documents/UDEM FALL 2026/3913/tools/ci-check/tika-core/src/main/java/org/apache/tika/config/ServiceLoader.java: Recompile with -Xlint:unchecked for details.
+[INFO] 
+[INFO] --- resources:3.5.0:testResources (default-testResources) @ tika-core ---
+[INFO] Copying 57 resources from src/test/resources to target/test-classes
+[INFO] Copying 3 resources from target/maven-shared-archive-resources to target/test-classes
+[INFO] 
+[INFO] --- compiler:3.15.0:testCompile (default-testCompile) @ tika-core ---
+[INFO] Recompiling the module because of changed dependency.
+[INFO] Compiling 75 source files with javac [debug deprecation release 17] to target/test-classes
+[WARNING] /mnt/c/Users/adawa/Documents/UDEM FALL 2026/3913/tools/ci-check/tika-core/src/test/java/org/apache/tika/mime/MimeTypesReaderTest.java:[296,37] getMimeType(java.lang.String) in org.apache.tika.mime.MimeTypes has been deprecated
+[WARNING] /mnt/c/Users/adawa/Documents/UDEM FALL 2026/3913/tools/ci-check/tika-core/src/test/java/org/apache/tika/mime/MimeTypesReaderTest.java:[304,37] getMimeType(java.lang.String) in org.apache.tika.mime.MimeTypes has been deprecated
+[WARNING] /mnt/c/Users/adawa/Documents/UDEM FALL 2026/3913/tools/ci-check/tika-core/src/test/java/org/apache/tika/parser/ParserDecoratorTest.java:[117,28] withFallbacks(java.util.Collection<? extends org.apache.tika.parser.Parser>,java.util.Set<org.apache.tika.mime.MediaType>) in org.apache.tika.parser.ParserDecorator has been deprecated
+[WARNING] /mnt/c/Users/adawa/Documents/UDEM FALL 2026/3913/tools/ci-check/tika-core/src/test/java/org/apache/tika/utils/ServiceLoaderUtilsTest.java:[45,48] org.apache.tika.detect.OverrideDetector in org.apache.tika.detect has been deprecated
+[INFO] 
+[INFO] --- surefire:3.5.6:test (default-test) @ tika-core ---
+[INFO] Tests are skipped.
+[INFO] 
+[INFO] --- jacoco:0.8.15:report (report) @ tika-core ---
+[INFO] Skipping JaCoCo execution because property jacoco.skip is set.
+[INFO] 
+[INFO] --- bundle:6.1.0:bundle (default-bundle) @ tika-core ---
+[INFO] Building bundle: /mnt/c/Users/adawa/Documents/UDEM FALL 2026/3913/tools/ci-check/tika-core/target/tika-core-4.0.0-SNAPSHOT.jar
+[INFO] Writing manifest: /mnt/c/Users/adawa/Documents/UDEM FALL 2026/3913/tools/ci-check/tika-core/target/classes/META-INF/MANIFEST.MF
+[INFO] 
+[INFO] --- jar:3.5.0:test-jar (default) @ tika-core ---
+[INFO] Building jar: /mnt/c/Users/adawa/Documents/UDEM FALL 2026/3913/tools/ci-check/tika-core/target/tika-core-4.0.0-SNAPSHOT-tests.jar
+[INFO] 
+[INFO] --- assembly:3.8.0:single (default) @ tika-core ---
+[INFO] Reading assembly descriptor: src/main/assembly/test-jar-with-dependencies.xml
+[INFO] Building jar: /mnt/c/Users/adawa/Documents/UDEM FALL 2026/3913/tools/ci-check/tika-core/target/tika-core-4.0.0-SNAPSHOT-test-jar-with-dependencies.jar
+[INFO] 
+[INFO] --- failsafe:3.5.6:integration-test (default) @ tika-core ---
+[INFO] Tests are skipped.
+[INFO] 
+[INFO] --- ossindex:3.2.0:audit (audit-dependencies) @ tika-core ---
+[INFO] Skipping; configured
+[INFO] 
+[INFO] --- forbiddenapis:3.10:check (default) @ tika-core ---
+[INFO] Scanning for classes to check...
+[INFO] Reading bundled API signatures: jdk-unsafe-17
+[INFO] Reading bundled API signatures: jdk-deprecated-17
+[INFO] Reading bundled API signatures: jdk-non-portable
+[INFO] Reading bundled API signatures: jdk-internal-17
+[INFO] Reading bundled API signatures: commons-io-unsafe-2.11.0
+[INFO] Loading classes to check...
+[INFO] Scanning classes for violations...
+[INFO] Scanned 394 class file(s) for forbidden API invocations (in 15.66s), 0 error(s).
+[INFO] 
+[INFO] --- forbiddenapis:3.10:testCheck (default) @ tika-core ---
+[INFO] Scanning for classes to check...
+[INFO] Reading bundled API signatures: jdk-unsafe-17
+[INFO] Reading bundled API signatures: jdk-deprecated-17
+[INFO] Reading bundled API signatures: jdk-non-portable
+[INFO] Reading bundled API signatures: jdk-internal-17
+[INFO] Reading bundled API signatures: commons-io-unsafe-2.11.0
+[INFO] Loading classes to check...
+[INFO] Scanning classes for violations...
+[INFO] Scanned 98 class file(s) for forbidden API invocations (in 8.04s), 0 error(s).
+[INFO] 
+[INFO] --- failsafe:3.5.6:verify (default) @ tika-core ---
+[INFO] Tests are skipped.
+[INFO] 
+[INFO] --- install:3.1.4:install (default-install) @ tika-core ---
+[INFO] Installing /mnt/c/Users/adawa/Documents/UDEM FALL 2026/3913/tools/ci-check/tika-core/.flattened-pom.xml to /root/.m2/repository/org/apache/tika/tika-core/4.0.0-SNAPSHOT/tika-core-4.0.0-SNAPSHOT.pom
+[INFO] Installing /mnt/c/Users/adawa/Documents/UDEM FALL 2026/3913/tools/ci-check/tika-core/target/tika-core-4.0.0-SNAPSHOT.jar to /root/.m2/repository/org/apache/tika/tika-core/4.0.0-SNAPSHOT/tika-core-4.0.0-SNAPSHOT.jar
+[INFO] Installing /mnt/c/Users/adawa/Documents/UDEM FALL 2026/3913/tools/ci-check/tika-core/target/tika-core-4.0.0-SNAPSHOT-tests.jar to /root/.m2/repository/org/apache/tika/tika-core/4.0.0-SNAPSHOT/tika-core-4.0.0-SNAPSHOT-tests.jar
+[INFO] Installing /mnt/c/Users/adawa/Documents/UDEM FALL 2026/3913/tools/ci-check/tika-core/target/tika-core-4.0.0-SNAPSHOT-test-jar-with-dependencies.jar to /root/.m2/repository/org/apache/tika/tika-core/4.0.0-SNAPSHOT/tika-core-4.0.0-SNAPSHOT-test-jar-with-dependencies.jar
+[INFO] 
+[INFO] --- bundle:6.1.0:install (default-install) @ tika-core ---
+[INFO] Writing OBR metadata
+[INFO] Installing org/apache/tika/tika-core/4.0.0-SNAPSHOT/tika-core-4.0.0-SNAPSHOT.jar
+[INFO] Installing org/apache/tika/tika-core/4.0.0-SNAPSHOT/tika-core-4.0.0-SNAPSHOT-test-jar-with-dependencies.jar
+[INFO] Writing OBR metadata
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Summary for Apache Tika parent 4.0.0-SNAPSHOT:
+[INFO] 
+[INFO] Apache Tika parent ................................. SUCCESS [ 20.917 s]
+[INFO] Apache Tika Annotation Processor ................... SUCCESS [  7.583 s]
+[INFO] Apache Tika core ................................... SUCCESS [01:48 min]
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  02:30 min
+[INFO] Finished at: 2026-10-13T15:07:57-04:00
+[INFO] ------------------------------------------------------------------------
+[INFO] Maveniverse Nisse 0.9.4 loaded
+[INFO] Nisse injecting 31 properties into User Properties
+[INFO] Scanning for projects...
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for org.apache.tika:tika-parent:pom:4.0.0-SNAPSHOT
+[WARNING] 'version' contains an expression but should be a constant. @ org.apache.tika:tika-parent:${revision}, /mnt/c/Users/adawa/Documents/UDEM FALL 2026/3913/tools/ci-check/tika-parent/pom.xml, line 34, column 12
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for org.apache.tika:tika:pom:4.0.0-SNAPSHOT
+[WARNING] 'version' contains an expression but should be a constant. @ org.apache.tika:tika-parent:${revision}, /mnt/c/Users/adawa/Documents/UDEM FALL 2026/3913/tools/ci-check/tika-parent/pom.xml, line 34, column 12
+[WARNING] 
+[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+[WARNING] 
+[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+[WARNING] 
+[INFO] No need for inlining
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Build Order:
+[INFO] 
+[INFO] Apache Tika parent                                                 [pom]
+[INFO] Apache Tika Annotation Processor                                   [jar]
+[INFO] Apache Tika core                                                [bundle]
+[INFO] 
+[INFO] --------------------< org.apache.tika:tika-parent >---------------------
+[INFO] Building Apache Tika parent 4.0.0-SNAPSHOT                         [1/3]
+[INFO]   from pom.xml
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --- enforcer:3.6.3:enforce (enforce-maven-version) @ tika-parent ---
+[INFO] Rule 0: org.apache.maven.enforcer.rules.version.RequireMavenVersion passed
+[INFO] 
+[INFO] --- enforcer:3.6.3:enforce (enforce-java-version) @ tika-parent ---
+[INFO] Rule 0: org.apache.maven.enforcer.rules.version.RequireJavaVersion passed
+[INFO] 
+[INFO] --- enforcer:3.6.3:enforce (enforce-maven) @ tika-parent ---
+[INFO] Rule 0: org.apache.maven.enforcer.rules.dependency.DependencyConvergence passed
+[INFO] Rule 1: org.apache.maven.enforcer.rules.version.RequireMavenVersion passed
+[INFO] 
+[INFO] --- enforcer:3.6.3:enforce (ban-bad-log4j-versions) @ tika-parent ---
+[INFO] Rule 0: org.apache.maven.enforcer.rules.dependency.BannedDependencies passed
+[INFO] 
+[INFO] --- enforcer:3.6.3:enforce (ban-xerces-and-xml-apis) @ tika-parent ---
+[INFO] Rule 0: org.apache.maven.enforcer.rules.dependency.BannedDependencies passed
+[INFO] 
+[INFO] --- jacoco:0.8.15:prepare-agent (default) @ tika-parent ---
+[INFO] surefireArgLine set to "-javaagent:/root/.m2/repository/org/jacoco/org.jacoco.agent/0.8.15/org.jacoco.agent-0.8.15-runtime.jar=destfile=/mnt/c/Users/adawa/Documents/UDEM FALL 2026/3913/tools/ci-check/tika-parent/target/jacoco.exec"
+[INFO] 
+[INFO] --- spotless:3.9.0:apply (default) @ tika-parent ---
+[INFO] Spotless apply skipped
+[INFO] 
+[INFO] --- remote-resources:3.3.0:process (process-resource-bundles) @ tika-parent ---
+[INFO] Preparing remote bundle org.apache.apache.resources:apache-jar-resource-bundle:1.8
+[INFO] Copying 3 resources from 1 bundle.
+[INFO] 
+[INFO] --- flatten:1.8.0:flatten (flatten) @ tika-parent ---
+[INFO] Generating flattened POM of project org.apache.tika:tika-parent:pom:4.0.0-SNAPSHOT...
+[INFO] 
+[INFO] --- checkstyle:3.6.0:check (validate) @ tika-parent ---
+[INFO] 
+[INFO] --- jacoco:0.8.15:report (report) @ tika-parent ---
+[INFO] Skipping JaCoCo execution due to missing execution data file.
+[INFO] 
+[INFO] -------------< org.apache.tika:tika-annotation-processor >--------------
+[INFO] Building Apache Tika Annotation Processor 4.0.0-SNAPSHOT           [2/3]
+[INFO]   from /mnt/c/Users/adawa/Documents/UDEM FALL 2026/3913/tools/ci-check/tika-annotation-processor/pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- enforcer:3.6.3:enforce (enforce-maven-version) @ tika-annotation-processor ---
+[INFO] 
+[INFO] --- enforcer:3.6.3:enforce (enforce-java-version) @ tika-annotation-processor ---
+[INFO] 
+[INFO] --- enforcer:3.6.3:enforce (enforce-maven) @ tika-annotation-processor ---
+[INFO] Rule 0: org.apache.maven.enforcer.rules.dependency.DependencyConvergence passed
+[INFO] 
+[INFO] --- enforcer:3.6.3:enforce (ban-bad-log4j-versions) @ tika-annotation-processor ---
+[INFO] Rule 0: org.apache.maven.enforcer.rules.dependency.BannedDependencies passed
+[INFO] 
+[INFO] --- enforcer:3.6.3:enforce (ban-xerces-and-xml-apis) @ tika-annotation-processor ---
+[INFO] Rule 0: org.apache.maven.enforcer.rules.dependency.BannedDependencies passed
+[INFO] 
+[INFO] --- jacoco:0.8.15:prepare-agent (default) @ tika-annotation-processor ---
+[INFO] surefireArgLine set to "-javaagent:/root/.m2/repository/org/jacoco/org.jacoco.agent/0.8.15/org.jacoco.agent-0.8.15-runtime.jar=destfile=/mnt/c/Users/adawa/Documents/UDEM FALL 2026/3913/tools/ci-check/tika-annotation-processor/target/jacoco.exec"
+[INFO] 
+[INFO] --- spotless:3.9.0:apply (default) @ tika-annotation-processor ---
+[INFO] Spotless apply skipped
+[INFO] 
+[INFO] --- remote-resources:3.3.0:process (process-resource-bundles) @ tika-annotation-processor ---
+[INFO] Preparing remote bundle org.apache.apache.resources:apache-jar-resource-bundle:1.8
+[INFO] Copying 3 resources from 1 bundle.
+[INFO] 
+[INFO] --- resources:3.5.0:resources (default-resources) @ tika-annotation-processor ---
+[INFO] Copying 1 resource from src/main/resources to target/classes
+[INFO] Copying 3 resources from target/maven-shared-archive-resources to target/classes
+[INFO] 
+[INFO] --- flatten:1.8.0:flatten (flatten) @ tika-annotation-processor ---
+[INFO] Generating flattened POM of project org.apache.tika:tika-annotation-processor:jar:4.0.0-SNAPSHOT...
+[INFO] 
+[INFO] --- compiler:3.15.0:compile (default-compile) @ tika-annotation-processor ---
+[INFO] Nothing to compile - all classes are up to date.
+[INFO] 
+[INFO] --- checkstyle:3.6.0:check (validate) @ tika-annotation-processor ---
+[INFO] 
+[INFO] --- resources:3.5.0:testResources (default-testResources) @ tika-annotation-processor ---
+[INFO] skip non existing resourceDirectory /mnt/c/Users/adawa/Documents/UDEM FALL 2026/3913/tools/ci-check/tika-annotation-processor/src/test/resources
+[INFO] Copying 3 resources from target/maven-shared-archive-resources to target/test-classes
+[INFO] 
+[INFO] --- compiler:3.15.0:testCompile (default-testCompile) @ tika-annotation-processor ---
+[INFO] Nothing to compile - all classes are up to date.
+[INFO] 
+[INFO] --- surefire:3.5.6:test (default-test) @ tika-annotation-processor ---
+[INFO] Using auto detected provider org.apache.maven.surefire.junitplatform.JUnitPlatformProvider
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running org.apache.tika.annotation.KebabCaseConverterTest
+[INFO] Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.234 s -- in org.apache.tika.annotation.KebabCaseConverterTest
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 8, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] 
+[INFO] --- jacoco:0.8.15:report (report) @ tika-annotation-processor ---
+[INFO] Loading execution data file /mnt/c/Users/adawa/Documents/UDEM FALL 2026/3913/tools/ci-check/tika-annotation-processor/target/jacoco.exec
+[INFO] Analyzed bundle 'Apache Tika Annotation Processor' with 2 classes
+[INFO] 
+[INFO] ---------------------< org.apache.tika:tika-core >----------------------
+[INFO] Building Apache Tika core 4.0.0-SNAPSHOT                           [3/3]
+[INFO]   from /mnt/c/Users/adawa/Documents/UDEM FALL 2026/3913/tools/ci-check/tika-core/pom.xml
+[INFO] -------------------------------[ bundle ]-------------------------------
+[INFO] 
+[INFO] --- enforcer:3.6.3:enforce (enforce-maven-version) @ tika-core ---
+[INFO] Rule 0: org.apache.maven.enforcer.rules.version.RequireMavenVersion passed
+[INFO] 
+[INFO] --- enforcer:3.6.3:enforce (enforce-java-version) @ tika-core ---
+[INFO] Rule 0: org.apache.maven.enforcer.rules.version.RequireJavaVersion passed
+[INFO] 
+[INFO] --- enforcer:3.6.3:enforce (enforce-maven) @ tika-core ---
+[INFO] Rule 0: org.apache.maven.enforcer.rules.dependency.DependencyConvergence passed
+[INFO] Rule 1: org.apache.maven.enforcer.rules.version.RequireMavenVersion passed
+[INFO] 
+[INFO] --- enforcer:3.6.3:enforce (ban-bad-log4j-versions) @ tika-core ---
+[INFO] Rule 0: org.apache.maven.enforcer.rules.dependency.BannedDependencies passed
+[INFO] 
+[INFO] --- enforcer:3.6.3:enforce (ban-xerces-and-xml-apis) @ tika-core ---
+[INFO] Rule 0: org.apache.maven.enforcer.rules.dependency.BannedDependencies passed
+[INFO] 
+[INFO] --- checkstyle:3.6.0:check (validate) @ tika-core ---
+[INFO] 
+[INFO] --- jacoco:0.8.15:prepare-agent (default) @ tika-core ---
+[INFO] surefireArgLine set to "-javaagent:/root/.m2/repository/org/jacoco/org.jacoco.agent/0.8.15/org.jacoco.agent-0.8.15-runtime.jar=destfile=/mnt/c/Users/adawa/Documents/UDEM FALL 2026/3913/tools/ci-check/tika-core/target/jacoco.exec"
+[INFO] 
+[INFO] --- spotless:3.9.0:apply (default) @ tika-core ---
+[INFO] Spotless apply skipped
+[INFO] 
+[INFO] --- remote-resources:3.3.0:process (process-resource-bundles) @ tika-core ---
+[INFO] Preparing remote bundle org.apache.apache.resources:apache-jar-resource-bundle:1.8
+[INFO] Copying 3 resources from 1 bundle.
+[INFO] Copying appended resource: META-INF/LICENSE
+[INFO] 
+[INFO] --- resources:3.5.0:resources (default-resources) @ tika-core ---
+[INFO] Copying 5 resources from src/main/resources to target/classes
+[INFO] Copying 3 resources from target/maven-shared-archive-resources to target/classes
+[INFO] 
+[INFO] --- flatten:1.8.0:flatten (flatten) @ tika-core ---
+[INFO] Generating flattened POM of project org.apache.tika:tika-core:bundle:4.0.0-SNAPSHOT...
+[INFO] 
+[INFO] --- compiler:3.15.0:compile (default-compile) @ tika-core ---
+[INFO] Nothing to compile - all classes are up to date.
+[INFO] 
+[INFO] --- resources:3.5.0:testResources (default-testResources) @ tika-core ---
+[INFO] Copying 57 resources from src/test/resources to target/test-classes
+[INFO] Copying 3 resources from target/maven-shared-archive-resources to target/test-classes
+[INFO] 
+[INFO] --- compiler:3.15.0:testCompile (default-testCompile) @ tika-core ---
+[INFO] Nothing to compile - all classes are up to date.
+[INFO] 
+[INFO] --- surefire:3.5.6:test (default-test) @ tika-core ---
+[INFO] Using auto detected provider org.apache.maven.surefire.junitplatform.JUnitPlatformProvider
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running org.apache.tika.config.ParseContextConfigTest
+[INFO] Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.330 s -- in org.apache.tika.config.ParseContextConfigTest
+[INFO] Running org.apache.tika.config.TikaExtrasTest
+INFO  [main] 15:08:41,256 org.apache.tika.config.TikaExtras tika.extras.dir: loaded 1 extra jar(s): [/tmp/junit-15018104559312755431/extra.jar]
+[INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.018 s -- in org.apache.tika.config.TikaExtrasTest
+[INFO] Running org.apache.tika.config.TikaProgressTrackerTest
+[INFO] Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.113 s -- in org.apache.tika.config.TikaProgressTrackerTest
+[INFO] Running org.apache.tika.detect.BOMDetectorTest
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.836 s -- in org.apache.tika.detect.BOMDetectorTest
+[INFO] Running org.apache.tika.detect.CharsetSupersetsTest
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.051 s -- in org.apache.tika.detect.CharsetSupersetsTest
+[INFO] Running org.apache.tika.detect.FileCommandDetectorTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.513 s -- in org.apache.tika.detect.FileCommandDetectorTest
+[INFO] Running org.apache.tika.detect.HighByteLetterStatsTest
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.019 s -- in org.apache.tika.detect.HighByteLetterStatsTest
+[INFO] Running org.apache.tika.detect.MagicDetectorTest
+[INFO] Tests run: 14, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.175 s -- in org.apache.tika.detect.MagicDetectorTest
+[INFO] Running org.apache.tika.detect.MetadataCharsetDetectorTest
+[INFO] Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.015 s -- in org.apache.tika.detect.MetadataCharsetDetectorTest
+[INFO] Running org.apache.tika.detect.MimeDetectionWithNNTest
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.404 s -- in org.apache.tika.detect.MimeDetectionWithNNTest
+[INFO] Running org.apache.tika.detect.NameDetectorTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.013 s -- in org.apache.tika.detect.NameDetectorTest
+[INFO] Running org.apache.tika.detect.TextDetectorTest
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.014 s -- in org.apache.tika.detect.TextDetectorTest
+[INFO] Running org.apache.tika.detect.TypeDetectorTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.011 s -- in org.apache.tika.detect.TypeDetectorTest
+[INFO] Running org.apache.tika.detect.ZeroSizeFileDetectorTest
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.013 s -- in org.apache.tika.detect.ZeroSizeFileDetectorTest
+[INFO] Running org.apache.tika.digest.InputStreamDigesterTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.031 s -- in org.apache.tika.digest.InputStreamDigesterTest
+[INFO] Running org.apache.tika.extractor.EmbeddedDocumentUtilExtensionTest
+[INFO] Tests run: 10, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.177 s -- in org.apache.tika.extractor.EmbeddedDocumentUtilExtensionTest
+[INFO] Running org.apache.tika.io.EndianUtilsTest
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.014 s -- in org.apache.tika.io.EndianUtilsTest
+[INFO] Running org.apache.tika.io.FilenameUtilsTest
+[INFO] Tests run: 10, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.046 s -- in org.apache.tika.io.FilenameUtilsTest
+[INFO] Running org.apache.tika.io.LookaheadInputStreamTest
+[INFO] Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.004 s -- in org.apache.tika.io.LookaheadInputStreamTest
+[INFO] Running org.apache.tika.io.TailStreamTest
+[INFO] Tests run: 9, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.015 s -- in org.apache.tika.io.TailStreamTest
+[INFO] Running org.apache.tika.io.TemporaryResourcesTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 s -- in org.apache.tika.io.TemporaryResourcesTest
+[INFO] Running org.apache.tika.io.TikaInputStreamTest
+[WARNING] Tests run: 102, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 1.659 s -- in org.apache.tika.io.TikaInputStreamTest
+[INFO] Running org.apache.tika.language.detect.LanguageNamesTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.014 s -- in org.apache.tika.language.detect.LanguageNamesTest
+[INFO] Running org.apache.tika.metadata.filter.LegacyKeyMigrationFilterTest
+[INFO] Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.061 s -- in org.apache.tika.metadata.filter.LegacyKeyMigrationFilterTest
+[INFO] Running org.apache.tika.metadata.MetadataInternalKeyGuardTest
+[INFO] Tests run: 11, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.006 s -- in org.apache.tika.metadata.MetadataInternalKeyGuardTest
+[INFO] Running org.apache.tika.metadata.TestMetadata
+[INFO] Tests run: 18, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.135 s -- in org.apache.tika.metadata.TestMetadata
+[INFO] Running org.apache.tika.metadata.TestPageAnchoring
+[INFO] Tests run: 9, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.033 s -- in org.apache.tika.metadata.TestPageAnchoring
+[INFO] Running org.apache.tika.mime.CustomReaderTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.014 s -- in org.apache.tika.mime.CustomReaderTest
+[INFO] Running org.apache.tika.mime.MediaTypeTest
+[INFO] Tests run: 9, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.013 s -- in org.apache.tika.mime.MediaTypeTest
+[INFO] Running org.apache.tika.mime.MimeDetectionTest
+[INFO] Tests run: 10, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.649 s -- in org.apache.tika.mime.MimeDetectionTest
+[INFO] Running org.apache.tika.mime.MimeTypesReaderTest
+[INFO] Tests run: 19, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.438 s -- in org.apache.tika.mime.MimeTypesReaderTest
+[INFO] Running org.apache.tika.mime.PatternsTest
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.003 s -- in org.apache.tika.mime.PatternsTest
+[INFO] Running org.apache.tika.mime.ProbabilisticMimeDetectionTest
+[INFO] Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.320 s -- in org.apache.tika.mime.ProbabilisticMimeDetectionTest
+[INFO] Running org.apache.tika.mime.RFC822DetectionTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 s -- in org.apache.tika.mime.RFC822DetectionTest
+[INFO] Running org.apache.tika.parser.CompositeParserTest
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.236 s -- in org.apache.tika.parser.CompositeParserTest
+[INFO] Running org.apache.tika.parser.mock.MockParserTest
+INFO  [pool-6-thread-1] 15:08:49,734 com.martensigwart.fakeload.DefaultFakeLoadExecutor FakeLoad execution started
+INFO  [pool-8-thread-1] 15:08:49,850 com.martensigwart.fakeload.DefaultFakeLoadExecutor FakeLoad execution finished
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.462 s -- in org.apache.tika.parser.mock.MockParserTest
+[INFO] Running org.apache.tika.parser.multiple.MultipleParserTest
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.095 s -- in org.apache.tika.parser.multiple.MultipleParserTest
+[INFO] Running org.apache.tika.parser.ParseContextTest
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.003 s -- in org.apache.tika.parser.ParseContextTest
+[INFO] Running org.apache.tika.parser.ParserDecoratorTest
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.014 s -- in org.apache.tika.parser.ParserDecoratorTest
+[INFO] Running org.apache.tika.parser.RegexCaptureParserTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.023 s -- in org.apache.tika.parser.RegexCaptureParserTest
+[INFO] Running org.apache.tika.sax.BasicContentHandlerFactoryTest
+[INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.050 s -- in org.apache.tika.sax.BasicContentHandlerFactoryTest
+[INFO] Running org.apache.tika.sax.BodyContentHandlerTest
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.029 s -- in org.apache.tika.sax.BodyContentHandlerTest
+[INFO] Running org.apache.tika.sax.CustomErrorHandlerTest
+[WARNING] Tests run: 1, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 0 s -- in org.apache.tika.sax.CustomErrorHandlerTest
+[INFO] Running org.apache.tika.sax.LinkContentHandlerTest
+[INFO] Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.036 s -- in org.apache.tika.sax.LinkContentHandlerTest
+[INFO] Running org.apache.tika.sax.OfflineContentHandlerTest
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.015 s -- in org.apache.tika.sax.OfflineContentHandlerTest
+[INFO] Running org.apache.tika.sax.RichTextContentHandlerTest
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.013 s -- in org.apache.tika.sax.RichTextContentHandlerTest
+[INFO] Running org.apache.tika.sax.SafeContentHandlerTest
+[INFO] Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.008 s -- in org.apache.tika.sax.SafeContentHandlerTest
+[INFO] Running org.apache.tika.sax.SecureContentHandlerTest
+[INFO] Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.128 s -- in org.apache.tika.sax.SecureContentHandlerTest
+[INFO] Running org.apache.tika.sax.SerializerTest
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 s -- in org.apache.tika.sax.SerializerTest
+[INFO] Running org.apache.tika.sax.ToMarkdownContentHandlerTest
+[INFO] Tests run: 357, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.502 s -- in org.apache.tika.sax.ToMarkdownContentHandlerTest
+[INFO] Running org.apache.tika.sax.XHTMLBalancingHandlerTest
+[INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.015 s -- in org.apache.tika.sax.XHTMLBalancingHandlerTest
+[INFO] Running org.apache.tika.sax.XHTMLContentHandlerTest
+[INFO] Tests run: 13, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.009 s -- in org.apache.tika.sax.XHTMLContentHandlerTest
+[INFO] Running org.apache.tika.sax.xpath.XPathParserTest
+[INFO] Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.028 s -- in org.apache.tika.sax.xpath.XPathParserTest
+[INFO] Running org.apache.tika.TikaDetectionTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.094 s -- in org.apache.tika.TikaDetectionTest
+[INFO] Running org.apache.tika.utils.CharsetUtilsTest
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.057 s -- in org.apache.tika.utils.CharsetUtilsTest
+[INFO] Running org.apache.tika.utils.ConcurrentUtilsTest
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.021 s -- in org.apache.tika.utils.ConcurrentUtilsTest
+[INFO] Running org.apache.tika.utils.RegexUtilsTest
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.013 s -- in org.apache.tika.utils.RegexUtilsTest
+[INFO] Running org.apache.tika.utils.ServiceLoaderUtilsTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.021 s -- in org.apache.tika.utils.ServiceLoaderUtilsTest
+[INFO] Running org.apache.tika.utils.XMLReaderUtilsTest
+[INFO] Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.233 s -- in org.apache.tika.utils.XMLReaderUtilsTest
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 749, Failures: 0, Errors: 0, Skipped: 2
+[INFO] 
+[INFO] 
+[INFO] --- jacoco:0.8.15:report (report) @ tika-core ---
+[INFO] Loading execution data file /mnt/c/Users/adawa/Documents/UDEM FALL 2026/3913/tools/ci-check/tika-core/target/jacoco.exec
+[INFO] Analyzed bundle 'Apache Tika core' with 345 classes
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Summary for Apache Tika parent 4.0.0-SNAPSHOT:
+[INFO] 
+[INFO] Apache Tika parent ................................. SUCCESS [  1.077 s]
+[INFO] Apache Tika Annotation Processor ................... SUCCESS [  6.349 s]
+[INFO] Apache Tika core ................................... SUCCESS [ 52.442 s]
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  01:04 min
+[INFO] Finished at: 2026-10-13T15:09:08-04:00
+[INFO] ------------------------------------------------------------------------
+[INFO] Maveniverse Nisse 0.9.4 loaded
+[INFO] Nisse injecting 31 properties into User Properties
+[INFO] Scanning for projects...
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for org.apache.tika:tika-core:bundle:4.0.0-SNAPSHOT
+[WARNING] 'version' contains an expression but should be a constant. @ org.apache.tika:tika-parent:${revision}, /mnt/c/Users/adawa/Documents/UDEM FALL 2026/3913/tools/ci-check/tika-parent/pom.xml, line 34, column 12
+[WARNING] 
+[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+[WARNING] 
+[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+[WARNING] 
+[INFO] No need for inlining
+[INFO] 
+[INFO] ---------------------< org.apache.tika:tika-core >----------------------
+[INFO] Building Apache Tika core 4.0.0-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] -------------------------------[ bundle ]-------------------------------
+[INFO] 
+[INFO] --- pitest:1.17.4:mutationCoverage (default-cli) @ tika-core ---
+[INFO] Root dir is : /mnt/c/Users/adawa/Documents/UDEM FALL 2026/3913/tools/ci-check/tika-core
+[INFO] Found plugin : Default csv report plugin
+[INFO] Found plugin : Default xml report plugin
+[INFO] Found plugin : Default html report plugin
+[INFO] Found plugin : Static initializer code detector plugin
+[INFO] Found plugin : Excluded annotations plugin
+[INFO] Found plugin : Try with resources filter
+[INFO] Found plugin : Inlined finally block filter plugin
+[INFO] Found plugin : Implicit null check filter
+[INFO] Found plugin : Method reference null check filter
+[INFO] Found plugin : For each loop filter
+[INFO] Found plugin : Enum junk filter
+[INFO] Found plugin : Record junk mutation filter
+[INFO] Found plugin : String switch filter
+[INFO] Found plugin : Assertions filter
+[INFO] Found plugin : Enum switch filter
+[INFO] Found plugin : Logging calls filter
+[INFO] Found plugin : Infinite for loop filter
+[INFO] Found plugin : Long running iterator loop filter
+[INFO] Found plugin : For loop counter filter
+[INFO] Found plugin : Kotlin junk mutations filter
+[INFO] Found plugin : Groovy junk mutations filter
+[INFO] Found plugin : Max mutations per class limit
+[INFO] Found plugin : Equals shortcut equivalent mutant filter
+[INFO] Found plugin : Trivial return vals equivalence filter
+[INFO] Found plugin : Filters mutants with line number <= 1
+[INFO] Found plugin : Division by one equivalent mutant filter
+[INFO] Found plugin : Lombok junk mutations filter
+[INFO] Found plugin : Filter mutations to defensive wrappers such as unmodifiableCollection on return or field write
+[INFO] Found plugin : Mutant export plugin
+[INFO] Found plugin : Auto add java.awt.headless=true to keep keyboard focus on Mac OS
+[INFO] Found plugin : Auto set number of threads based on machine
+[INFO] Found plugin : Automatically add -ea to launch args to enable assertions
+[INFO] Found plugin : Default build verifier
+[INFO] Found plugin : Detect missing JUnit5 plugin
+[INFO] Found plugin : Detect missing TestNG plugin
+[INFO] Found plugin : Detect missing kotlin plugin
+[INFO] Found plugin : Detect missing spring plugin
+[INFO] Found plugin : Default coverage exporter
+[INFO] Found shared classpath plugin : Default mutation engine
+[INFO] Found shared classpath plugin : JUnit 5 test framework support
+[INFO] Found shared classpath plugin : JUnit plugin
+[INFO] Found shared classpath plugin : Support for mocking frameworks using javassist
+[INFO] Found shared classpath plugin : Reset environment for javassist
+[INFO] Available mutators : EXPERIMENTAL_ARGUMENT_PROPAGATION,FALSE_RETURNS,TRUE_RETURNS,CONDITIONALS_BOUNDARY,CONSTRUCTOR_CALLS,EMPTY_RETURNS,INCREMENTS,INLINE_CONSTS,INVERT_NEGS,MATH,NEGATE_CONDITIONALS,NON_VOID_METHOD_CALLS,NULL_RETURNS,PRIMITIVE_RETURNS,REMOVE_CONDITIONALS_EQUAL_IF,REMOVE_CONDITIONALS_EQUAL_ELSE,REMOVE_CONDITIONALS_ORDER_IF,REMOVE_CONDITIONALS_ORDER_ELSE,VOID_METHOD_CALLS,EXPERIMENTAL_BIG_DECIMAL,EXPERIMENTAL_BIG_INTEGER,EXPERIMENTAL_MEMBER_VARIABLE,EXPERIMENTAL_NAKED_RECEIVER,REMOVE_INCREMENTS,EXPERIMENTAL_SWITCH
+[INFO] Adding org.pitest:pitest-junit5-plugin to SUT classpath
+[INFO] Adding org.pitest:pitest to SUT classpath
+[INFO] Auto adding org.junit.platform:junit-platform-launcher:jar:6.1.3 < central (https://repo.maven.apache.org/maven2, default, releases) to classpath.
+[INFO] Mutating from /mnt/c/Users/adawa/Documents/UDEM FALL 2026/3913/tools/ci-check/tika-core/target/classes
+[INFO] Replacing properties in argLine -Xmx4g -Djava.awt.headless=true @{surefireArgLine}
+3:09:41 PM PIT >> INFO : Verbose logging is disabled. If you encounter a problem, please enable it before reporting an issue.
+3:09:43 PM PIT >> INFO : Created 1 mutation test units in pre scan
+3:09:44 PM PIT >> INFO : Sending 1 test classes to minion
+3:09:44 PM PIT >> INFO : Sent tests to minion
+/-\|/-3:09:46 PM PIT >> INFO : Calculated coverage in 2 seconds.
+3:09:49 PM PIT >> INFO : Created 1 mutation test units
+/3:09:54 PM PIT >> INFO : Completed in 13 seconds
+================================================================================
+- Mutators
+================================================================================
+> org.pitest.mutationtest.engine.gregor.mutators.RemoveConditionalMutator_ORDER_ELSE
+>> Generated 3 Killed 2 (67%)
+> KILLED 2 SURVIVED 0 TIMED_OUT 0 NON_VIABLE 0 
+> MEMORY_ERROR 0 NOT_STARTED 0 STARTED 0 RUN_ERROR 0 
+> NO_COVERAGE 1 
+--------------------------------------------------------------------------------
+> org.pitest.mutationtest.engine.gregor.mutators.returns.PrimitiveReturnsMutator
+>> Generated 6 Killed 4 (67%)
+> KILLED 4 SURVIVED 0 TIMED_OUT 0 NON_VIABLE 0 
+> MEMORY_ERROR 0 NOT_STARTED 0 STARTED 0 RUN_ERROR 0 
+> NO_COVERAGE 2 
+--------------------------------------------------------------------------------
+> org.pitest.mutationtest.engine.gregor.mutators.ConditionalsBoundaryMutator
+>> Generated 3 Killed 1 (33%)
+> KILLED 1 SURVIVED 1 TIMED_OUT 0 NON_VIABLE 0 
+> MEMORY_ERROR 0 NOT_STARTED 0 STARTED 0 RUN_ERROR 0 
+> NO_COVERAGE 1 
+--------------------------------------------------------------------------------
+> org.pitest.mutationtest.engine.gregor.mutators.VoidMethodCallMutator
+>> Generated 7 Killed 3 (43%)
+> KILLED 3 SURVIVED 2 TIMED_OUT 0 NON_VIABLE 0 
+> MEMORY_ERROR 0 NOT_STARTED 0 STARTED 0 RUN_ERROR 0 
+> NO_COVERAGE 2 
+--------------------------------------------------------------------------------
+> org.pitest.mutationtest.engine.gregor.mutators.RemoveConditionalMutator_EQUAL_ELSE
+>> Generated 5 Killed 4 (80%)
+> KILLED 4 SURVIVED 1 TIMED_OUT 0 NON_VIABLE 0 
+> MEMORY_ERROR 0 NOT_STARTED 0 STARTED 0 RUN_ERROR 0 
+> NO_COVERAGE 0 
+--------------------------------------------------------------------------------
+> org.pitest.mutationtest.engine.gregor.mutators.MathMutator
+>> Generated 8 Killed 5 (63%)
+> KILLED 5 SURVIVED 1 TIMED_OUT 0 NON_VIABLE 0 
+> MEMORY_ERROR 0 NOT_STARTED 0 STARTED 0 RUN_ERROR 0 
+> NO_COVERAGE 2 
+--------------------------------------------------------------------------------
+> org.pitest.mutationtest.engine.gregor.mutators.returns.BooleanFalseReturnValsMutator
+>> Generated 1 Killed 0 (0%)
+> KILLED 0 SURVIVED 0 TIMED_OUT 0 NON_VIABLE 0 
+> MEMORY_ERROR 0 NOT_STARTED 0 STARTED 0 RUN_ERROR 0 
+> NO_COVERAGE 1 
+--------------------------------------------------------------------------------
+================================================================================
+- Timings
+================================================================================
+> pre-scan for mutations : 2 seconds
+> scan classpath : < 1 second
+> coverage and dependency analysis : 2 seconds
+> build mutation tests : 2 seconds
+> run mutation analysis : 5 seconds
+--------------------------------------------------------------------------------
+> Total  : 13 seconds
+--------------------------------------------------------------------------------
+================================================================================
+- Statistics
+================================================================================
+>> Line Coverage (for mutated classes only): 32/40 (80%)
+>> 1 tests examined
+>> Generated 33 mutations Killed 19 (58%)
+>> Mutations with no coverage 9. Test strength 79%
+>> Ran 50 tests (1.52 tests per mutation)
+Enhanced functionality available at https://www.arcmutate.com/
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  32.957 s
+[INFO] Finished at: 2026-10-13T15:09:54-04:00
+[INFO] ------------------------------------------------------------------------
+[INFO] Maveniverse Nisse 0.9.4 loaded
+[INFO] Nisse injecting 31 properties into User Properties
+[INFO] Scanning for projects...
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for org.apache.tika:tika-parent:pom:4.0.0-SNAPSHOT
+[WARNING] 'version' contains an expression but should be a constant. @ org.apache.tika:tika-parent:${revision}, /mnt/c/Users/adawa/Documents/UDEM FALL 2026/3913/tools/ci-check/tika-parent/pom.xml, line 34, column 12
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for org.apache.tika:tika:pom:4.0.0-SNAPSHOT
+[WARNING] 'version' contains an expression but should be a constant. @ org.apache.tika:tika-parent:${revision}, /mnt/c/Users/adawa/Documents/UDEM FALL 2026/3913/tools/ci-check/tika-parent/pom.xml, line 34, column 12
+[WARNING] 
+[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+[WARNING] 
+[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+[WARNING] 
+[INFO] No need for inlining
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Build Order:
+[INFO] 
+[INFO] Apache Tika parent                                                 [pom]
+[INFO] Apache Tika Annotation Processor                                   [jar]
+[INFO] Apache Tika core                                                [bundle]
+[INFO] 
+[INFO] --------------------< org.apache.tika:tika-parent >---------------------
+[INFO] Building Apache Tika parent 4.0.0-SNAPSHOT                         [1/3]
+[INFO]   from pom.xml
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --- enforcer:3.6.3:enforce (enforce-maven-version) @ tika-parent ---
+[INFO] Rule 0: org.apache.maven.enforcer.rules.version.RequireMavenVersion passed
+[INFO] 
+[INFO] --- enforcer:3.6.3:enforce (enforce-java-version) @ tika-parent ---
+[INFO] Rule 0: org.apache.maven.enforcer.rules.version.RequireJavaVersion passed
+[INFO] 
+[INFO] --- enforcer:3.6.3:enforce (enforce-maven) @ tika-parent ---
+[INFO] Rule 0: org.apache.maven.enforcer.rules.dependency.DependencyConvergence passed
+[INFO] Rule 1: org.apache.maven.enforcer.rules.version.RequireMavenVersion passed
+[INFO] 
+[INFO] --- enforcer:3.6.3:enforce (ban-bad-log4j-versions) @ tika-parent ---
+[INFO] Rule 0: org.apache.maven.enforcer.rules.dependency.BannedDependencies passed
+[INFO] 
+[INFO] --- enforcer:3.6.3:enforce (ban-xerces-and-xml-apis) @ tika-parent ---
+[INFO] Rule 0: org.apache.maven.enforcer.rules.dependency.BannedDependencies passed
+[INFO] 
+[INFO] --- jacoco:0.8.15:prepare-agent (default) @ tika-parent ---
+[INFO] surefireArgLine set to "-javaagent:/root/.m2/repository/org/jacoco/org.jacoco.agent/0.8.15/org.jacoco.agent-0.8.15-runtime.jar=destfile=/mnt/c/Users/adawa/Documents/UDEM FALL 2026/3913/tools/ci-check/tika-parent/target/jacoco.exec"
+[INFO] 
+[INFO] --- spotless:3.9.0:apply (default) @ tika-parent ---
+[INFO] Spotless apply skipped
+[INFO] 
+[INFO] --- remote-resources:3.3.0:process (process-resource-bundles) @ tika-parent ---
+[INFO] Preparing remote bundle org.apache.apache.resources:apache-jar-resource-bundle:1.8
+[INFO] Copying 3 resources from 1 bundle.
+[INFO] 
+[INFO] --- flatten:1.8.0:flatten (flatten) @ tika-parent ---
+[INFO] Generating flattened POM of project org.apache.tika:tika-parent:pom:4.0.0-SNAPSHOT...
+[INFO] 
+[INFO] --- checkstyle:3.6.0:check (validate) @ tika-parent ---
+[INFO] 
+[INFO] --- jacoco:0.8.15:report (report) @ tika-parent ---
+[INFO] Skipping JaCoCo execution due to missing execution data file.
+[INFO] 
+[INFO] -------------< org.apache.tika:tika-annotation-processor >--------------
+[INFO] Building Apache Tika Annotation Processor 4.0.0-SNAPSHOT           [2/3]
+[INFO]   from /mnt/c/Users/adawa/Documents/UDEM FALL 2026/3913/tools/ci-check/tika-annotation-processor/pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- enforcer:3.6.3:enforce (enforce-maven-version) @ tika-annotation-processor ---
+[INFO] 
+[INFO] --- enforcer:3.6.3:enforce (enforce-java-version) @ tika-annotation-processor ---
+[INFO] 
+[INFO] --- enforcer:3.6.3:enforce (enforce-maven) @ tika-annotation-processor ---
+[INFO] Rule 0: org.apache.maven.enforcer.rules.dependency.DependencyConvergence passed
+[INFO] 
+[INFO] --- enforcer:3.6.3:enforce (ban-bad-log4j-versions) @ tika-annotation-processor ---
+[INFO] Rule 0: org.apache.maven.enforcer.rules.dependency.BannedDependencies passed
+[INFO] 
+[INFO] --- enforcer:3.6.3:enforce (ban-xerces-and-xml-apis) @ tika-annotation-processor ---
+[INFO] Rule 0: org.apache.maven.enforcer.rules.dependency.BannedDependencies passed
+[INFO] 
+[INFO] --- jacoco:0.8.15:prepare-agent (default) @ tika-annotation-processor ---
+[INFO] surefireArgLine set to "-javaagent:/root/.m2/repository/org/jacoco/org.jacoco.agent/0.8.15/org.jacoco.agent-0.8.15-runtime.jar=destfile=/mnt/c/Users/adawa/Documents/UDEM FALL 2026/3913/tools/ci-check/tika-annotation-processor/target/jacoco.exec"
+[INFO] 
+[INFO] --- spotless:3.9.0:apply (default) @ tika-annotation-processor ---
+[INFO] Spotless apply skipped
+[INFO] 
+[INFO] --- remote-resources:3.3.0:process (process-resource-bundles) @ tika-annotation-processor ---
+[INFO] Preparing remote bundle org.apache.apache.resources:apache-jar-resource-bundle:1.8
+[INFO] Copying 3 resources from 1 bundle.
+[INFO] 
+[INFO] --- resources:3.5.0:resources (default-resources) @ tika-annotation-processor ---
+[INFO] Copying 1 resource from src/main/resources to target/classes
+[INFO] Copying 3 resources from target/maven-shared-archive-resources to target/classes
+[INFO] 
+[INFO] --- flatten:1.8.0:flatten (flatten) @ tika-annotation-processor ---
+[INFO] Generating flattened POM of project org.apache.tika:tika-annotation-processor:jar:4.0.0-SNAPSHOT...
+[INFO] 
+[INFO] --- compiler:3.15.0:compile (default-compile) @ tika-annotation-processor ---
+[INFO] Nothing to compile - all classes are up to date.
+[INFO] 
+[INFO] --- checkstyle:3.6.0:check (validate) @ tika-annotation-processor ---
+[INFO] 
+[INFO] --- resources:3.5.0:testResources (default-testResources) @ tika-annotation-processor ---
+[INFO] skip non existing resourceDirectory /mnt/c/Users/adawa/Documents/UDEM FALL 2026/3913/tools/ci-check/tika-annotation-processor/src/test/resources
+[INFO] Copying 3 resources from target/maven-shared-archive-resources to target/test-classes
+[INFO] 
+[INFO] --- compiler:3.15.0:testCompile (default-testCompile) @ tika-annotation-processor ---
+[INFO] Nothing to compile - all classes are up to date.
+[INFO] 
+[INFO] --- surefire:3.5.6:test (default-test) @ tika-annotation-processor ---
+[INFO] Using auto detected provider org.apache.maven.surefire.junitplatform.JUnitPlatformProvider
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running org.apache.tika.annotation.KebabCaseConverterTest
+[INFO] Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.239 s -- in org.apache.tika.annotation.KebabCaseConverterTest
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 8, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] 
+[INFO] --- jacoco:0.8.15:report (report) @ tika-annotation-processor ---
+[INFO] Loading execution data file /mnt/c/Users/adawa/Documents/UDEM FALL 2026/3913/tools/ci-check/tika-annotation-processor/target/jacoco.exec
+[INFO] Analyzed bundle 'Apache Tika Annotation Processor' with 2 classes
+[INFO] 
+[INFO] ---------------------< org.apache.tika:tika-core >----------------------
+[INFO] Building Apache Tika core 4.0.0-SNAPSHOT                           [3/3]
+[INFO]   from /mnt/c/Users/adawa/Documents/UDEM FALL 2026/3913/tools/ci-check/tika-core/pom.xml
+[INFO] -------------------------------[ bundle ]-------------------------------
+[INFO] 
+[INFO] --- enforcer:3.6.3:enforce (enforce-maven-version) @ tika-core ---
+[INFO] Rule 0: org.apache.maven.enforcer.rules.version.RequireMavenVersion passed
+[INFO] 
+[INFO] --- enforcer:3.6.3:enforce (enforce-java-version) @ tika-core ---
+[INFO] Rule 0: org.apache.maven.enforcer.rules.version.RequireJavaVersion passed
+[INFO] 
+[INFO] --- enforcer:3.6.3:enforce (enforce-maven) @ tika-core ---
+[INFO] Rule 0: org.apache.maven.enforcer.rules.dependency.DependencyConvergence passed
+[INFO] Rule 1: org.apache.maven.enforcer.rules.version.RequireMavenVersion passed
+[INFO] 
+[INFO] --- enforcer:3.6.3:enforce (ban-bad-log4j-versions) @ tika-core ---
+[INFO] Rule 0: org.apache.maven.enforcer.rules.dependency.BannedDependencies passed
+[INFO] 
+[INFO] --- enforcer:3.6.3:enforce (ban-xerces-and-xml-apis) @ tika-core ---
+[INFO] Rule 0: org.apache.maven.enforcer.rules.dependency.BannedDependencies passed
+[INFO] 
+[INFO] --- checkstyle:3.6.0:check (validate) @ tika-core ---
+[INFO] 
+[INFO] --- jacoco:0.8.15:prepare-agent (default) @ tika-core ---
+[INFO] surefireArgLine set to "-javaagent:/root/.m2/repository/org/jacoco/org.jacoco.agent/0.8.15/org.jacoco.agent-0.8.15-runtime.jar=destfile=/mnt/c/Users/adawa/Documents/UDEM FALL 2026/3913/tools/ci-check/tika-core/target/jacoco.exec"
+[INFO] 
+[INFO] --- spotless:3.9.0:apply (default) @ tika-core ---
+[INFO] Spotless apply skipped
+[INFO] 
+[INFO] --- remote-resources:3.3.0:process (process-resource-bundles) @ tika-core ---
+[INFO] Preparing remote bundle org.apache.apache.resources:apache-jar-resource-bundle:1.8
+[INFO] Copying 3 resources from 1 bundle.
+[INFO] Copying appended resource: META-INF/LICENSE
+[INFO] 
+[INFO] --- resources:3.5.0:resources (default-resources) @ tika-core ---
+[INFO] Copying 5 resources from src/main/resources to target/classes
+[INFO] Copying 3 resources from target/maven-shared-archive-resources to target/classes
+[INFO] 
+[INFO] --- flatten:1.8.0:flatten (flatten) @ tika-core ---
+[INFO] Generating flattened POM of project org.apache.tika:tika-core:bundle:4.0.0-SNAPSHOT...
+[INFO] 
+[INFO] --- compiler:3.15.0:compile (default-compile) @ tika-core ---
+[INFO] Nothing to compile - all classes are up to date.
+[INFO] 
+[INFO] --- resources:3.5.0:testResources (default-testResources) @ tika-core ---
+[INFO] Copying 57 resources from src/test/resources to target/test-classes
+[INFO] Copying 3 resources from target/maven-shared-archive-resources to target/test-classes
+[INFO] 
+[INFO] --- compiler:3.15.0:testCompile (default-testCompile) @ tika-core ---
+[INFO] Nothing to compile - all classes are up to date.
+[INFO] 
+[INFO] --- surefire:3.5.6:test (default-test) @ tika-core ---
+[INFO] Using auto detected provider org.apache.maven.surefire.junitplatform.JUnitPlatformProvider
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running org.apache.tika.config.ParseContextConfigTest
+[INFO] Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.352 s -- in org.apache.tika.config.ParseContextConfigTest
+[INFO] Running org.apache.tika.config.TikaExtrasTest
+INFO  [main] 15:10:36,369 org.apache.tika.config.TikaExtras tika.extras.dir: loaded 1 extra jar(s): [/tmp/junit-12652319711447716090/extra.jar]
+[INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.291 s -- in org.apache.tika.config.TikaExtrasTest
+[INFO] Running org.apache.tika.config.TikaProgressTrackerTest
+[INFO] Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.111 s -- in org.apache.tika.config.TikaProgressTrackerTest
+[INFO] Running org.apache.tika.detect.BOMDetectorTest
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.855 s -- in org.apache.tika.detect.BOMDetectorTest
+[INFO] Running org.apache.tika.detect.CharsetSupersetsTest
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.058 s -- in org.apache.tika.detect.CharsetSupersetsTest
+[INFO] Running org.apache.tika.detect.FileCommandDetectorTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.537 s -- in org.apache.tika.detect.FileCommandDetectorTest
+[INFO] Running org.apache.tika.detect.HighByteLetterStatsTest
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.021 s -- in org.apache.tika.detect.HighByteLetterStatsTest
+[INFO] Running org.apache.tika.detect.MagicDetectorTest
+[INFO] Tests run: 14, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.179 s -- in org.apache.tika.detect.MagicDetectorTest
+[INFO] Running org.apache.tika.detect.MetadataCharsetDetectorTest
+[INFO] Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.017 s -- in org.apache.tika.detect.MetadataCharsetDetectorTest
+[INFO] Running org.apache.tika.detect.MimeDetectionWithNNTest
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.419 s -- in org.apache.tika.detect.MimeDetectionWithNNTest
+[INFO] Running org.apache.tika.detect.NameDetectorTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.013 s -- in org.apache.tika.detect.NameDetectorTest
+[INFO] Running org.apache.tika.detect.TextDetectorTest
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.015 s -- in org.apache.tika.detect.TextDetectorTest
+[INFO] Running org.apache.tika.detect.TypeDetectorTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.012 s -- in org.apache.tika.detect.TypeDetectorTest
+[INFO] Running org.apache.tika.detect.ZeroSizeFileDetectorTest
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.013 s -- in org.apache.tika.detect.ZeroSizeFileDetectorTest
+[INFO] Running org.apache.tika.digest.InputStreamDigesterTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.034 s -- in org.apache.tika.digest.InputStreamDigesterTest
+[INFO] Running org.apache.tika.extractor.EmbeddedDocumentUtilExtensionTest
+[INFO] Tests run: 10, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.181 s -- in org.apache.tika.extractor.EmbeddedDocumentUtilExtensionTest
+[INFO] Running org.apache.tika.io.EndianUtilsTest
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.015 s -- in org.apache.tika.io.EndianUtilsTest
+[INFO] Running org.apache.tika.io.FilenameUtilsTest
+[INFO] Tests run: 10, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.047 s -- in org.apache.tika.io.FilenameUtilsTest
+[INFO] Running org.apache.tika.io.LookaheadInputStreamTest
+[INFO] Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.004 s -- in org.apache.tika.io.LookaheadInputStreamTest
+[INFO] Running org.apache.tika.io.LookaheadInputStream_close_0_0_Test
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.003 s -- in org.apache.tika.io.LookaheadInputStream_close_0_0_Test
+[INFO] Running org.apache.tika.io.LookaheadInputStream_markSupported_6_0_Test
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.008 s -- in org.apache.tika.io.LookaheadInputStream_markSupported_6_0_Test
+[INFO] Running org.apache.tika.io.LookaheadInputStream_read_2_0_Test
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 s -- in org.apache.tika.io.LookaheadInputStream_read_2_0_Test
+[INFO] Running org.apache.tika.io.LookaheadInputStream_read_3_0_Test
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 s -- in org.apache.tika.io.LookaheadInputStream_read_3_0_Test
+[INFO] Running org.apache.tika.io.TailStreamTest
+[INFO] Tests run: 9, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.009 s -- in org.apache.tika.io.TailStreamTest
+[INFO] Running org.apache.tika.io.TemporaryResourcesTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 s -- in org.apache.tika.io.TemporaryResourcesTest
+[INFO] Running org.apache.tika.io.TikaInputStreamTest
+[WARNING] Tests run: 102, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 1.661 s -- in org.apache.tika.io.TikaInputStreamTest
+[INFO] Running org.apache.tika.language.detect.LanguageNamesTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.013 s -- in org.apache.tika.language.detect.LanguageNamesTest
+[INFO] Running org.apache.tika.metadata.filter.LegacyKeyMigrationFilterTest
+[INFO] Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.056 s -- in org.apache.tika.metadata.filter.LegacyKeyMigrationFilterTest
+[INFO] Running org.apache.tika.metadata.MetadataInternalKeyGuardTest
+[INFO] Tests run: 11, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.012 s -- in org.apache.tika.metadata.MetadataInternalKeyGuardTest
+[INFO] Running org.apache.tika.metadata.TestMetadata
+[INFO] Tests run: 18, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.133 s -- in org.apache.tika.metadata.TestMetadata
+[INFO] Running org.apache.tika.metadata.TestPageAnchoring
+[INFO] Tests run: 9, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.038 s -- in org.apache.tika.metadata.TestPageAnchoring
+[INFO] Running org.apache.tika.mime.CustomReaderTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.018 s -- in org.apache.tika.mime.CustomReaderTest
+[INFO] Running org.apache.tika.mime.MediaTypeTest
+[INFO] Tests run: 9, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.009 s -- in org.apache.tika.mime.MediaTypeTest
+[INFO] Running org.apache.tika.mime.MimeDetectionTest
+[INFO] Tests run: 10, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.600 s -- in org.apache.tika.mime.MimeDetectionTest
+[INFO] Running org.apache.tika.mime.MimeTypesReaderTest
+[INFO] Tests run: 19, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.489 s -- in org.apache.tika.mime.MimeTypesReaderTest
+[INFO] Running org.apache.tika.mime.PatternsTest
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 s -- in org.apache.tika.mime.PatternsTest
+[INFO] Running org.apache.tika.mime.ProbabilisticMimeDetectionTest
+[INFO] Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.373 s -- in org.apache.tika.mime.ProbabilisticMimeDetectionTest
+[INFO] Running org.apache.tika.mime.RFC822DetectionTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 s -- in org.apache.tika.mime.RFC822DetectionTest
+[INFO] Running org.apache.tika.parser.CompositeParserTest
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.240 s -- in org.apache.tika.parser.CompositeParserTest
+[INFO] Running org.apache.tika.parser.mock.MockParserTest
+INFO  [pool-6-thread-1] 15:10:45,005 com.martensigwart.fakeload.DefaultFakeLoadExecutor FakeLoad execution started
+INFO  [pool-8-thread-1] 15:10:45,124 com.martensigwart.fakeload.DefaultFakeLoadExecutor FakeLoad execution finished
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.466 s -- in org.apache.tika.parser.mock.MockParserTest
+[INFO] Running org.apache.tika.parser.multiple.MultipleParserTest
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.093 s -- in org.apache.tika.parser.multiple.MultipleParserTest
+[INFO] Running org.apache.tika.parser.ParseContextTest
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 s -- in org.apache.tika.parser.ParseContextTest
+[INFO] Running org.apache.tika.parser.ParserDecoratorTest
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.012 s -- in org.apache.tika.parser.ParserDecoratorTest
+[INFO] Running org.apache.tika.parser.RegexCaptureParserTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.022 s -- in org.apache.tika.parser.RegexCaptureParserTest
+[INFO] Running org.apache.tika.sax.BasicContentHandlerFactoryTest
+[INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.038 s -- in org.apache.tika.sax.BasicContentHandlerFactoryTest
+[INFO] Running org.apache.tika.sax.BodyContentHandlerTest
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.029 s -- in org.apache.tika.sax.BodyContentHandlerTest
+[INFO] Running org.apache.tika.sax.CustomErrorHandlerTest
+[WARNING] Tests run: 1, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 0 s -- in org.apache.tika.sax.CustomErrorHandlerTest
+[INFO] Running org.apache.tika.sax.LinkContentHandlerTest
+[INFO] Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.040 s -- in org.apache.tika.sax.LinkContentHandlerTest
+[INFO] Running org.apache.tika.sax.OfflineContentHandlerTest
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.018 s -- in org.apache.tika.sax.OfflineContentHandlerTest
+[INFO] Running org.apache.tika.sax.RichTextContentHandlerTest
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.014 s -- in org.apache.tika.sax.RichTextContentHandlerTest
+[INFO] Running org.apache.tika.sax.SafeContentHandlerTest
+[INFO] Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.004 s -- in org.apache.tika.sax.SafeContentHandlerTest
+[INFO] Running org.apache.tika.sax.SecureContentHandlerTest
+[INFO] Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.128 s -- in org.apache.tika.sax.SecureContentHandlerTest
+[INFO] Running org.apache.tika.sax.SerializerTest
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.003 s -- in org.apache.tika.sax.SerializerTest
+[INFO] Running org.apache.tika.sax.ToMarkdownContentHandlerTest
+[INFO] Tests run: 357, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.529 s -- in org.apache.tika.sax.ToMarkdownContentHandlerTest
+[INFO] Running org.apache.tika.sax.XHTMLBalancingHandlerTest
+[INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.015 s -- in org.apache.tika.sax.XHTMLBalancingHandlerTest
+[INFO] Running org.apache.tika.sax.XHTMLContentHandlerTest
+[INFO] Tests run: 13, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.009 s -- in org.apache.tika.sax.XHTMLContentHandlerTest
+[INFO] Running org.apache.tika.sax.xpath.XPathParserTest
+[INFO] Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.028 s -- in org.apache.tika.sax.xpath.XPathParserTest
+[INFO] Running org.apache.tika.TikaDetectionTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.104 s -- in org.apache.tika.TikaDetectionTest
+[INFO] Running org.apache.tika.utils.CharsetUtilsTest
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.060 s -- in org.apache.tika.utils.CharsetUtilsTest
+[INFO] Running org.apache.tika.utils.ConcurrentUtilsTest
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.024 s -- in org.apache.tika.utils.ConcurrentUtilsTest
+[INFO] Running org.apache.tika.utils.RegexUtilsTest
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.013 s -- in org.apache.tika.utils.RegexUtilsTest
+[INFO] Running org.apache.tika.utils.ServiceLoaderUtilsTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.022 s -- in org.apache.tika.utils.ServiceLoaderUtilsTest
+[INFO] Running org.apache.tika.utils.XMLReaderUtilsTest
+[INFO] Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.230 s -- in org.apache.tika.utils.XMLReaderUtilsTest
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 757, Failures: 0, Errors: 0, Skipped: 2
+[INFO] 
+[INFO] 
+[INFO] --- jacoco:0.8.15:report (report) @ tika-core ---
+[INFO] Loading execution data file /mnt/c/Users/adawa/Documents/UDEM FALL 2026/3913/tools/ci-check/tika-core/target/jacoco.exec
+[INFO] Analyzed bundle 'Apache Tika core' with 345 classes
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Summary for Apache Tika parent 4.0.0-SNAPSHOT:
+[INFO] 
+[INFO] Apache Tika parent ................................. SUCCESS [  1.045 s]
+[INFO] Apache Tika Annotation Processor ................... SUCCESS [  4.352 s]
+[INFO] Apache Tika core ................................... SUCCESS [ 52.074 s]
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  01:02 min
+[INFO] Finished at: 2026-10-13T15:11:03-04:00
+[INFO] ------------------------------------------------------------------------
+[INFO] Maveniverse Nisse 0.9.4 loaded
+[INFO] Nisse injecting 31 properties into User Properties
+[INFO] Scanning for projects...
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for org.apache.tika:tika-core:bundle:4.0.0-SNAPSHOT
+[WARNING] 'version' contains an expression but should be a constant. @ org.apache.tika:tika-parent:${revision}, /mnt/c/Users/adawa/Documents/UDEM FALL 2026/3913/tools/ci-check/tika-parent/pom.xml, line 34, column 12
+[WARNING] 
+[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+[WARNING] 
+[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+[WARNING] 
+[INFO] No need for inlining
+[INFO] 
+[INFO] ---------------------< org.apache.tika:tika-core >----------------------
+[INFO] Building Apache Tika core 4.0.0-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] -------------------------------[ bundle ]-------------------------------
+[INFO] 
+[INFO] --- pitest:1.17.4:mutationCoverage (default-cli) @ tika-core ---
+[INFO] Root dir is : /mnt/c/Users/adawa/Documents/UDEM FALL 2026/3913/tools/ci-check/tika-core
+[INFO] Found plugin : Default csv report plugin
+[INFO] Found plugin : Default xml report plugin
+[INFO] Found plugin : Default html report plugin
+[INFO] Found plugin : Static initializer code detector plugin
+[INFO] Found plugin : Excluded annotations plugin
+[INFO] Found plugin : Try with resources filter
+[INFO] Found plugin : Inlined finally block filter plugin
+[INFO] Found plugin : Implicit null check filter
+[INFO] Found plugin : Method reference null check filter
+[INFO] Found plugin : For each loop filter
+[INFO] Found plugin : Enum junk filter
+[INFO] Found plugin : Record junk mutation filter
+[INFO] Found plugin : String switch filter
+[INFO] Found plugin : Assertions filter
+[INFO] Found plugin : Enum switch filter
+[INFO] Found plugin : Logging calls filter
+[INFO] Found plugin : Infinite for loop filter
+[INFO] Found plugin : Long running iterator loop filter
+[INFO] Found plugin : For loop counter filter
+[INFO] Found plugin : Kotlin junk mutations filter
+[INFO] Found plugin : Groovy junk mutations filter
+[INFO] Found plugin : Max mutations per class limit
+[INFO] Found plugin : Equals shortcut equivalent mutant filter
+[INFO] Found plugin : Trivial return vals equivalence filter
+[INFO] Found plugin : Filters mutants with line number <= 1
+[INFO] Found plugin : Division by one equivalent mutant filter
+[INFO] Found plugin : Lombok junk mutations filter
+[INFO] Found plugin : Filter mutations to defensive wrappers such as unmodifiableCollection on return or field write
+[INFO] Found plugin : Mutant export plugin
+[INFO] Found plugin : Auto add java.awt.headless=true to keep keyboard focus on Mac OS
+[INFO] Found plugin : Auto set number of threads based on machine
+[INFO] Found plugin : Automatically add -ea to launch args to enable assertions
+[INFO] Found plugin : Default build verifier
+[INFO] Found plugin : Detect missing JUnit5 plugin
+[INFO] Found plugin : Detect missing TestNG plugin
+[INFO] Found plugin : Detect missing kotlin plugin
+[INFO] Found plugin : Detect missing spring plugin
+[INFO] Found plugin : Default coverage exporter
+[INFO] Found shared classpath plugin : Default mutation engine
+[INFO] Found shared classpath plugin : JUnit 5 test framework support
+[INFO] Found shared classpath plugin : JUnit plugin
+[INFO] Found shared classpath plugin : Support for mocking frameworks using javassist
+[INFO] Found shared classpath plugin : Reset environment for javassist
+[INFO] Available mutators : EXPERIMENTAL_ARGUMENT_PROPAGATION,FALSE_RETURNS,TRUE_RETURNS,CONDITIONALS_BOUNDARY,CONSTRUCTOR_CALLS,EMPTY_RETURNS,INCREMENTS,INLINE_CONSTS,INVERT_NEGS,MATH,NEGATE_CONDITIONALS,NON_VOID_METHOD_CALLS,NULL_RETURNS,PRIMITIVE_RETURNS,REMOVE_CONDITIONALS_EQUAL_IF,REMOVE_CONDITIONALS_EQUAL_ELSE,REMOVE_CONDITIONALS_ORDER_IF,REMOVE_CONDITIONALS_ORDER_ELSE,VOID_METHOD_CALLS,EXPERIMENTAL_BIG_DECIMAL,EXPERIMENTAL_BIG_INTEGER,EXPERIMENTAL_MEMBER_VARIABLE,EXPERIMENTAL_NAKED_RECEIVER,REMOVE_INCREMENTS,EXPERIMENTAL_SWITCH
+[INFO] Adding org.pitest:pitest-junit5-plugin to SUT classpath
+[INFO] Adding org.pitest:pitest to SUT classpath
+[INFO] Auto adding org.junit.platform:junit-platform-launcher:jar:6.1.3 < central (https://repo.maven.apache.org/maven2, default, releases) to classpath.
+[INFO] Mutating from /mnt/c/Users/adawa/Documents/UDEM FALL 2026/3913/tools/ci-check/tika-core/target/classes
+[INFO] Replacing properties in argLine -Xmx4g -Djava.awt.headless=true @{surefireArgLine}
+3:11:24 PM PIT >> INFO : Verbose logging is disabled. If you encounter a problem, please enable it before reporting an issue.
+3:11:26 PM PIT >> INFO : Created 1 mutation test units in pre scan
+3:11:27 PM PIT >> INFO : Sending 8 test classes to minion
+3:11:27 PM PIT >> INFO : Sent tests to minion
+/-\|/-\|/-\|/-3:11:29 PM PIT >> INFO : Calculated coverage in 3 seconds.
+3:11:32 PM PIT >> INFO : Created 1 mutation test units
+/3:11:38 PM PIT >> INFO : Completed in 14 seconds
+================================================================================
+- Mutators
+================================================================================
+> org.pitest.mutationtest.engine.gregor.mutators.RemoveConditionalMutator_ORDER_ELSE
+>> Generated 3 Killed 3 (100%)
+> KILLED 3 SURVIVED 0 TIMED_OUT 0 NON_VIABLE 0 
+> MEMORY_ERROR 0 NOT_STARTED 0 STARTED 0 RUN_ERROR 0 
+> NO_COVERAGE 0 
+--------------------------------------------------------------------------------
+> org.pitest.mutationtest.engine.gregor.mutators.returns.PrimitiveReturnsMutator
+>> Generated 6 Killed 6 (100%)
+> KILLED 6 SURVIVED 0 TIMED_OUT 0 NON_VIABLE 0 
+> MEMORY_ERROR 0 NOT_STARTED 0 STARTED 0 RUN_ERROR 0 
+> NO_COVERAGE 0 
+--------------------------------------------------------------------------------
+> org.pitest.mutationtest.engine.gregor.mutators.ConditionalsBoundaryMutator
+>> Generated 3 Killed 2 (67%)
+> KILLED 2 SURVIVED 1 TIMED_OUT 0 NON_VIABLE 0 
+> MEMORY_ERROR 0 NOT_STARTED 0 STARTED 0 RUN_ERROR 0 
+> NO_COVERAGE 0 
+--------------------------------------------------------------------------------
+> org.pitest.mutationtest.engine.gregor.mutators.VoidMethodCallMutator
+>> Generated 7 Killed 5 (71%)
+> KILLED 5 SURVIVED 2 TIMED_OUT 0 NON_VIABLE 0 
+> MEMORY_ERROR 0 NOT_STARTED 0 STARTED 0 RUN_ERROR 0 
+> NO_COVERAGE 0 
+--------------------------------------------------------------------------------
+> org.pitest.mutationtest.engine.gregor.mutators.RemoveConditionalMutator_EQUAL_ELSE
+>> Generated 5 Killed 4 (80%)
+> KILLED 4 SURVIVED 1 TIMED_OUT 0 NON_VIABLE 0 
+> MEMORY_ERROR 0 NOT_STARTED 0 STARTED 0 RUN_ERROR 0 
+> NO_COVERAGE 0 
+--------------------------------------------------------------------------------
+> org.pitest.mutationtest.engine.gregor.mutators.MathMutator
+>> Generated 8 Killed 6 (75%)
+> KILLED 6 SURVIVED 2 TIMED_OUT 0 NON_VIABLE 0 
+> MEMORY_ERROR 0 NOT_STARTED 0 STARTED 0 RUN_ERROR 0 
+> NO_COVERAGE 0 
+--------------------------------------------------------------------------------
+> org.pitest.mutationtest.engine.gregor.mutators.returns.BooleanFalseReturnValsMutator
+>> Generated 1 Killed 1 (100%)
+> KILLED 1 SURVIVED 0 TIMED_OUT 0 NON_VIABLE 0 
+> MEMORY_ERROR 0 NOT_STARTED 0 STARTED 0 RUN_ERROR 0 
+> NO_COVERAGE 0 
+--------------------------------------------------------------------------------
+================================================================================
+- Timings
+================================================================================
+> pre-scan for mutations : 2 seconds
+> scan classpath : < 1 second
+> coverage and dependency analysis : 2 seconds
+> build mutation tests : 2 seconds
+> run mutation analysis : 6 seconds
+--------------------------------------------------------------------------------
+> Total  : 14 seconds
+--------------------------------------------------------------------------------
+================================================================================
+- Statistics
+================================================================================
+>> Line Coverage (for mutated classes only): 40/40 (100%)
+>> 8 tests examined
+>> Generated 33 mutations Killed 27 (82%)
+>> Mutations with no coverage 0. Test strength 82%
+>> Ran 97 tests (2.94 tests per mutation)
+Enhanced functionality available at https://www.arcmutate.com/
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  21.760 s
+[INFO] Finished at: 2026-10-13T15:11:38-04:00
+[INFO] ------------------------------------------------------------------------
+[INFO] Maveniverse Nisse 0.9.4 loaded
+[INFO] Nisse injecting 31 properties into User Properties
+[INFO] Scanning for projects...
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for org.apache.tika:tika-parent:pom:4.0.0-SNAPSHOT
+[WARNING] 'version' contains an expression but should be a constant. @ org.apache.tika:tika-parent:${revision}, /mnt/c/Users/adawa/Documents/UDEM FALL 2026/3913/tools/ci-check/tika-parent/pom.xml, line 34, column 12
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for org.apache.tika:tika:pom:4.0.0-SNAPSHOT
+[WARNING] 'version' contains an expression but should be a constant. @ org.apache.tika:tika-parent:${revision}, /mnt/c/Users/adawa/Documents/UDEM FALL 2026/3913/tools/ci-check/tika-parent/pom.xml, line 34, column 12
+[WARNING] 
+[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+[WARNING] 
+[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+[WARNING] 
+[INFO] No need for inlining
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Build Order:
+[INFO] 
+[INFO] Apache Tika parent                                                 [pom]
+[INFO] Apache Tika Annotation Processor                                   [jar]
+[INFO] Apache Tika core                                                [bundle]
+[INFO] 
+[INFO] --------------------< org.apache.tika:tika-parent >---------------------
+[INFO] Building Apache Tika parent 4.0.0-SNAPSHOT                         [1/3]
+[INFO]   from pom.xml
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --- enforcer:3.6.3:enforce (enforce-maven-version) @ tika-parent ---
+[INFO] Rule 0: org.apache.maven.enforcer.rules.version.RequireMavenVersion passed
+[INFO] 
+[INFO] --- enforcer:3.6.3:enforce (enforce-java-version) @ tika-parent ---
+[INFO] Rule 0: org.apache.maven.enforcer.rules.version.RequireJavaVersion passed
+[INFO] 
+[INFO] --- enforcer:3.6.3:enforce (enforce-maven) @ tika-parent ---
+[INFO] Rule 0: org.apache.maven.enforcer.rules.dependency.DependencyConvergence passed
+[INFO] Rule 1: org.apache.maven.enforcer.rules.version.RequireMavenVersion passed
+[INFO] 
+[INFO] --- enforcer:3.6.3:enforce (ban-bad-log4j-versions) @ tika-parent ---
+[INFO] Rule 0: org.apache.maven.enforcer.rules.dependency.BannedDependencies passed
+[INFO] 
+[INFO] --- enforcer:3.6.3:enforce (ban-xerces-and-xml-apis) @ tika-parent ---
+[INFO] Rule 0: org.apache.maven.enforcer.rules.dependency.BannedDependencies passed
+[INFO] 
+[INFO] --- jacoco:0.8.15:prepare-agent (default) @ tika-parent ---
+[INFO] surefireArgLine set to "-javaagent:/root/.m2/repository/org/jacoco/org.jacoco.agent/0.8.15/org.jacoco.agent-0.8.15-runtime.jar=destfile=/mnt/c/Users/adawa/Documents/UDEM FALL 2026/3913/tools/ci-check/tika-parent/target/jacoco.exec"
+[INFO] 
+[INFO] --- spotless:3.9.0:apply (default) @ tika-parent ---
+[INFO] Spotless apply skipped
+[INFO] 
+[INFO] --- remote-resources:3.3.0:process (process-resource-bundles) @ tika-parent ---
+[INFO] Preparing remote bundle org.apache.apache.resources:apache-jar-resource-bundle:1.8
+[INFO] Copying 3 resources from 1 bundle.
+[INFO] 
+[INFO] --- flatten:1.8.0:flatten (flatten) @ tika-parent ---
+[INFO] Generating flattened POM of project org.apache.tika:tika-parent:pom:4.0.0-SNAPSHOT...
+[INFO] 
+[INFO] --- checkstyle:3.6.0:check (validate) @ tika-parent ---
+[INFO] 
+[INFO] --- jacoco:0.8.15:report (report) @ tika-parent ---
+[INFO] Skipping JaCoCo execution due to missing execution data file.
+[INFO] 
+[INFO] -------------< org.apache.tika:tika-annotation-processor >--------------
+[INFO] Building Apache Tika Annotation Processor 4.0.0-SNAPSHOT           [2/3]
+[INFO]   from /mnt/c/Users/adawa/Documents/UDEM FALL 2026/3913/tools/ci-check/tika-annotation-processor/pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- enforcer:3.6.3:enforce (enforce-maven-version) @ tika-annotation-processor ---
+[INFO] 
+[INFO] --- enforcer:3.6.3:enforce (enforce-java-version) @ tika-annotation-processor ---
+[INFO] 
+[INFO] --- enforcer:3.6.3:enforce (enforce-maven) @ tika-annotation-processor ---
+[INFO] Rule 0: org.apache.maven.enforcer.rules.dependency.DependencyConvergence passed
+[INFO] 
+[INFO] --- enforcer:3.6.3:enforce (ban-bad-log4j-versions) @ tika-annotation-processor ---
+[INFO] Rule 0: org.apache.maven.enforcer.rules.dependency.BannedDependencies passed
+[INFO] 
+[INFO] --- enforcer:3.6.3:enforce (ban-xerces-and-xml-apis) @ tika-annotation-processor ---
+[INFO] Rule 0: org.apache.maven.enforcer.rules.dependency.BannedDependencies passed
+[INFO] 
+[INFO] --- jacoco:0.8.15:prepare-agent (default) @ tika-annotation-processor ---
+[INFO] surefireArgLine set to "-javaagent:/root/.m2/repository/org/jacoco/org.jacoco.agent/0.8.15/org.jacoco.agent-0.8.15-runtime.jar=destfile=/mnt/c/Users/adawa/Documents/UDEM FALL 2026/3913/tools/ci-check/tika-annotation-processor/target/jacoco.exec"
+[INFO] 
+[INFO] --- spotless:3.9.0:apply (default) @ tika-annotation-processor ---
+[INFO] Spotless apply skipped
+[INFO] 
+[INFO] --- remote-resources:3.3.0:process (process-resource-bundles) @ tika-annotation-processor ---
+[INFO] Preparing remote bundle org.apache.apache.resources:apache-jar-resource-bundle:1.8
+[INFO] Copying 3 resources from 1 bundle.
+[INFO] 
+[INFO] --- resources:3.5.0:resources (default-resources) @ tika-annotation-processor ---
+[INFO] Copying 1 resource from src/main/resources to target/classes
+[INFO] Copying 3 resources from target/maven-shared-archive-resources to target/classes
+[INFO] 
+[INFO] --- flatten:1.8.0:flatten (flatten) @ tika-annotation-processor ---
+[INFO] Generating flattened POM of project org.apache.tika:tika-annotation-processor:jar:4.0.0-SNAPSHOT...
+[INFO] 
+[INFO] --- compiler:3.15.0:compile (default-compile) @ tika-annotation-processor ---
+[INFO] Nothing to compile - all classes are up to date.
+[INFO] 
+[INFO] --- checkstyle:3.6.0:check (validate) @ tika-annotation-processor ---
+[INFO] 
+[INFO] --- resources:3.5.0:testResources (default-testResources) @ tika-annotation-processor ---
+[INFO] skip non existing resourceDirectory /mnt/c/Users/adawa/Documents/UDEM FALL 2026/3913/tools/ci-check/tika-annotation-processor/src/test/resources
+[INFO] Copying 3 resources from target/maven-shared-archive-resources to target/test-classes
+[INFO] 
+[INFO] --- compiler:3.15.0:testCompile (default-testCompile) @ tika-annotation-processor ---
+[INFO] Nothing to compile - all classes are up to date.
+[INFO] 
+[INFO] --- surefire:3.5.6:test (default-test) @ tika-annotation-processor ---
+[INFO] Using auto detected provider org.apache.maven.surefire.junitplatform.JUnitPlatformProvider
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running org.apache.tika.annotation.KebabCaseConverterTest
+[INFO] Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.254 s -- in org.apache.tika.annotation.KebabCaseConverterTest
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 8, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] 
+[INFO] --- jacoco:0.8.15:report (report) @ tika-annotation-processor ---
+[INFO] Loading execution data file /mnt/c/Users/adawa/Documents/UDEM FALL 2026/3913/tools/ci-check/tika-annotation-processor/target/jacoco.exec
+[INFO] Analyzed bundle 'Apache Tika Annotation Processor' with 2 classes
+[INFO] 
+[INFO] ---------------------< org.apache.tika:tika-core >----------------------
+[INFO] Building Apache Tika core 4.0.0-SNAPSHOT                           [3/3]
+[INFO]   from /mnt/c/Users/adawa/Documents/UDEM FALL 2026/3913/tools/ci-check/tika-core/pom.xml
+[INFO] -------------------------------[ bundle ]-------------------------------
+[INFO] 
+[INFO] --- enforcer:3.6.3:enforce (enforce-maven-version) @ tika-core ---
+[INFO] Rule 0: org.apache.maven.enforcer.rules.version.RequireMavenVersion passed
+[INFO] 
+[INFO] --- enforcer:3.6.3:enforce (enforce-java-version) @ tika-core ---
+[INFO] Rule 0: org.apache.maven.enforcer.rules.version.RequireJavaVersion passed
+[INFO] 
+[INFO] --- enforcer:3.6.3:enforce (enforce-maven) @ tika-core ---
+[INFO] Rule 0: org.apache.maven.enforcer.rules.dependency.DependencyConvergence passed
+[INFO] Rule 1: org.apache.maven.enforcer.rules.version.RequireMavenVersion passed
+[INFO] 
+[INFO] --- enforcer:3.6.3:enforce (ban-bad-log4j-versions) @ tika-core ---
+[INFO] Rule 0: org.apache.maven.enforcer.rules.dependency.BannedDependencies passed
+[INFO] 
+[INFO] --- enforcer:3.6.3:enforce (ban-xerces-and-xml-apis) @ tika-core ---
+[INFO] Rule 0: org.apache.maven.enforcer.rules.dependency.BannedDependencies passed
+[INFO] 
+[INFO] --- checkstyle:3.6.0:check (validate) @ tika-core ---
+[INFO] 
+[INFO] --- jacoco:0.8.15:prepare-agent (default) @ tika-core ---
+[INFO] surefireArgLine set to "-javaagent:/root/.m2/repository/org/jacoco/org.jacoco.agent/0.8.15/org.jacoco.agent-0.8.15-runtime.jar=destfile=/mnt/c/Users/adawa/Documents/UDEM FALL 2026/3913/tools/ci-check/tika-core/target/jacoco.exec"
+[INFO] 
+[INFO] --- spotless:3.9.0:apply (default) @ tika-core ---
+[INFO] Spotless apply skipped
+[INFO] 
+[INFO] --- remote-resources:3.3.0:process (process-resource-bundles) @ tika-core ---
+[INFO] Preparing remote bundle org.apache.apache.resources:apache-jar-resource-bundle:1.8
+[INFO] Copying 3 resources from 1 bundle.
+[INFO] Copying appended resource: META-INF/LICENSE
+[INFO] 
+[INFO] --- resources:3.5.0:resources (default-resources) @ tika-core ---
+[INFO] Copying 5 resources from src/main/resources to target/classes
+[INFO] Copying 3 resources from target/maven-shared-archive-resources to target/classes
+[INFO] 
+[INFO] --- flatten:1.8.0:flatten (flatten) @ tika-core ---
+[INFO] Generating flattened POM of project org.apache.tika:tika-core:bundle:4.0.0-SNAPSHOT...
+[INFO] 
+[INFO] --- compiler:3.15.0:compile (default-compile) @ tika-core ---
+[INFO] Nothing to compile - all classes are up to date.
+[INFO] 
+[INFO] --- resources:3.5.0:testResources (default-testResources) @ tika-core ---
+[INFO] Copying 57 resources from src/test/resources to target/test-classes
+[INFO] Copying 3 resources from target/maven-shared-archive-resources to target/test-classes
+[INFO] 
+[INFO] --- compiler:3.15.0:testCompile (default-testCompile) @ tika-core ---
+[INFO] Nothing to compile - all classes are up to date.
+[INFO] 
+[INFO] --- surefire:3.5.6:test (default-test) @ tika-core ---
+[INFO] Using auto detected provider org.apache.maven.surefire.junitplatform.JUnitPlatformProvider
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running org.apache.tika.config.ParseContextConfigTest
+[INFO] Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.335 s -- in org.apache.tika.config.ParseContextConfigTest
+[INFO] Running org.apache.tika.config.TikaExtrasTest
+INFO  [main] 15:12:19,995 org.apache.tika.config.TikaExtras tika.extras.dir: loaded 1 extra jar(s): [/tmp/junit-11933117212944961832/extra.jar]
+[INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.937 s -- in org.apache.tika.config.TikaExtrasTest
+[INFO] Running org.apache.tika.config.TikaProgressTrackerTest
+[INFO] Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.112 s -- in org.apache.tika.config.TikaProgressTrackerTest
+[INFO] Running org.apache.tika.detect.BOMDetectorTest
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.820 s -- in org.apache.tika.detect.BOMDetectorTest
+[INFO] Running org.apache.tika.detect.CharsetSupersetsTest
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.056 s -- in org.apache.tika.detect.CharsetSupersetsTest
+[INFO] Running org.apache.tika.detect.FileCommandDetectorTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.500 s -- in org.apache.tika.detect.FileCommandDetectorTest
+[INFO] Running org.apache.tika.detect.HighByteLetterStatsTest
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.020 s -- in org.apache.tika.detect.HighByteLetterStatsTest
+[INFO] Running org.apache.tika.detect.MagicDetectorTest
+[INFO] Tests run: 14, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.175 s -- in org.apache.tika.detect.MagicDetectorTest
+[INFO] Running org.apache.tika.detect.MetadataCharsetDetectorTest
+[INFO] Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.014 s -- in org.apache.tika.detect.MetadataCharsetDetectorTest
+[INFO] Running org.apache.tika.detect.MimeDetectionWithNNTest
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.405 s -- in org.apache.tika.detect.MimeDetectionWithNNTest
+[INFO] Running org.apache.tika.detect.NameDetectorTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.013 s -- in org.apache.tika.detect.NameDetectorTest
+[INFO] Running org.apache.tika.detect.TextDetectorTest
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.015 s -- in org.apache.tika.detect.TextDetectorTest
+[INFO] Running org.apache.tika.detect.TypeDetectorTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.012 s -- in org.apache.tika.detect.TypeDetectorTest
+[INFO] Running org.apache.tika.detect.ZeroSizeFileDetectorTest
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.014 s -- in org.apache.tika.detect.ZeroSizeFileDetectorTest
+[INFO] Running org.apache.tika.digest.InputStreamDigesterTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.040 s -- in org.apache.tika.digest.InputStreamDigesterTest
+[INFO] Running org.apache.tika.extractor.EmbeddedDocumentUtilExtensionTest
+[INFO] Tests run: 10, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.183 s -- in org.apache.tika.extractor.EmbeddedDocumentUtilExtensionTest
+[INFO] Running org.apache.tika.io.EndianUtilsTest
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.014 s -- in org.apache.tika.io.EndianUtilsTest
+[INFO] Running org.apache.tika.io.FilenameUtilsTest
+[INFO] Tests run: 10, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.047 s -- in org.apache.tika.io.FilenameUtilsTest
+[INFO] Running org.apache.tika.io.LookaheadInputStreamManualTest
+[INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.011 s -- in org.apache.tika.io.LookaheadInputStreamManualTest
+[INFO] Running org.apache.tika.io.LookaheadInputStreamTest
+[INFO] Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.004 s -- in org.apache.tika.io.LookaheadInputStreamTest
+[INFO] Running org.apache.tika.io.LookaheadInputStream_close_0_0_Test
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 s -- in org.apache.tika.io.LookaheadInputStream_close_0_0_Test
+[INFO] Running org.apache.tika.io.LookaheadInputStream_markSupported_6_0_Test
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.003 s -- in org.apache.tika.io.LookaheadInputStream_markSupported_6_0_Test
+[INFO] Running org.apache.tika.io.LookaheadInputStream_read_2_0_Test
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.003 s -- in org.apache.tika.io.LookaheadInputStream_read_2_0_Test
+[INFO] Running org.apache.tika.io.LookaheadInputStream_read_3_0_Test
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 s -- in org.apache.tika.io.LookaheadInputStream_read_3_0_Test
+[INFO] Running org.apache.tika.io.TailStreamTest
+[INFO] Tests run: 9, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.010 s -- in org.apache.tika.io.TailStreamTest
+[INFO] Running org.apache.tika.io.TemporaryResourcesTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 s -- in org.apache.tika.io.TemporaryResourcesTest
+[INFO] Running org.apache.tika.io.TikaInputStreamTest
+[WARNING] Tests run: 102, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 1.775 s -- in org.apache.tika.io.TikaInputStreamTest
+[INFO] Running org.apache.tika.language.detect.LanguageNamesTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.014 s -- in org.apache.tika.language.detect.LanguageNamesTest
+[INFO] Running org.apache.tika.metadata.filter.LegacyKeyMigrationFilterTest
+[INFO] Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.062 s -- in org.apache.tika.metadata.filter.LegacyKeyMigrationFilterTest
+[INFO] Running org.apache.tika.metadata.MetadataInternalKeyGuardTest
+[INFO] Tests run: 11, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.010 s -- in org.apache.tika.metadata.MetadataInternalKeyGuardTest
+[INFO] Running org.apache.tika.metadata.TestMetadata
+[INFO] Tests run: 18, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.113 s -- in org.apache.tika.metadata.TestMetadata
+[INFO] Running org.apache.tika.metadata.TestPageAnchoring
+[INFO] Tests run: 9, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.047 s -- in org.apache.tika.metadata.TestPageAnchoring
+[INFO] Running org.apache.tika.mime.CustomReaderTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.016 s -- in org.apache.tika.mime.CustomReaderTest
+[INFO] Running org.apache.tika.mime.MediaTypeTest
+[INFO] Tests run: 9, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.008 s -- in org.apache.tika.mime.MediaTypeTest
+[INFO] Running org.apache.tika.mime.MimeDetectionTest
+[INFO] Tests run: 10, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.651 s -- in org.apache.tika.mime.MimeDetectionTest
+[INFO] Running org.apache.tika.mime.MimeTypesReaderTest
+[INFO] Tests run: 19, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.522 s -- in org.apache.tika.mime.MimeTypesReaderTest
+[INFO] Running org.apache.tika.mime.PatternsTest
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 s -- in org.apache.tika.mime.PatternsTest
+[INFO] Running org.apache.tika.mime.ProbabilisticMimeDetectionTest
+[INFO] Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.420 s -- in org.apache.tika.mime.ProbabilisticMimeDetectionTest
+[INFO] Running org.apache.tika.mime.RFC822DetectionTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 s -- in org.apache.tika.mime.RFC822DetectionTest
+[INFO] Running org.apache.tika.parser.CompositeParserTest
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.243 s -- in org.apache.tika.parser.CompositeParserTest
+[INFO] Running org.apache.tika.parser.mock.MockParserTest
+INFO  [pool-6-thread-1] 15:12:28,800 com.martensigwart.fakeload.DefaultFakeLoadExecutor FakeLoad execution started
+INFO  [pool-8-thread-1] 15:12:28,916 com.martensigwart.fakeload.DefaultFakeLoadExecutor FakeLoad execution finished
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.480 s -- in org.apache.tika.parser.mock.MockParserTest
+[INFO] Running org.apache.tika.parser.multiple.MultipleParserTest
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.094 s -- in org.apache.tika.parser.multiple.MultipleParserTest
+[INFO] Running org.apache.tika.parser.ParseContextTest
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.003 s -- in org.apache.tika.parser.ParseContextTest
+[INFO] Running org.apache.tika.parser.ParserDecoratorTest
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.013 s -- in org.apache.tika.parser.ParserDecoratorTest
+[INFO] Running org.apache.tika.parser.RegexCaptureParserTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.022 s -- in org.apache.tika.parser.RegexCaptureParserTest
+[INFO] Running org.apache.tika.sax.BasicContentHandlerFactoryTest
+[INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.046 s -- in org.apache.tika.sax.BasicContentHandlerFactoryTest
+[INFO] Running org.apache.tika.sax.BodyContentHandlerTest
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.030 s -- in org.apache.tika.sax.BodyContentHandlerTest
+[INFO] Running org.apache.tika.sax.CustomErrorHandlerTest
+[WARNING] Tests run: 1, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 0.001 s -- in org.apache.tika.sax.CustomErrorHandlerTest
+[INFO] Running org.apache.tika.sax.LinkContentHandlerTest
+[INFO] Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.036 s -- in org.apache.tika.sax.LinkContentHandlerTest
+[INFO] Running org.apache.tika.sax.OfflineContentHandlerTest
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.017 s -- in org.apache.tika.sax.OfflineContentHandlerTest
+[INFO] Running org.apache.tika.sax.RichTextContentHandlerTest
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.013 s -- in org.apache.tika.sax.RichTextContentHandlerTest
+[INFO] Running org.apache.tika.sax.SafeContentHandlerTest
+[INFO] Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.003 s -- in org.apache.tika.sax.SafeContentHandlerTest
+[INFO] Running org.apache.tika.sax.SecureContentHandlerTest
+[INFO] Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.125 s -- in org.apache.tika.sax.SecureContentHandlerTest
+[INFO] Running org.apache.tika.sax.SerializerTest
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.003 s -- in org.apache.tika.sax.SerializerTest
+[INFO] Running org.apache.tika.sax.ToMarkdownContentHandlerTest
+[INFO] Tests run: 357, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.529 s -- in org.apache.tika.sax.ToMarkdownContentHandlerTest
+[INFO] Running org.apache.tika.sax.XHTMLBalancingHandlerTest
+[INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.015 s -- in org.apache.tika.sax.XHTMLBalancingHandlerTest
+[INFO] Running org.apache.tika.sax.XHTMLContentHandlerTest
+[INFO] Tests run: 13, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.008 s -- in org.apache.tika.sax.XHTMLContentHandlerTest
+[INFO] Running org.apache.tika.sax.xpath.XPathParserTest
+[INFO] Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.029 s -- in org.apache.tika.sax.xpath.XPathParserTest
+[INFO] Running org.apache.tika.TikaDetectionTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.106 s -- in org.apache.tika.TikaDetectionTest
+[INFO] Running org.apache.tika.utils.CharsetUtilsTest
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.061 s -- in org.apache.tika.utils.CharsetUtilsTest
+[INFO] Running org.apache.tika.utils.ConcurrentUtilsTest
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.024 s -- in org.apache.tika.utils.ConcurrentUtilsTest
+[INFO] Running org.apache.tika.utils.RegexUtilsTest
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.013 s -- in org.apache.tika.utils.RegexUtilsTest
+[INFO] Running org.apache.tika.utils.ServiceLoaderUtilsTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.023 s -- in org.apache.tika.utils.ServiceLoaderUtilsTest
+[INFO] Running org.apache.tika.utils.XMLReaderUtilsTest
+[INFO] Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.222 s -- in org.apache.tika.utils.XMLReaderUtilsTest
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 762, Failures: 0, Errors: 0, Skipped: 2
+[INFO] 
+[INFO] 
+[INFO] --- jacoco:0.8.15:report (report) @ tika-core ---
+[INFO] Loading execution data file /mnt/c/Users/adawa/Documents/UDEM FALL 2026/3913/tools/ci-check/tika-core/target/jacoco.exec
+[INFO] Analyzed bundle 'Apache Tika core' with 345 classes
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Summary for Apache Tika parent 4.0.0-SNAPSHOT:
+[INFO] 
+[INFO] Apache Tika parent ................................. SUCCESS [  1.004 s]
+[INFO] Apache Tika Annotation Processor ................... SUCCESS [  4.582 s]
+[INFO] Apache Tika core ................................... SUCCESS [ 51.860 s]
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  01:02 min
+[INFO] Finished at: 2026-10-13T15:12:46-04:00
+[INFO] ------------------------------------------------------------------------
+[INFO] Maveniverse Nisse 0.9.4 loaded
+[INFO] Nisse injecting 31 properties into User Properties
+[INFO] Scanning for projects...
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for org.apache.tika:tika-core:bundle:4.0.0-SNAPSHOT
+[WARNING] 'version' contains an expression but should be a constant. @ org.apache.tika:tika-parent:${revision}, /mnt/c/Users/adawa/Documents/UDEM FALL 2026/3913/tools/ci-check/tika-parent/pom.xml, line 34, column 12
+[WARNING] 
+[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+[WARNING] 
+[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+[WARNING] 
+[INFO] No need for inlining
+[INFO] 
+[INFO] ---------------------< org.apache.tika:tika-core >----------------------
+[INFO] Building Apache Tika core 4.0.0-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] -------------------------------[ bundle ]-------------------------------
+[INFO] 
+[INFO] --- pitest:1.17.4:mutationCoverage (default-cli) @ tika-core ---
+[INFO] Root dir is : /mnt/c/Users/adawa/Documents/UDEM FALL 2026/3913/tools/ci-check/tika-core
+[INFO] Found plugin : Default csv report plugin
+[INFO] Found plugin : Default xml report plugin
+[INFO] Found plugin : Default html report plugin
+[INFO] Found plugin : Static initializer code detector plugin
+[INFO] Found plugin : Excluded annotations plugin
+[INFO] Found plugin : Try with resources filter
+[INFO] Found plugin : Inlined finally block filter plugin
+[INFO] Found plugin : Implicit null check filter
+[INFO] Found plugin : Method reference null check filter
+[INFO] Found plugin : For each loop filter
+[INFO] Found plugin : Enum junk filter
+[INFO] Found plugin : Record junk mutation filter
+[INFO] Found plugin : String switch filter
+[INFO] Found plugin : Assertions filter
+[INFO] Found plugin : Enum switch filter
+[INFO] Found plugin : Logging calls filter
+[INFO] Found plugin : Infinite for loop filter
+[INFO] Found plugin : Long running iterator loop filter
+[INFO] Found plugin : For loop counter filter
+[INFO] Found plugin : Kotlin junk mutations filter
+[INFO] Found plugin : Groovy junk mutations filter
+[INFO] Found plugin : Max mutations per class limit
+[INFO] Found plugin : Equals shortcut equivalent mutant filter
+[INFO] Found plugin : Trivial return vals equivalence filter
+[INFO] Found plugin : Filters mutants with line number <= 1
+[INFO] Found plugin : Division by one equivalent mutant filter
+[INFO] Found plugin : Lombok junk mutations filter
+[INFO] Found plugin : Filter mutations to defensive wrappers such as unmodifiableCollection on return or field write
+[INFO] Found plugin : Mutant export plugin
+[INFO] Found plugin : Auto add java.awt.headless=true to keep keyboard focus on Mac OS
+[INFO] Found plugin : Auto set number of threads based on machine
+[INFO] Found plugin : Automatically add -ea to launch args to enable assertions
+[INFO] Found plugin : Default build verifier
+[INFO] Found plugin : Detect missing JUnit5 plugin
+[INFO] Found plugin : Detect missing TestNG plugin
+[INFO] Found plugin : Detect missing kotlin plugin
+[INFO] Found plugin : Detect missing spring plugin
+[INFO] Found plugin : Default coverage exporter
+[INFO] Found shared classpath plugin : Default mutation engine
+[INFO] Found shared classpath plugin : JUnit 5 test framework support
+[INFO] Found shared classpath plugin : JUnit plugin
+[INFO] Found shared classpath plugin : Support for mocking frameworks using javassist
+[INFO] Found shared classpath plugin : Reset environment for javassist
+[INFO] Available mutators : EXPERIMENTAL_ARGUMENT_PROPAGATION,FALSE_RETURNS,TRUE_RETURNS,CONDITIONALS_BOUNDARY,CONSTRUCTOR_CALLS,EMPTY_RETURNS,INCREMENTS,INLINE_CONSTS,INVERT_NEGS,MATH,NEGATE_CONDITIONALS,NON_VOID_METHOD_CALLS,NULL_RETURNS,PRIMITIVE_RETURNS,REMOVE_CONDITIONALS_EQUAL_IF,REMOVE_CONDITIONALS_EQUAL_ELSE,REMOVE_CONDITIONALS_ORDER_IF,REMOVE_CONDITIONALS_ORDER_ELSE,VOID_METHOD_CALLS,EXPERIMENTAL_BIG_DECIMAL,EXPERIMENTAL_BIG_INTEGER,EXPERIMENTAL_MEMBER_VARIABLE,EXPERIMENTAL_NAKED_RECEIVER,REMOVE_INCREMENTS,EXPERIMENTAL_SWITCH
+[INFO] Adding org.pitest:pitest-junit5-plugin to SUT classpath
+[INFO] Adding org.pitest:pitest to SUT classpath
+[INFO] Auto adding org.junit.platform:junit-platform-launcher:jar:6.1.3 < central (https://repo.maven.apache.org/maven2, default, releases) to classpath.
+[INFO] Mutating from /mnt/c/Users/adawa/Documents/UDEM FALL 2026/3913/tools/ci-check/tika-core/target/classes
+[INFO] Replacing properties in argLine -Xmx4g -Djava.awt.headless=true @{surefireArgLine}
+3:13:07 PM PIT >> INFO : Verbose logging is disabled. If you encounter a problem, please enable it before reporting an issue.
+3:13:09 PM PIT >> INFO : Created 1 mutation test units in pre scan
+3:13:10 PM PIT >> INFO : Sending 9 test classes to minion
+3:13:10 PM PIT >> INFO : Sent tests to minion
+/-\|/-\|/-\|/-\|/-\3:13:13 PM PIT >> INFO : Calculated coverage in 3 seconds.
+3:13:15 PM PIT >> INFO : Created 1 mutation test units
+/3:13:23 PM PIT >> INFO : Completed in 16 seconds
+================================================================================
+- Mutators
+================================================================================
+> org.pitest.mutationtest.engine.gregor.mutators.RemoveConditionalMutator_ORDER_ELSE
+>> Generated 3 Killed 3 (100%)
+> KILLED 3 SURVIVED 0 TIMED_OUT 0 NON_VIABLE 0 
+> MEMORY_ERROR 0 NOT_STARTED 0 STARTED 0 RUN_ERROR 0 
+> NO_COVERAGE 0 
+--------------------------------------------------------------------------------
+> org.pitest.mutationtest.engine.gregor.mutators.returns.PrimitiveReturnsMutator
+>> Generated 6 Killed 6 (100%)
+> KILLED 6 SURVIVED 0 TIMED_OUT 0 NON_VIABLE 0 
+> MEMORY_ERROR 0 NOT_STARTED 0 STARTED 0 RUN_ERROR 0 
+> NO_COVERAGE 0 
+--------------------------------------------------------------------------------
+> org.pitest.mutationtest.engine.gregor.mutators.ConditionalsBoundaryMutator
+>> Generated 3 Killed 3 (100%)
+> KILLED 3 SURVIVED 0 TIMED_OUT 0 NON_VIABLE 0 
+> MEMORY_ERROR 0 NOT_STARTED 0 STARTED 0 RUN_ERROR 0 
+> NO_COVERAGE 0 
+--------------------------------------------------------------------------------
+> org.pitest.mutationtest.engine.gregor.mutators.VoidMethodCallMutator
+>> Generated 7 Killed 7 (100%)
+> KILLED 7 SURVIVED 0 TIMED_OUT 0 NON_VIABLE 0 
+> MEMORY_ERROR 0 NOT_STARTED 0 STARTED 0 RUN_ERROR 0 
+> NO_COVERAGE 0 
+--------------------------------------------------------------------------------
+> org.pitest.mutationtest.engine.gregor.mutators.RemoveConditionalMutator_EQUAL_ELSE
+>> Generated 5 Killed 5 (100%)
+> KILLED 5 SURVIVED 0 TIMED_OUT 0 NON_VIABLE 0 
+> MEMORY_ERROR 0 NOT_STARTED 0 STARTED 0 RUN_ERROR 0 
+> NO_COVERAGE 0 
+--------------------------------------------------------------------------------
+> org.pitest.mutationtest.engine.gregor.mutators.MathMutator
+>> Generated 8 Killed 8 (100%)
+> KILLED 8 SURVIVED 0 TIMED_OUT 0 NON_VIABLE 0 
+> MEMORY_ERROR 0 NOT_STARTED 0 STARTED 0 RUN_ERROR 0 
+> NO_COVERAGE 0 
+--------------------------------------------------------------------------------
+> org.pitest.mutationtest.engine.gregor.mutators.returns.BooleanFalseReturnValsMutator
+>> Generated 1 Killed 1 (100%)
+> KILLED 1 SURVIVED 0 TIMED_OUT 0 NON_VIABLE 0 
+> MEMORY_ERROR 0 NOT_STARTED 0 STARTED 0 RUN_ERROR 0 
+> NO_COVERAGE 0 
+--------------------------------------------------------------------------------
+================================================================================
+- Timings
+================================================================================
+> pre-scan for mutations : 2 seconds
+> scan classpath : < 1 second
+> coverage and dependency analysis : 3 seconds
+> build mutation tests : 2 seconds
+> run mutation analysis : 7 seconds
+--------------------------------------------------------------------------------
+> Total  : 16 seconds
+--------------------------------------------------------------------------------
+================================================================================
+- Statistics
+================================================================================
+>> Line Coverage (for mutated classes only): 40/40 (100%)
+>> 9 tests examined
+>> Generated 33 mutations Killed 33 (100%)
+>> Mutations with no coverage 0. Test strength 100%
+>> Ran 119 tests (3.61 tests per mutation)
+Enhanced functionality available at https://www.arcmutate.com/
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  23.108 s
+[INFO] Finished at: 2026-10-13T15:13:23-04:00
+[INFO] ------------------------------------------------------------------------
+{
+  "original": {
+    "total": 33,
+    "statuses": {
+      "SURVIVED": 5,
+      "KILLED": 19,
+      "NO_COVERAGE": 9
+    },
+    "mutation_score_percent": 57.58
+  },
+  "generated": {
+    "total": 33,
+    "statuses": {
+      "SURVIVED": 6,
+      "KILLED": 27
+    },
+    "mutation_score_percent": 81.82
+  },
+  "final": {
+    "total": 33,
+    "statuses": {
+      "KILLED": 33
+    },
+    "mutation_score_percent": 100.0
+  }
+}

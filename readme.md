@@ -395,9 +395,11 @@ Les rapports de chaque étape sont séparés sous evidence.
 PowerShell appelle aussi la synthèse; sous Bash elle est appelée dans la commande
 ci-dessus et dans le workflow.
 
-Une régénération écrit sous evidence/chatunitest/generated et crée les historiques
-sous tika-core/target/chatunitest-info. Elle ne remplace pas les sources retenues
-dans src/test/java. Avant intégration, conserver les historiques, compiler,
+Une régénération écrit sous tika-core/target/chatunitest-regenerated et crée
+les historiques sous tika-core/target/chatunitest-info. Après l'expérience,
+ce répertoire de sortie a été séparé des preuves figées sous evidence/chatunitest/generated
+pour éviter de les écraser. Elle ne remplace pas les sources retenues
+dans src/test/java. Avant intégration, conserver les nouvelles sorties et historiques, compiler,
 vérifier Surefire, documenter les corrections puis refaire les trois mesures.
 Température zéro ne garantit pas une réponse identique entre versions ou matériels;
 les sorties de cette expérience sont conservées et identifiées par empreintes.
@@ -425,8 +427,17 @@ Il conserve Surefire, JaCoCo, PIT, les trois journaux de suites et les synthèse
 Le seuil PIT final de 100 % fait échouer une régression. Ollama n'est pas requis en CI.
 
 Le [pipeline PowerShell complet](evidence/local-powershell-pipeline.log) a réussi,
-y compris après ajout des tests manuels. La syntaxe Bash a été vérifiée par
-bash -n sous Ubuntu WSL sur cet ordinateur.
+y compris après ajout des tests manuels. Les **commandes du workflow Bash ont
+aussi été exécutées complètement sous Ubuntu WSL sur cet ordinateur**, depuis
+une archive Git des sources livrées :
+[journal complet](evidence/ubuntu-wsl/pipeline.log) et
+[vérification structurée](evidence/ubuntu-wsl/verification.json).
+Ubuntu reproduit **19/33, 27/33 et 33/33**, avec les mêmes identités de mutants
+que Windows. Les 762 tests finaux y comptent **760 réussites et deux ignorés** :
+l'utilitaire file y est disponible, donc le test supplémentaire ignoré sous
+Windows s'y exécute avec succès. Les données XML des trois étapes Ubuntu
+sont conservées sous evidence/ubuntu-wsl. La syntaxe Bash a aussi été vérifiée
+avec bash -n, et le bit exécutable du script est enregistré dans Git.
 **L'exécution hébergée de GitHub Actions reste à vérifier après publication :
 aucun push n'a été effectué pendant cette préparation locale.**
 

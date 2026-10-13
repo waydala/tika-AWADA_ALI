@@ -399,6 +399,9 @@
     </profile>
     <profile>
       <id>tache2-generation</id>
+      <properties>
+        <tache2.generationOutput>${project.build.directory}/chatunitest-regenerated</tache2.generationOutput>
+      </properties>
       <dependencies>
         <dependency>
           <groupId>io.github.ZJU-ACES-ISE</groupId>
@@ -425,7 +428,7 @@
               <promptPath>${project.basedir}/../scripts/chatunitest-prompts</promptPath>
               <thread>false</thread>
               <temperature>0</temperature>
-              <testOutput>${project.basedir}/../evidence/chatunitest/generated</testOutput>
+              <testOutput>${tache2.generationOutput}</testOutput>
               <tmpOutput>${project.basedir}/target/chatunitest-info</tmpOutput>
             </configuration>
           </plugin>

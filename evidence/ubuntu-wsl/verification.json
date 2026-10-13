@@ -1,0 +1,118 @@
+{
+  "success": true,
+  "environment": "Ubuntu WSL, Java 21, Maven 3.9.9, on the local computer",
+  "source_archive_commit": "d80b24b2b129c3e178f5f357fbcd03ef47ed8938",
+  "suites": {
+    "original": {
+      "tests": {
+        "tests": 749,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 2
+      },
+      "coverage": {
+        "INSTRUCTION": {
+          "covered": 129,
+          "missed": 35
+        },
+        "BRANCH": {
+          "covered": 14,
+          "missed": 2
+        },
+        "LINE": {
+          "covered": 32,
+          "missed": 8
+        },
+        "COMPLEXITY": {
+          "covered": 15,
+          "missed": 3
+        },
+        "METHOD": {
+          "covered": 8,
+          "missed": 2
+        },
+        "CLASS": {
+          "covered": 1,
+          "missed": 0
+        }
+      },
+      "mutants_killed": 19,
+      "mutants_total": 33
+    },
+    "generated": {
+      "tests": {
+        "tests": 757,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 2
+      },
+      "coverage": {
+        "INSTRUCTION": {
+          "covered": 164,
+          "missed": 0
+        },
+        "BRANCH": {
+          "covered": 16,
+          "missed": 0
+        },
+        "LINE": {
+          "covered": 40,
+          "missed": 0
+        },
+        "COMPLEXITY": {
+          "covered": 18,
+          "missed": 0
+        },
+        "METHOD": {
+          "covered": 10,
+          "missed": 0
+        },
+        "CLASS": {
+          "covered": 1,
+          "missed": 0
+        }
+      },
+      "mutants_killed": 27,
+      "mutants_total": 33
+    },
+    "final": {
+      "tests": {
+        "tests": 762,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 2
+      },
+      "coverage": {
+        "INSTRUCTION": {
+          "covered": 164,
+          "missed": 0
+        },
+        "BRANCH": {
+          "covered": 16,
+          "missed": 0
+        },
+        "LINE": {
+          "covered": 40,
+          "missed": 0
+        },
+        "COMPLEXITY": {
+          "covered": 18,
+          "missed": 0
+        },
+        "METHOD": {
+          "covered": 10,
+          "missed": 0
+        },
+        "CLASS": {
+          "covered": 1,
+          "missed": 0
+        }
+      },
+      "mutants_killed": 33,
+      "mutants_total": 33
+    }
+  },
+  "mutation_identities_match_windows": true,
+  "workflow_commands": "scripts/tache2.sh all; python3 scripts/summarize-mutations.py",
+  "hosted_github_actions_verified": false
+}
