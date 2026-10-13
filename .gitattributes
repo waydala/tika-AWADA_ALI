@@ -1,4 +1,6 @@
 * text=auto eol=lf
+# Preserve frozen ChatUniTest source bytes for the recorded SHA-256 evidence.
+evidence/chatunitest/generated/**/*.java -text
 tika-parsers/tika-parsers-standard/tika-parsers-standard-package/src/test/resources/test-documents/testEMLX.emlx eol=lf
 tika-parsers/tika-parsers-standard/tika-parsers-standard-package/src/test/resources/test-documents/testTXT.txt eol=lf
 tika-parsers/tika-parsers-standard/tika-parsers-standard-modules/tika-parser-html-module/src/test/resources/test-documents/testHTML.html eol=lf
