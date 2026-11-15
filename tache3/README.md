@@ -160,7 +160,7 @@ propre référence (`github.event.before`).
 | push du commit B (vulnérabilités) | [43738487549](https://github.com/waydala/tika-AWADA_ALI/actions/runs/43738487549) | ❌ **9 nouveaux résultats, code 1**, référence `fef5e5d` | ⏭️ **non lancé** (`needs: semgrep`) |
 | push du commit C (documentation) | [43738519545](https://github.com/waydala/tika-AWADA_ALI/actions/runs/43738519545) | ✅ succès, référence `56af40e` | ❌ test d'intégration S3 (voir plus bas) |
 | test volontairement en échec | [43738551319](https://github.com/waydala/tika-AWADA_ALI/actions/runs/43738551319) | ✅ succès | ❌ `RickrollDemoTest` échoue → **rickroll** |
-| push du correctif S3 (commit D) | _en cours_ | | |
+| push du correctif S3 (commit D) | [43743105371](https://github.com/waydala/tika-AWADA_ALI/actions/runs/43743105371) | ✅ succès, référence `a3336c0` | ✅ **succès** (build complet + e2e) |
 
 Le run B montre la porte en action : Semgrep compare au commit A, ne retient
 que les 9 résultats ajoutés par B (les 3 résultats historiques de Tika ne sont
@@ -176,7 +176,8 @@ donc Docker Compose ne peut plus la télécharger. Apache Tika a corrigé ce
 problème après notre commit de base, en remplaçant MinIO par RustFS
 ([TIKA-4928](https://github.com/apache/tika/commit/930bd6890c956e9f4b4bc10d7773d804acf6b42d)).
 J'ai repris ce correctif tel quel (commit D : `docker-compose.yml` et le nom
-du service dans `S3PipeIntegrationTest`). Au passage, ces deux échecs ont
+du service dans `S3PipeIntegrationTest`), vérifié en local avec Docker, puis
+confirmé par le run D, entièrement vert. Au passage, ces deux échecs ont
 aussi déclenché le rickroll, ce qui confirme qu'il fonctionne pour n'importe
 quel test en échec.
 
