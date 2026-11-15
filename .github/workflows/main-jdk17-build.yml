@@ -15,6 +15,13 @@
 # limitations under the License.
 #
 
+# IFT3913 - tâche 3 : ce workflow a été modifié pour
+#   1. faire échouer le build quand un commit introduit une NOUVELLE
+#      vulnérabilité détectée par Semgrep (job `semgrep`, dont dépend `build`) ;
+#   2. rickroll les développeurs quand un cas de test échoue
+#      (action réutilisable .github/actions/rickroll).
+# Voir tache3/README.md pour la justification des choix.
+
 name: main jdk17 build
 
 on:
@@ -23,14 +30,108 @@ on:
     paths-ignore:
       - 'docs/**'
   push:
-    branches: [ main ]
+    branches: [ main, 'tache3-**' ]
     paths-ignore:
       - 'docs/**'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+env:
+  SEMGREP_VERSION: '1.185.0'
 
 jobs:
+  semgrep:
+    name: Semgrep (nouvelles vulnérabilités)
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          # L'historique complet est nécessaire pour que Semgrep puisse
+          # analyser le commit de référence (--baseline-commit).
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install Semgrep ${{ env.SEMGREP_VERSION }}
+        run: pip install "semgrep==${SEMGREP_VERSION}"
+      - name: Determine baseline commit
+        id: baseline
+        env:
+          EVENT: ${{ github.event_name }}
+          PR_BASE: ${{ github.event.pull_request.base.sha }}
+          BEFORE: ${{ github.event.before }}
+        run: |
+          zero=0000000000000000000000000000000000000000
+          if [ "$EVENT" = "pull_request" ]; then
+            # Tout ce que la PR ajoute par rapport à la branche cible.
+            base=$(git merge-base "$PR_BASE" HEAD)
+          elif [ -n "$BEFORE" ] && [ "$BEFORE" != "$zero" ] \
+               && git cat-file -e "${BEFORE}^{commit}" 2>/dev/null; then
+            # Push : ce que le(s) commit(s) poussé(s) ajoutent.
+            base="$BEFORE"
+          else
+            # Nouvelle branche ou déclenchement manuel : le commit parent.
+            base=$(git rev-parse HEAD~1)
+          fi
+          echo "sha=$base" >> "$GITHUB_OUTPUT"
+          echo "Baseline : $base -> HEAD : $(git rev-parse HEAD)"
+      - name: Semgrep diff-aware scan (fails on new findings)
+        env:
+          BASELINE: ${{ steps.baseline.outputs.sha }}
+        run: |
+          semgrep scan \
+            --config p/java \
+            --config p/security-audit \
+            --metrics=off \
+            --exclude '**/src/test/**' \
+            --baseline-commit "$BASELINE" \
+            --json-output semgrep-new.json \
+            --sarif-output semgrep-new.sarif \
+            --error
+      - name: Summarize new findings
+        if: always()
+        run: |
+          python3 - <<'PY'
+          import json, os
+          try:
+              results = json.load(open("semgrep-new.json"))["results"]
+          except (OSError, ValueError, KeyError):
+              results = None
+          out = open(os.environ["GITHUB_STEP_SUMMARY"], "a", encoding="utf-8")
+          if results is None:
+              out.write("## Semgrep\n\nAucun rapport produit (erreur d'exécution).\n")
+          elif not results:
+              out.write("## Semgrep :white_check_mark:\n\nAucune nouvelle vulnérabilité.\n")
+          else:
+              out.write(f"## Semgrep :x: {len(results)} nouvelle(s) vulnérabilité(s)\n\n")
+              out.write("| Règle | Sévérité | Emplacement |\n|---|---|---|\n")
+              for r in results:
+                  rule = r["check_id"].rsplit(".", 1)[-1]
+                  out.write(f"| `{rule}` | {r['extra']['severity']} | "
+                            f"`{r['path']}:{r['start']['line']}` |\n")
+          PY
+      - name: Upload Semgrep reports
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: semgrep-new-findings
+          path: |
+            semgrep-new.json
+            semgrep-new.sarif
+          if-no-files-found: ignore
+
   build:
     runs-on: ubuntu-latest
     timeout-minutes: 60
+    # Le build n'est lancé que si Semgrep n'a trouvé aucune nouvelle
+    # vulnérabilité : sinon le workflow échoue avant la compilation.
+    needs: semgrep
+    permissions:
+      contents: read
+      pull-requests: write
     strategy:
       matrix:
         java: [ '17' ]
@@ -46,12 +147,22 @@ jobs:
       - name: Install external tools
         run: sudo apt-get update && sudo apt-get install -y ffmpeg libimage-exiftool-perl
       - name: Build with Maven
+        id: maven
         run: mvn clean apache-rat:check test install javadoc:aggregate -Pci -B "-Dorg.slf4j.simpleLogger.log.org.apache.maven.cli.transfer.Slf4jMavenTransferListener=warn"
+      - name: Rickroll on test failure
+        if: failure() && steps.maven.outcome == 'failure'
+        uses: ./.github/actions/rickroll
+        with:
+          reason: 'Le build Maven / un cas de test de Tika a échoué'
+          github-token: ${{ github.token }}
 
   e2e-tests:
     runs-on: ubuntu-latest
     timeout-minutes: 30
     needs: build
+    permissions:
+      contents: read
+      pull-requests: write
     strategy:
       matrix:
         java: [ '17' ]
@@ -65,4 +176,11 @@ jobs:
           java-version: ${{ matrix.java }}
           cache: 'maven'
       - name: Run E2E Tests
+        id: e2e
         run: mvn -pl tika-e2e-tests -am clean verify -Pe2e -B "-Dorg.slf4j.simpleLogger.log.org.apache.maven.cli.transfer.Slf4jMavenTransferListener=warn"
+      - name: Rickroll on test failure
+        if: failure() && steps.e2e.outcome == 'failure'
+        uses: ./.github/actions/rickroll
+        with:
+          reason: 'Un test end-to-end de Tika a échoué'
+          github-token: ${{ github.token }}

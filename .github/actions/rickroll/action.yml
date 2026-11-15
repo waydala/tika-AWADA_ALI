@@ -1,0 +1,84 @@
+#
+# Licensed to the Apache Software Foundation (ASF) under one or more
+# contributor license agreements.  See the NOTICE file distributed with
+# this work for additional information regarding copyright ownership.
+# The ASF licenses this file to You under the Apache License, Version 2.0
+# (the "License"); you may not use this file except in compliance with
+# the License.  You may obtain a copy of the License at
+#
+#      http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+#
+
+# IFT3913 - tâche 3 : action composite réutilisable qui « rickroll » le CI.
+#
+# Inspirée de TejasvOnly/random-rickroll : au lieu d'un simple lien, l'action
+# choisit au hasard un « déguisement » de lien (rapport de tests, log de
+# Surefire, ...), l'écrit dans le résumé du job, ajoute une annotation
+# d'erreur, et commente la pull request quand un jeton est fourni.
+name: 'Rickroll on failure'
+description: 'Rickroll les développeurs quand un cas de test échoue.'
+inputs:
+  reason:
+    description: 'Ce qui a échoué (affiché dans le message).'
+    required: false
+    default: 'Un cas de test a échoué'
+  github-token:
+    description: 'Jeton pour commenter la PR (optionnel).'
+    required: false
+    default: ''
+outputs:
+  disguise:
+    description: 'Texte du lien piégé qui a été choisi.'
+    value: ${{ steps.roll.outputs.disguise }}
+runs:
+  using: composite
+  steps:
+    - id: roll
+      shell: bash
+      env:
+        REASON: ${{ inputs.reason }}
+      run: |
+        url="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+        disguises=(
+          "Rapport Surefire détaillé des tests en échec"
+          "Stack trace complète (cliquez pour déplier)"
+          "Guide officiel : corriger ce test en 30 secondes"
+          "Diff attendu / obtenu de l'oracle"
+          "Rapport de couverture JaCoCo"
+        )
+        pick="${disguises[$((RANDOM % ${#disguises[@]}))]}"
+        echo "disguise=$pick" >> "$GITHUB_OUTPUT"
+
+        cat >> "$GITHUB_STEP_SUMMARY" <<EOF
+        ## :rotating_light: ${REASON}
+
+        Pas de panique, toute l'analyse est ici : **[${pick}](${url})**
+
+        ![rickroll](https://media.giphy.com/media/Ju7l5y9osyymQ/giphy.gif)
+
+        _You just got rickrolled by the Tika CI (IFT3913, tâche 3)._
+        EOF
+
+        echo "::error title=${REASON}::${pick} -> ${url}"
+        echo "=============================================="
+        echo "  ${REASON}"
+        echo "  ${pick}: ${url}"
+        echo "  Never Gonna Give You Up - Rick Astley (1987)"
+        echo "=============================================="
+
+    - if: ${{ inputs.github-token != '' && github.event_name == 'pull_request' }}
+      shell: bash
+      env:
+        GH_TOKEN: ${{ inputs.github-token }}
+        PR: ${{ github.event.pull_request.number }}
+        PICK: ${{ steps.roll.outputs.disguise }}
+      run: |
+        gh pr comment "$PR" --repo "$GITHUB_REPOSITORY" \
+          --body "Des tests échouent :x: — [${PICK}](https://www.youtube.com/watch?v=dQw4w9WgXcQ)" \
+          || echo "Commentaire impossible (PR externe ?), on continue."
