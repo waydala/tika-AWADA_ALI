@@ -1,0 +1,148 @@
+$ semgrep scan --config p/java --config p/security-audit --metrics=off \
+    --exclude '**/src/test/**' --baseline-commit fef5e5d --error   # HEAD = 56af40e
+               
+               
+┌─────────────┐
+│ Scan Status │
+└─────────────┘
+  Scanning 9 files tracked by git with 259 Code rules:
+                                                                                                                        
+  Language      Rules   Files          Origin      Rules                                                                
+ ─────────────────────────────        ───────────────────                                                               
+  <multilang>       2       9          Community     259                                                                
+  java             86       7                                                                                           
+  json              1       1                                                                                           
+                                                                                                                        
+  Current version has 10 findings.
+
+Creating git worktree from 'fef5e5d' to scan baseline.
+  Will report findings introduced by these commits (may be incomplete for shallow checkouts):
+    * 56af40e Tache 3 : introduire 7 vulnerabilites detectables par Semgrep et comparer les rapports
+
+               
+               
+┌─────────────┐
+│ Scan Status │
+└─────────────┘
+  Scanning 7 files tracked by git with 9 Code rules:
+  Scanning 7 files with 9 java rules.
+                
+                
+┌──────────────┐
+│ Scan Summary │
+└──────────────┘
+✅ Scan completed successfully.
+ • Findings: 9 (9 blocking)
+ • Rules run: 89
+ • Targets scanned: 9
+ • Parsed lines: ~100.0%
+ • Scan was limited to files changed since baseline commit.
+ • For a detailed list of skipped files and lines, run semgrep with the --verbose flag
+Ran 89 rules on 9 files: 9 findings.
+                   
+                   
+┌─────────────────┐
+│ 9 Code Findings │
+└─────────────────┘
+                                                                    
+    tika-core/src/main/java/org/apache/tika/digest/DigestHelper.java
+    ❯❱ java.lang.security.audit.crypto.use-of-md5.use-of-md5
+          ❰❰ Blocking ❱❱
+          Detected MD5 hash algorithm which is considered insecure. MD5 is not collision resistant and is
+          therefore not suitable as a cryptographic signature. Use HMAC instead.                         
+          Details: https://sg.run/ryJn                                                                   
+                                                                                                         
+           ▶▶┆ Autofix ▶ "SHA-512"
+          114┆ MessageDigest md5 = MessageDigest.getInstance("MD5");
+                                                                     
+    tika-core/src/main/java/org/apache/tika/parser/NetworkParser.java
+    ❯❱ java.lang.security.audit.crypto.ssl.insecure-trust-manager.insecure-trust-manager
+          ❰❰ Blocking ❱❱
+          Detected empty trust manager implementations. This is dangerous because it accepts any certificate,
+          enabling man-in-the-middle attacks. Consider using a KeyStore and TrustManagerFactory instead. See 
+          https://stackoverflow.com/questions/2642777/trusting-all-certificates-using-httpclient-over-https  
+          for more information.                                                                              
+          Details: https://sg.run/GePy                                                                       
+                                                                                                             
+          104┆ @Override
+          105┆ public void checkClientTrusted(X509Certificate[] chain, String authType) {
+          106┆     // accept everything
+          107┆ }
+            ⋮┆----------------------------------------
+          109┆ @Override
+          110┆ public void checkServerTrusted(X509Certificate[] chain, String authType) {
+          111┆     // accept everything
+          112┆ }
+                                                                                                                        
+    tika-parsers/tika-parsers-standard/tika-parsers-standard-modules/tika-parser-microsoft-module/src/main/java/org/apac
+  he/tika/parser/microsoft/JackcessExtractor.java                                                                       
+   ❯❯❱ java.lang.security.audit.formatted-sql-string.formatted-sql-string
+          ❰❰ Blocking ❱❱
+          Detected a formatted string in a SQL statement. This could lead to SQL injection if variables in the
+          SQL statement are not properly sanitized. Use a prepared statements (java.sql.PreparedStatement)    
+          instead. You can obtain a PreparedStatement using 'connection.prepareStatement'.                    
+          Details: https://sg.run/OPXp                                                                        
+                                                                                                              
+          106┆ return statement.executeQuery("SELECT * FROM " + tableName);
+                                                                                                                        
+    tika-parsers/tika-parsers-standard/tika-parsers-standard-modules/tika-parser-microsoft-module/src/main/java/org/apac
+  he/tika/parser/microsoft/OfficeParser.java                                                                            
+    ❯❱ java.lang.security.audit.crypto.ecb-cipher.ecb-cipher
+          ❰❰ Blocking ❱❱
+          Cipher in ECB mode is detected. ECB mode produces the same output for the same input each time which
+          allows an attacker to intercept and replay the data. Further, ECB mode does not provide any         
+          integrity checking. See https://find-sec-bugs.github.io/bugs.htm#CIPHER_INTEGRITY.                  
+          Details: https://sg.run/Ro9K                                                                        
+                                                                                                              
+          400┆ Cipher cipher = Cipher.getInstance("DES/ECB/PKCS5Padding");
+   
+    ❯❱ java.lang.security.audit.crypto.des-is-deprecated.des-is-deprecated
+          ❰❰ Blocking ❱❱
+          DES is considered deprecated. AES is the recommended cipher. Upgrade to use AES. See              
+          https://www.nist.gov/news-events/news/2005/06/nist-withdraws-outdated-data-encryption-standard for
+          more information.                                                                                 
+          Details: https://sg.run/5Q73                                                                      
+                                                                                                            
+           ▶▶┆ Autofix ▶ "AES/GCM/NoPadding"
+          400┆ Cipher cipher = Cipher.getInstance("DES/ECB/PKCS5Padding");
+                                                                                                                        
+    tika-parsers/tika-parsers-standard/tika-parsers-standard-modules/tika-parser-ocr-module/src/main/java/org/apache/tik
+  a/parser/ocr/TesseractOCRParser.java                                                                                  
+    ❯❱ java.lang.security.audit.crypto.weak-random.weak-random
+          ❰❰ Blocking ❱❱
+          Detected use of the functions `Math.random()` or `java.util.Random()`. These are both not      
+          cryptographically strong random number generators (RNGs). If you are using these RNGs to create
+          passwords or secret tokens, use `java.security.SecureRandom` instead.                          
+          Details: https://sg.run/NwBp                                                                   
+                                                                                                         
+          251┆ return OCR + Long.toHexString(new Random().nextLong()) + ".png";
+                                                                                                                        
+    tika-parsers/tika-parsers-standard/tika-parsers-standard-modules/tika-parser-pdf-module/src/main/java/org/apache/tik
+  a/parser/pdf/XFAExtractor.java                                                                                        
+   ❯❯❱ java.lang.security.audit.xxe.documentbuilderfactory-disallow-doctype-decl-missing.documentbuilderfactory-
+       disallow-doctype-decl-missing                                                                            
+          ❰❰ Blocking ❱❱
+          DOCTYPE declarations are enabled for this DocumentBuilderFactory. This is vulnerable to XML external
+          entity attacks. Disable this by setting the feature "http://apache.org/xml/features/disallow-       
+          doctype-decl" to true. Alternatively, allow DOCTYPE declarations and only prohibit external entities
+          declarations. This can be done by setting the features "http://xml.org/sax/features/external-       
+          general-entities" and "http://xml.org/sax/features/external-parameter-entities" to false.           
+          Details: https://sg.run/PYBz                                                                        
+                                                                                                              
+           ▶▶┆ Autofix ▶ factory.setFeature("http://apache.org/xml/features/disallow-doctype-decl", true);
+              factory.newDocumentBuilder();                                                               
+           88┆ return factory.newDocumentBuilder().parse(xfaIs);
+                                                                                         
+    tika-serialization/src/main/java/org/apache/tika/serialization/ParseContextUtils.java
+    ❯❱ java.lang.security.audit.object-deserialization.object-deserialization
+          ❰❰ Blocking ❱❱
+          Found object deserialization using ObjectInputStream. Deserializing entire Java objects is dangerous
+          because malicious actors can create Java object streams with unintended consequences. Ensure that   
+          the objects being deserialized are not user-controlled. If this must be done, consider using HMACs  
+          to sign the data stream to make sure it is not tampered with, or consider only transmitting object  
+          fields and populating a new object.                                                                 
+          Details: https://sg.run/Ek0A                                                                        
+                                                                                                              
+          270┆ ObjectInputStream objectInputStream = new ObjectInputStream(inputStream);
+
+EXIT CODE = 1

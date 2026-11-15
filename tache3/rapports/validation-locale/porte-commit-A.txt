@@ -1,0 +1,36 @@
+$ semgrep scan --config p/java --config p/security-audit --metrics=off \
+    --exclude '**/src/test/**' --baseline-commit a2d75c2 --error   # HEAD = fef5e5d
+               
+               
+┌─────────────┐
+│ Scan Status │
+└─────────────┘
+  Scanning 6 files tracked by git with 259 Code rules:
+                                                                                                                        
+  Language      Rules   Files          Origin      Rules                                                                
+ ─────────────────────────────        ───────────────────                                                               
+  <multilang>       2       6          Community     259                                                                
+  python           77       1                                                                                           
+  json              1       1                                                                                           
+                                                                                                                        
+  Current version has 0 findings.
+
+Skipping baseline scan, because there are no current findings.
+                
+                
+┌──────────────┐
+│ Scan Summary │
+└──────────────┘
+✅ Scan completed successfully.
+ • Findings: 0 (0 blocking)
+ • Rules run: 80
+ • Targets scanned: 6
+ • Parsed lines: ~100.0%
+ • Scan was limited to files changed since baseline commit.
+ • For a detailed list of skipped files and lines, run semgrep with the --verbose flag
+Ran 80 rules on 6 files: 0 findings.
+(need more rules? `semgrep login` for additional free Semgrep Registry rules)
+
+If Semgrep missed a finding, please send us feedback to let us know!
+See https://semgrep.dev/docs/reporting-false-negatives/
+EXIT CODE = 0
