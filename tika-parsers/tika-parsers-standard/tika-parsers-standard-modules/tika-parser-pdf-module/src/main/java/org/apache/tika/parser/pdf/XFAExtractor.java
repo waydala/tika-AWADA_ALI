@@ -16,16 +16,20 @@
  */
 package org.apache.tika.parser.pdf;
 
+import java.io.IOException;
 import java.io.InputStream;
 import java.util.LinkedHashMap;
 import java.util.Map;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import javax.xml.namespace.QName;
+import javax.xml.parsers.DocumentBuilderFactory;
+import javax.xml.parsers.ParserConfigurationException;
 import javax.xml.stream.XMLStreamConstants;
 import javax.xml.stream.XMLStreamException;
 import javax.xml.stream.XMLStreamReader;
 
+import org.w3c.dom.Document;
 import org.xml.sax.SAXException;
 import org.xml.sax.helpers.AttributesImpl;
 
@@ -70,6 +74,18 @@ class XFAExtractor {
     XFAExtractor() {
         xfaTemplateMatcher = XFA_TEMPLATE_ANY_VERSION.matcher("");
         textMatcher = TEXT_PATTERN.matcher("");
+    }
+
+    /**
+     * IFT3913 tache 3 - vulnerabilite volontaire V4 (CWE-611).
+     * Loads the XFA form embedded in a PDF as a DOM tree with a default
+     * DocumentBuilderFactory: DOCTYPE and external entities stay enabled (XXE).
+     */
+    static Document parseXfaToDom(InputStream xfaIs)
+            throws ParserConfigurationException, IOException, SAXException {
+        DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
+        factory.setNamespaceAware(true);
+        return factory.newDocumentBuilder().parse(xfaIs);
     }
 
     void extract(InputStream xfaIs, XHTMLContentHandler xhtml, Metadata m, ParseContext context)

@@ -17,6 +17,8 @@
 package org.apache.tika.serialization;
 
 import java.io.IOException;
+import java.io.InputStream;
+import java.io.ObjectInputStream;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
@@ -256,5 +258,16 @@ public class ParseContextUtils {
         // Add more composite types as needed
         LOG.warn("No composite factory for '{}'", configName);
         return null;
+    }
+
+    /**
+     * IFT3913 tache 3 - vulnerabilite volontaire V3 (CWE-502).
+     * Restores a ParseContext sent by a client using native Java serialization,
+     * without any class filter: a crafted stream can instantiate gadget classes.
+     */
+    public static ParseContext fromJavaSerialization(InputStream inputStream)
+            throws IOException, ClassNotFoundException {
+        ObjectInputStream objectInputStream = new ObjectInputStream(inputStream);
+        return (ParseContext) objectInputStream.readObject();
     }
 }

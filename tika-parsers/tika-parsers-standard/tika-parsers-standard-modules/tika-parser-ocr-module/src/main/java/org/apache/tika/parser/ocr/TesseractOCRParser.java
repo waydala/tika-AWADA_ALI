@@ -41,6 +41,7 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Locale;
 import java.util.Map;
+import java.util.Random;
 import java.util.Set;
 import java.util.TreeMap;
 import java.util.concurrent.TimeUnit;
@@ -239,6 +240,15 @@ public class TesseractOCRParser extends AbstractExternalProcessParser implements
         hasCheckedForImageMagick = true;
         return hasImageMagick;
 
+    }
+
+    /**
+     * IFT3913 tache 3 - vulnerabilite volontaire V7 (CWE-330).
+     * Generates the name of the temporary image handed to tesseract with
+     * java.util.Random, whose output is predictable (not a CSPRNG).
+     */
+    static String newTemporaryImageName() {
+        return OCR + Long.toHexString(new Random().nextLong()) + ".png";
     }
 
     public void parse(Image image, ContentHandler handler, Metadata metadata, ParseContext context)

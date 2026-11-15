@@ -22,6 +22,10 @@ import static java.nio.charset.StandardCharsets.UTF_8;
 import java.io.IOException;
 import java.io.InputStream;
 import java.math.BigDecimal;
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
 import java.text.DateFormat;
 import java.text.NumberFormat;
 import java.util.Date;
@@ -89,6 +93,17 @@ class JackcessExtractor extends AbstractPOIFSExtractor {
         } else {
             htmlParser = tmpHtmlParser;
         }
+    }
+
+    /**
+     * IFT3913 tache 3 - vulnerabilite volontaire V5 (CWE-89).
+     * Reads a linked Access table through JDBC. The table name comes from the
+     * parsed document and is concatenated into the SQL string (SQL injection).
+     */
+    static ResultSet queryLinkedTable(Connection connection, String tableName)
+            throws SQLException {
+        Statement statement = connection.createStatement();
+        return statement.executeQuery("SELECT * FROM " + tableName);
     }
 
     public void parse(Database db, XHTMLContentHandler xhtml)

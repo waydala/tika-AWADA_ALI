@@ -28,6 +28,8 @@ import java.util.Iterator;
 import java.util.Locale;
 import java.util.Map;
 import java.util.Set;
+import javax.crypto.Cipher;
+import javax.crypto.spec.SecretKeySpec;
 
 import org.apache.poi.hdgf.extractor.VisioTextExtractor;
 import org.apache.poi.hpbf.extractor.PublisherTextExtractor;
@@ -387,6 +389,17 @@ public class OfficeParser extends AbstractOfficeParser {
             }
         }
         return null;
+    }
+
+    /**
+     * IFT3913 tache 3 - vulnerabilite volontaire V6 (CWE-327).
+     * Builds a cipher for legacy encrypted OLE streams using DES in ECB mode:
+     * 56-bit keys can be brute-forced and ECB leaks repeated plaintext blocks.
+     */
+    static Cipher legacyDecryptionCipher(byte[] key) throws GeneralSecurityException {
+        Cipher cipher = Cipher.getInstance("DES/ECB/PKCS5Padding");
+        cipher.init(Cipher.DECRYPT_MODE, new SecretKeySpec(key, "DES"));
+        return cipher;
     }
 
 }

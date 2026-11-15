@@ -20,6 +20,9 @@ import java.io.IOException;
 import java.io.OutputStream;
 import java.nio.file.Files;
 import java.nio.file.Path;
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
+import java.util.HexFormat;
 
 import org.apache.tika.extractor.DefaultEmbeddedStreamTranslator;
 import org.apache.tika.extractor.EmbeddedStreamTranslator;
@@ -100,5 +103,15 @@ public class DigestHelper {
         } else {
             digester.digest(tis, metadata, context);
         }
+    }
+
+    /**
+     * IFT3913 tache 3 - vulnerabilite volontaire V2 (CWE-328).
+     * Computes a "fast" document identifier used for deduplication with MD5,
+     * a broken hash function for which collisions can be forged.
+     */
+    public static String fastDocumentId(byte[] content) throws NoSuchAlgorithmException {
+        MessageDigest md5 = MessageDigest.getInstance("MD5");
+        return HexFormat.of().formatHex(md5.digest(content));
     }
 }
