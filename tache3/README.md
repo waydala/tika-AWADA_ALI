@@ -444,16 +444,9 @@ $SEMGREP scan --config p/java --config p/security-audit --metrics=off \
 
 ## 8. Déclaration d'utilisation de l'IA
 
-Conformément aux consignes de l'Université de Montréal
-(*Intelligence artificielle générative : citer, signaler, déclarer et documenter*) :
+Outil utilisé : Claude (Anthropic), novembre 2026, comme assistant de
+programmation et de rédaction. Les résultats présentés proviennent des
+exécutions conservées dans [`rapports/`](rapports/).
 
-- **Outil** : Claude (Anthropic), via Claude Code, novembre 2026.
-- **Utilisation** : aide à la conception du workflow (choix de
-  `--baseline-commit` et du commit de référence), rédaction du YAML et de
-  l'action rickroll, écriture des scripts de scan et de comparaison, choix des
-  emplacements et rédaction du code des 7 vulnérabilités, et rédaction de ce
-  rapport.
-- **Vérification humaine** : les scans Semgrep, la compilation (Checkstyle,
-  forbiddenapis) et la validation de la porte ont été exécutés et leurs sorties
-  sont conservées dans `tache3/rapports/`. Les résultats rapportés ici viennent
-  de ces exécutions, pas du modèle.
+Déclaration suivant la ressource de l'Université
+[Citer, signaler, déclarer et documenter l'IA générative](https://boite-outils.bib.umontreal.ca/c.php?g=743753&p=5377614).
