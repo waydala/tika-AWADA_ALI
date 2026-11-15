@@ -456,21 +456,6 @@ Les XML PIT et JaCoCo des trois étapes sont conservés sous evidence/github-act
 Outils utilisés le **13 octobre 2026** : Qwen2.5-Coder 3B, avec les versions
 de ChatUniTest et d'Ollama précisées en section 2, et
 [Codex](https://openai.com/codex/), agent basé sur GPT-6 dans cette session.
-La demande initiale à Codex comprenait notamment « je veux que tu complètes la tâche numéro 2 »
-et « tu peux les run sur mon ordi ». Les prompts et réponses effectivement
-transmis à Qwen par ChatUniTest sont conservés dans les historiques liés en section 3.
-
-ChatUniTest et Qwen2.5-Coder produisent les tests identifiés comme générés.
-Codex assiste la configuration, les validations, les 12 corrections explicites,
-l'analyse des rapports, la conception des cinq tests complémentaires et ce README.
-Ces derniers sont conçus en réponse aux survivants avec cette assistance
-et sont distincts des sorties ChatUniTest.
-
-Le travail préparatoire cloud avait choisi la classe et proposé une configuration
-et des tests complémentaires. Ces éléments ont été inspectés et adaptés.
-Les sorties ChatUniTest livrées et les mesures rapportées ont été
-**régénérées et exécutées localement**; les anciennes mesures cloud ne sont pas
-présentées comme celles de cet ordinateur.
 
 Déclaration suivant les
 [consignes du cours](https://github.com/umontreal-diro/IFT3913/blob/2026/tache2/readme.md)
