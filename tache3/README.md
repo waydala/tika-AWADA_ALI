@@ -28,6 +28,7 @@ vérifiable séparément par le CI) :
 | A — `fef5e5d` | workflow modifié, action rickroll, scripts, rapport « avant » | succès (aucune nouvelle vulnérabilité) |
 | B — `56af40e` | les 7 vulnérabilités + rapport « après » + comparaison | **échec** (9 nouveaux résultats) |
 | C | cette documentation et les preuves de validation | succès (rien de nouveau depuis B) |
+| D | correctif amont TIKA-4928 (test d'intégration S3, voir §3.2) et liens des runs | succès |
 
 ---
 
@@ -150,12 +151,34 @@ Tika ne déclenchent pas d'échec : seules les nouvelles comptent.
 
 ### 3.2 Validation sur GitHub Actions
 
-| Scénario | Run | Résultat |
-|---|---|---|
-| push du commit A | _lien ajouté après exécution_ | |
-| push du commit B (vulnérabilités) | _lien ajouté après exécution_ | |
-| push du commit C (documentation) | _lien ajouté après exécution_ | |
-| test volontairement en échec (rickroll) | _lien ajouté après exécution_ | |
+Chaque commit a été poussé séparément, pour que le CI évalue chacun avec sa
+propre référence (`github.event.before`).
+
+| Scénario | Run | Job `semgrep` | Job `build` |
+|---|---|---|---|
+| push du commit A (CI seul) | [43738455245](https://github.com/waydala/tika-AWADA_ALI/actions/runs/43738455245) | ✅ succès, référence `a2d75c2` | ❌ test d'intégration S3 (voir plus bas) |
+| push du commit B (vulnérabilités) | [43738487549](https://github.com/waydala/tika-AWADA_ALI/actions/runs/43738487549) | ❌ **9 nouveaux résultats, code 1**, référence `fef5e5d` | ⏭️ **non lancé** (`needs: semgrep`) |
+| push du commit C (documentation) | [43738519545](https://github.com/waydala/tika-AWADA_ALI/actions/runs/43738519545) | ✅ succès, référence `56af40e` | ❌ test d'intégration S3 (voir plus bas) |
+| test volontairement en échec | [43738551319](https://github.com/waydala/tika-AWADA_ALI/actions/runs/43738551319) | ✅ succès | ❌ `RickrollDemoTest` échoue → **rickroll** |
+| push du correctif S3 (commit D) | _en cours_ | | |
+
+Le run B montre la porte en action : Semgrep compare au commit A, ne retient
+que les 9 résultats ajoutés par B (les 3 résultats historiques de Tika ne sont
+pas comptés), échoue, et le build n'est même pas lancé. Le run C montre
+l'autre côté : les mêmes vulnérabilités, déjà présentes dans la référence B, ne
+bloquent plus les commits suivants. Seul le commit qui les introduit est bloqué.
+
+**Échec du build sur A et C, sans lien avec la tâche.** Dans les deux runs,
+tous les modules du cas d'étude compilent et leurs tests passent. Le build
+s'arrête plus loin, dans `tika-pipes-s3-integration-tests` : ce test démarre
+un conteneur `quay.io/minio/minio`, et **MinIO a retiré ses images publiques**,
+donc Docker Compose ne peut plus la télécharger. Apache Tika a corrigé ce
+problème après notre commit de base, en remplaçant MinIO par RustFS
+([TIKA-4928](https://github.com/apache/tika/commit/930bd6890c956e9f4b4bc10d7773d804acf6b42d)).
+J'ai repris ce correctif tel quel (commit D : `docker-compose.yml` et le nom
+du service dans `S3PipeIntegrationTest`). Au passage, ces deux échecs ont
+aussi déclenché le rickroll, ce qui confirme qu'il fonctionne pour n'importe
+quel test en échec.
 
 ## 4. Les 7 vulnérabilités introduites
 
